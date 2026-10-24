@@ -26,15 +26,15 @@ Read `AGENTS.md`; pull first, publish your claim, work on nonoverlapping files, 
 
 ### Codex — GPT-6
 
-- Status: IN PROGRESS; research only, training remains PAUSED.
+- Status: COMPLETE; research only, training remains PAUSED.
 - Goal: identify evidence-backed routes from retained public ROC AUC 0.96111 to above 0.96200.
 - Evidence/hypothesis and approach: review accepted/rejected experiments, inspect current primary competition/model sources, distinguish independent model signal from leaderboard-selected blends, and rank bounded future experiments.
 - Branch: `main` for bounded documentation research.
-- Owned files/areas: this registry entry, `docs/plans/codex-breakthrough-research.md`, and a linked research-only ledger entry in `docs/EXPERIMENTS.md`; no runtime code ownership.
+- Ownership released: this registry entry, `docs/plans/codex-breakthrough-research.md`, and the linked research-only ledger entry in `docs/EXPERIMENTS.md`; no runtime files changed.
 - Plan: [codex-breakthrough-research.md](plans/codex-breakthrough-research.md).
 - Experiment contract/job owner: none; no training or submission authorized.
-- Verification and result: clean initial worktree; fetched/pulled current main and read latest remote coordination documents. Research in progress.
-- Next handoff/blockers: publish a sourced recommendation and explicit unknowns; local private reports/results are absent. User-supplied credential will not be committed or included in logs.
+- Verification and result: reviewed six public notebook sources with version/hash provenance and official model documentation; matched historical TabPFN source hash and identified API version 2. Published a ranked queue, fold-safety findings, proposed compute caps and promotion gates. Documentation links, whitespace and credential patterns checked; no runtime tests needed or run.
+- Next handoff/blockers: recover exact incumbent OOF artifacts and finalize a bounded TabPFN contract after explicit training resumption. No measured improvement yet; private reports/results, available GPU quota and hardware feasibility remain unverified. Supplied credential was not used or saved. No job/submission occurred.
 
 ## New-agent entry template
 

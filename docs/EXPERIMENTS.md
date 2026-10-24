@@ -60,6 +60,14 @@ Decision: retain Batch6, no seed2026 confirmation. Do not recycle these arms wit
 - Distinct possible lead: [independently trained full-context TabPFN-3.5](https://www.kaggle.com/code/hemingweb/s6e10-exp01-tabpfn35-full-context). Inspected source snapshot SHA256 `6f683e494124f1169a413bb38646b046d1e3362602d9893e3fb21ad95a013c82`; numeric kernel version unknown. Its fold-separated training exists, but clean OOF gain against our incumbent is unverified. It includes a large11.5hour scheduler and a custom KV patch whose equivalence is not independently established. Do not execute it wholesale.
 - Training remains PAUSED. No diagnostic work imported public predictions, trained a model or submitted.
 
+## Codex research update — 2026-10-24, no experiments launched
+
+See [breakthrough research and proposed gates](plans/codex-breakthrough-research.md) for primary sources, source hashes, validation risks and a ranked queue. Independent TabPFN-3.5 contribution is the first hypothesis; TabM is a lower-evidence second architecture. No gain is established. Current public 0.96209 source explicitly uses leaderboard-driven selection, so it is not proof of a clean modeling improvement.
+
+Hemingweb's previously recorded source hash was matched through the public API and its current numeric version identified as **2**. Inspection also found train/test-wide category mapping and potentially uneven or partial fold/seed aggregation; any adaptation must use fold-local mappings and complete balanced outputs. The custom memory patch remains unverified. No historical result or replay tolerance changes.
+
+All proposal gates are conditional on explicit training resumption and a finalized experiment contract. No training, GPU smoke, remote job, submission or use of the supplied credential occurred. Incumbent 0.96111 remains retained.
+
 ## Contract template for later authorized experiments
 
 Record before launching: agent/owner, hypothesis and evidence, control, exact fold seed, parameters/feature changes, fixed blend weights, versions/checkpoint/source hashes, execution location, resource/time cap, promotion and stop criteria, job/kernel version and monitor owner. After completion append actual device/smoke status, complete OOF verification, paired gains, replay results/caveats, decision, artifact location/access and submissions used. Preserve rejected results; never silently replace a historical record.
