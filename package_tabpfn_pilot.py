@@ -130,7 +130,7 @@ def package():
         'RUNNER_SOURCE = ' + repr(runner) + '\nWORKER_SOURCE = ' + repr(worker) + '\nTOTAL_BUDGET_SECONDS = 1800', 1)
     (output / 'train.py').write_text(script)
     py_compile.compile(str(output / 'train.py'), doraise=True)
-    metadata = dict(id='wasidyms/s6e10-codex-tabpfn-pilot', title='S6E10 Codex TabPFN Feasibility Pilot',
+    metadata = dict(id='wasidyms/s6e10-codex-tabpfn-pilot', title='S6E10 Codex TabPFN Pilot',
         code_file='train.py', language='python', kernel_type='script', is_private=True,
         enable_gpu=True, enable_internet=True, machine_shape='NvidiaTeslaT4',
         competition_sources=['playground-series-s6e10'], dataset_sources=[], kernel_sources=[], model_sources=[])
