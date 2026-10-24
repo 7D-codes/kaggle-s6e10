@@ -63,4 +63,18 @@ The owner supplied [Summit Composer scriptVersionId361447722](https://www.kaggle
 - Launched exactly one private notebook version1, kernel140608582, at [wasidyms/s6e10-codex-tabpfn-feasibility-pilot](https://www.kaggle.com/code/wasidyms/s6e10-codex-tabpfn-feasibility-pilot). Kaggle canonicalized its slug from the title, differing from the originally requested id. Used the returned canonical URL for all monitoring; did not retry the launch.
 - Read back exact source SHA256 `46723a730d1b0148fa08072dbd4409e6700d5da7eb10c3cf11f0601c357fb277` and `is_private=true`. Server timeout1800seconds plus internal1800second deadline. Status observed RUNNING; no result yet. Root Codex is launch owner/monitor.
 - A narrow title/id consistency correction for future packaging was reviewed and tested independently (6packager tests). It does not change this running version's worker/runner source or restart the job. Historical launch metadata/hash above remains authoritative.
-- Draft integration PR: [#2](https://github.com/7D-codes/kaggle-s6e10/pull/2). No merge or competition submission performed.
+- Draft integration PR: [#2](https://github.com/7D-codes/kaggle-s6e10/pull/2). No merge to main or competition submission performed.
+
+### Pilot v1 result: rejected on native batch-size replay
+
+- Private kernel140608582, canonical feasibility-pilot version1, ended ERROR. Supervisor receipt: failed, returncode1, total runtime **81.718523721seconds**, deadline not exhausted. GPU quota readback used **0.024103333333333334hours**. No duplicate launch.
+- Actual GPU **Tesla T4**, one visible device. Peak allocated2490343936bytes; reserved2881486848bytes. Runtime: Python3.13.15; NumPy2.1.3; pandas2.3.3; sklearn1.6.1; TabPFN9.0.0; torch2.11.0+cu128. Checkpoint/train/test/source hashes matched the frozen contract.
+- Context50000rows; validation/test1000each. Repeated64-row predictions passed, but64-row versus first64of1000-row query predictions failed the predeclared `rtol=1e-6, atol=1e-7`: **28/64** violating rows, maximum violating absolute difference **0.00048846**. The check was not removed or relaxed. This autocast path is not accepted for promotion.
+- No completed prediction CSV or pilot AUC was exported; no full-fold job is authorized by this result. Full diagnostic JSON/log evidence remains in ignored `reports/tabpfn-pilot/output-v1/` and the private remote job.
+
+### Separate FP32 correction arm — predeclared before launch
+
+- New evidence is concrete query-batch-dependent autocast drift. Hypothesis: supported full-float32 inference removes this precision failure while preserving the same checkpoint, cache precision, raw features, context, split, model seed and estimator count.
+- Change only backend inference precision from autocast to `torch.float32`, serialized as `float32` in JSON, plus a dedicated consistent kernel id/title and a reduced fixed deadline. No attention patch, relaxed replay check, context shrinkage, seed search or score-tuned weights.
+- Proposed private job `wasidyms/s6e10-codex-tabpfn-fp32-pilot`, exact version/source unknown until reviewed/published. Root remains sole launch/monitor owner. Hard **1710seconds** for setup/download/execution; combined with the first82seconds remains below the original1800second total pilot envelope. Server timeout must also be1710seconds. No automatic retry.
+- Same acceptance and original tolerances. Stop this correction arm if native replay fails again, resource limits fail, or outputs are incomplete. No full-fold extension before acceptance and explicit resource forecast. Native failure is not evidence about score improvement or the full TabPFN family.

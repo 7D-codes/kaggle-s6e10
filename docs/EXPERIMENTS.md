@@ -68,6 +68,14 @@ Hemingweb's previously recorded source hash was matched through the public API a
 
 All proposal gates are conditional on explicit training resumption and a finalized experiment contract. No training, GPU smoke, remote job, submission or use of the supplied credential occurred. Incumbent 0.96111 remains retained.
 
+## Codex execution: comparator recovery, Summit audit and rejected pilot
+
+- Owner explicitly resumed the bounded research plan, then explicitly prohibited submissions. [Execution contract/results](plans/codex-bounded-tabpfn.md); [pinned Summit audit](plans/codex-summit-audit.md). All work remains on `agent/codex/bounded-tabpfn`, draft PR#2.
+- Recovered exact safe-format incumbent predictions from authorized private kernels and independently matched ledger OOF AUCs: seed42 **0.9614620347107486**, seed2026 **0.9614641415242471**. IDs, labels, folds, probability ranges and source-data hashes verified.
+- Downloaded public Summit scriptVersion361447722 and version2 output; re-ranked CSV matches its declared internal prediction hash exactly. This source describes0.96213public. Separate atlas OOF AUC recomputed **0.9621655407199953**, but it is not the exact Summit OOF and has unresolved member/fold provenance. Neither public score was independently rescored here. No candidate higher than Summit has been established.
+- Single private CUDA pilot `wasidyms/s6e10-codex-tabpfn-feasibility-pilot/1`, kernel140608582, **rejected**: autocast batch-size replay failed28/64rows at unchanged `rtol=1e-6, atol=1e-7`, max violating absolute difference0.00048846. Supervisor runtime81.7185seconds, actualT4 peak allocation2.490GB. See plan for exact versions, parameters and hashes. No completed candidate predictions/OOF or full-fold run.
+- A separately predeclared supported FP32 correction arm may test this concrete precision issue within the remaining1710second pilot budget; no tolerance relaxation or automatic retry. Source/version identity must be published and read back before interpreting it. No competition submission occurred.
+
 ## Contract template for later authorized experiments
 
 Record before launching: agent/owner, hypothesis and evidence, control, exact fold seed, parameters/feature changes, fixed blend weights, versions/checkpoint/source hashes, execution location, resource/time cap, promotion and stop criteria, job/kernel version and monitor owner. After completion append actual device/smoke status, complete OOF verification, paired gains, replay results/caveats, decision, artifact location/access and submissions used. Preserve rejected results; never silently replace a historical record.
