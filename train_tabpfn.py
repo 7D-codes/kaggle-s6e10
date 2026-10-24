@@ -20,7 +20,7 @@ FEATURES = ['Gender', 'Customer Type', 'Age', 'Type of Travel', 'Class', 'Flight
     'Inflight entertainment', 'On-board service', 'Leg room service', 'Baggage handling',
     'Checkin service', 'Cleanliness', 'Departure Delay in Minutes', 'Arrival Delay in Minutes']
 MODEL_PARAMETERS = dict(n_estimators=1, random_state=42, device='cuda:0',
-    fit_mode='fit_with_cache', kv_cache_precision='int8', inference_precision='autocast',
+    fit_mode='fit_with_cache', kv_cache_precision='int8', inference_precision='float32',
     memory_saving_mode=True, keep_cache_on_device=False)
 
 
@@ -88,6 +88,7 @@ def make_model(**parameters):
         raise RuntimeError('Pilot requires CUDA:0; CPU fallback is not authorized')
     torch.cuda.set_device(0)
     torch.cuda.reset_peak_memory_stats(0)
+    parameters['inference_precision'] = torch.float32
     return TabPFNClassifier(**parameters)
 
 

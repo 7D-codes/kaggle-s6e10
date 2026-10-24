@@ -24,7 +24,7 @@ def test_package_embeds_exact_runner_and_private_single_gpu_contract(generated):
     script, namespace = generated
     assert namespace['RUNNER_SOURCE'] == (script.parents[1] / 'train_tabpfn.py').read_text()
     metadata = json.loads((script.parent / 'kernel-metadata.json').read_text())
-    assert metadata['id'] == 'wasidyms/s6e10-codex-tabpfn-pilot'
+    assert metadata['id'] == 'wasidyms/s6e10-codex-tabpfn-fp32-pilot'
     assert '-'.join(metadata['title'].lower().split()) == metadata['id'].split('/')[1]
     assert metadata['is_private'] is True and metadata['enable_gpu'] is True
     assert metadata['enable_internet'] is True and metadata['machine_shape'] == 'NvidiaTeslaT4'
@@ -35,7 +35,7 @@ def test_package_embeds_exact_runner_and_private_single_gpu_contract(generated):
     assert 'b0662010dd17679509f42326e2f9ba37a6f58818' in worker
     assert 'ece4d67eadfea42eb0e610df5189bea60cb7f31073d81e9c7a019b76eacf0be3' in worker
     assert "CUDA_VISIBLE_DEVICES" in worker
-    assert namespace['TOTAL_BUDGET_SECONDS'] == 1800
+    assert namespace['TOTAL_BUDGET_SECONDS'] == 1710
     ast.parse(worker)
 
 
