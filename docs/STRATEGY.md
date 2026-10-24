@@ -45,8 +45,8 @@ Read `AGENTS.md`; pull first, publish your claim, work on nonoverlapping files, 
 - Ownership: this entry/project-state update, `docs/plans/codex-bounded-tabpfn.md`, linked ledger evidence and task-specific experiment runner/packager/tests, with explicit handoff before any subagent edits.
 - Plan: [codex-bounded-tabpfn.md](plans/codex-bounded-tabpfn.md).
 - Job owner/monitor: Codex; none launched. Prelaunch contract will pin model/package/source identity, folds, fixed blend and resource cap.
-- Verification: clean main, fetched/pulled latest remote documents; no local GPU, datasets, incumbent outputs or installed Kaggle credentials. Isolated dependency environment being prepared.
-- Next: authenticate using the owner-supplied token without logging it, inspect private output metadata, recover only needed safe-format artifacts and establish model access/hardware feasibility. Publish checkpoint before launch.
+- Verification: source-only baseline48tests passed; authenticated owner credential in process memory; reported30GPUhours available; official checkpoint hash/revision verified. Recovered safe-format incumbent files and independently matched both ledger AUCs exactly. See execution plan for hashes and software pins.
+- Next: integrate and review synthetic-tested pilot runner from delegated `agent/codex/tabpfn-runner`, publish source/config contract and launch one capped private pilot. Owner explicitly reiterated no submissions. Root is sole launch/monitor owner.
 
 ## New-agent entry template
 
