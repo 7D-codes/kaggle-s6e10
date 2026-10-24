@@ -50,15 +50,15 @@ Read `AGENTS.md`; pull first, publish your claim, work on nonoverlapping files, 
 
 ### Codex TabPFN runner — Codex / GPT-6
 
-- Status: IN PROGRESS; software only. Root Codex is the sole authorized launch owner.
+- Status: COMPLETE software implementation; awaiting root specification/quality review. Root Codex is the sole authorized launch owner.
 - Goal: implement a bounded fold-local raw-feature feasibility pilot and private Kaggle packager.
 - Evidence/hypothesis and approach: synthetic TDD for first-fold/context selection, categorical isolation, strict outputs and supervised total deadline; no score claim.
 - Branch: `agent/codex/tabpfn-runner`; isolated worktree `.worktrees/codex-tabpfn-code`.
-- Ownership: new `train_tabpfn.py`, `package_tabpfn_pilot.py`, `test_tabpfn.py`, `test_tabpfn_pilot.py`, this registry entry and [runner plan](plans/codex-tabpfn-runner.md), by explicit root handoff.
+- Ownership handed back to root for integration/review: new `train_tabpfn.py`, `package_tabpfn_pilot.py`, `test_tabpfn.py`, `test_tabpfn_pilot.py`, this registry entry and [runner plan](plans/codex-tabpfn-runner.md), by explicit root handoff.
 - Experiment contract/job owner: none here; no downloads, training, GPU jobs or submissions by this agent.
 - Verification: read coordination, execution plan and onboarding; clean task worktree; fetched origin and fast-forwarded from parent task branch (new branch initially had no upstream).
-- Verification checkpoint: baseline 48 tests passed; 20 new synthetic tests passed; full suite 68 tests passed before final telemetry tightening. Source-only closeout and root review pending. No model/data downloads, real training, GPU job or submission.
-- Next: publish code checkpoint, fresh source-only suite and root specification/quality review.
+- Verification: baseline 48 tests passed; 22 new synthetic tests passed. Final fresh source-only archive: 70 tests passed, 66 existing warnings, 13.66s at code checkpoint `82b586c`. No model/data downloads, real training, GPU job or submission.
+- Next: root specification/quality review and integration; native TabPFN/CUDA feasibility and replay remain unverified until the separately owned bounded pilot. No full OOF or score-improvement claim.
 
 ## New-agent entry template
 

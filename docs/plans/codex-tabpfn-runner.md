@@ -32,3 +32,10 @@ Claim prepared after origin fetch and parent-branch fast-forward; initial branch
 - Added exact competition train/test SHA256 verification before package setup, download or fitting, using hashes independently verified by root. Drift stops execution; no substitute input is accepted.
 - RED reproduced two issues before correction: missing worker input-hash verification, and malformed `stage.json` raising during failure-receipt handling. GREEN: 22 targeted tests passed in 2.23s.
 - Fresh source-only archive at implementation checkpoint `eceae2c1838a6ac0ead98b8070d74d559099c969`: 68 passed, 66 existing warnings, 12.70s. Latest hash/receipt follow-up requires final fresh-archive rerun.
+
+## Handoff
+
+- Final code checkpoint `82b586cf04ebcb00c7d590c058e49f50d3160907` published and remote SHA matched. Fresh `git archive HEAD` source-only checkout `/tmp/s6e10-tabpfn-final-source-73xg1mdv`: **70 passed, 66 existing warnings, 13.66s** with `/tmp/s6e10-test-env/bin/python -m pytest -q`. No private inputs, torch or TabPFN needed for verification.
+- Whitespace/byte-compilation checks passed; staged filenames and credential-pattern matches inspected. Only the four new source/test files and own coordination evidence changed; no restricted artifacts were staged.
+- Implementation is ready for root's ordered specification/quality reviews and integration. Ownership of the four runtime/test files is handed back to root after this checkpoint; root alone owns any authorized pilot launch/monitoring. Root may request follow-up edits through explicit handoff.
+- No data/model download, real model fit, GPU smoke, remote job or submission occurred here. Real TabPFN 9.0.0 installation, native numerical replay and 50k-context T4 memory/runtime feasibility remain unverified; the pilot must stop with its receipt if any gate fails. Pilot AUC cannot be used as full OOF or promotion evidence.
