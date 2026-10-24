@@ -81,13 +81,14 @@ Read `AGENTS.md`; pull first, publish your claim, work on nonoverlapping files, 
 
 ### Codex public context implementation — Codex / GPT-6
 
-- Status: IN PROGRESS; software implementation only, synthetic fits permitted.
+- Status: IMPLEMENTED; independent root review pending; synthetic fits only.
 - Goal: implement the frozen within-original-fold control/context experiment with strict input validation, complete receipts and unchanged numerical gates.
 - Branch: `agent/codex/public-context-stack`; isolated worktree `.worktrees/codex-public-context`.
 - Owned by explicit root handoff: new `stack_public_context.py`, `test_public_context.py`, this entry and [implementation plan](plans/codex-context-implementation.md). Root retains the scientific contract, ledger and all real fits.
 - Approach: synthetic RED/GREEN tests for isolation, provenance, metrics, bootstrap, inference and failure/export gates; no new dependencies or existing runner changes.
 - Verification: clean initial worktree; fetched origin and read latest main coordination. Initial pull reports no tracking branch; branch starts at frozen-contract commit `1cd0b17`.
-- Handoff: independent root review before any real run. No GPU, download, real-data fit or submission authorized here.
+- Verification/result: targeted37passed; code `5546ac7` fresh source-only full suite121passed/66existingwarnings/21.65s. Strict manifest/identity/probability gates, within-original-fold paired metrics, JSON replay, cap receipts and conditional promotion implemented. Root review corrections preserved centroid ranks and nonconstant threshold.
+- Handoff: independent root review before any real run. Root will assert frozen top manifest SHA in launch wrapper. No GPU, download, real-data fit or submission occurred; no scientific gain claimed.
 
 ## New-agent entry template
 
