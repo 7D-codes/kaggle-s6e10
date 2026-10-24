@@ -2,7 +2,7 @@
 
 ## Project state
 
-**Training: RESUMED for Codex's bounded breakthrough plan by the owner's explicit instruction, “great go ahead and do this plan.”** Scope: artifact recovery, a capped TabPFN pilot and gated evaluation, then the conditional TabM/combination stages in the linked plan. Competition submissions remain unauthorized. This is not permission for unrestricted searches or duplicate jobs.
+**Training: PAUSED under the owner's latest supplied AGENTS.md instructions.** The subsequent “fix it” request covers the demonstrated software defect; it does not explicitly resume training, GPU smokes or remote jobs. Earlier bounded-plan permission is historical and cannot authorize a new launch. Competition submissions remain prohibited.
 
 Retained public ROC AUC: **0.96111**, submission **57568517**. Target ≥0.962 is an ambition, not an achieved result or a promise. Read [experiment history](EXPERIMENTS.md) before proposing work.
 
@@ -38,7 +38,7 @@ Read `AGENTS.md`; pull first, publish your claim, work on nonoverlapping files, 
 
 ### Codex execution — Codex / gpt-6.1-sol
 
-- Status: IN PROGRESS; bounded training authorized by the latest owner instruction; submissions unauthorized.
+- Status: IN PROGRESS; software replay correction only. Training, GPU verification and remote jobs are PAUSED; submissions prohibited.
 - Goal: execute the sourced breakthrough plan, starting with exact comparator recovery and a TabPFN feasibility gate.
 - Evidence/hypothesis: in-context predictions may add signal to the retained three-model ensemble; no candidate gain is established.
 - Branch: `agent/codex/bounded-tabpfn`; isolated worktree `.worktrees/codex-tabpfn`.
@@ -47,7 +47,7 @@ Read `AGENTS.md`; pull first, publish your claim, work on nonoverlapping files, 
 - Replay-fix steering: owner explicitly requested “fix it”; [root-cause evidence and fixed-dispatch contract](plans/codex-tabpfn-replay-fix.md). Root owns this plan plus linked ledger/strategy updates; implementation handoff will use a separate worktree.
 - Job owner/monitor: root Codex only; autocast kernel140608582/v1 and FP32 kernel140610219/v1 both ended ERROR on cross-batch replay. FP32 failed6/64rows, max3.90410423e-6. No job remains running. Stable-dispatch verification capped1500seconds is predeclared, not launched. No duplicate jobs or competition submissions.
 - Verification: source-only baseline48tests passed; authenticated owner credential in process memory; reported30GPUhours available; official checkpoint hash/revision verified. Recovered safe-format incumbent files and independently matched both ledger AUCs exactly. See execution plan for hashes and software pins.
-- Next: synthetic TDD, independent review, then one native fixed-dispatch verification at unchanged tolerance with slot/permutation/padding checks. TabM deferred while fixing this failure. Exact friend-Summit public ranking preserved; no matching OOF supplied. Draft integration PR#2; owner explicitly prohibits competition submissions.
+- Next: finish independent review and integrate the software correction into draft PR#2. Native fixed-dispatch verification requires explicit training/GPU resumption under the latest owner instructions. TabM deferred. Exact friend-Summit public ranking preserved; no matching OOF supplied. No score improvement established.
 
 ### Codex TabPFN runner — Codex / GPT-6
 
@@ -78,6 +78,6 @@ Read `AGENTS.md`; pull first, publish your claim, work on nonoverlapping files, 
 
 ## Decisions
 
-- The prior general pause is superseded only for Codex's owner-authorized bounded execution; other unclaimed training/search/submission work is not authorized.
+- The latest owner-supplied pause supersedes earlier bounded execution permission. Software maintenance/research may continue; no new training, GPU smoke, remote job or submission.
 - Current diagnosis suggests limited model diversity; TabPFN is only an unverified research lead. Its existence is not permission to install/download/launch it.
 - Preserve historical negative results and the incumbent. No new agent should start a fresh feature/epoch sweep by default.

@@ -2,6 +2,8 @@
 
 Owner: root Codex / gpt-6.1-sol. Branch: `agent/codex/bounded-tabpfn`. User explicitly requested “fix it” after the two failed pilot results. This authorizes fixing the demonstrated inference failure; the no-competition-submission instruction remains in effect. TabM work is deferred while this fix is investigated.
 
+Current boundary: the owner's latest supplied AGENTS.md explicitly pauses training, GPU smokes and remote jobs, and invalidates past launch permission. This correction proceeds as software maintenance only. The proposed native verification below is conditional on explicit resumption; no new job will launch in this task.
+
 ## Evidence and root-cause investigation
 
 - Autocast pilot kernel140608582/v1: repeated64-row queries passed;64versus1000query comparison failed28/64rows, max violating difference0.00048846, at unchanged `rtol=1e-6, atol=1e-7`.
@@ -24,7 +26,7 @@ This changes the declared numerical execution recipe. Acceptance means reproduci
 2. Keep both original64-row repeat and1000-versus64assertions unchanged at `rtol=1e-6, atol=1e-7`, routed through the production helper.
 3. Native exact128real-row adapter/direct-classifier anchor; nonprefix sizes1,17,63,65,127,128,129; random permutation/inversion of1000rows; two predeclared rows repeated128times to test position/composition neutrality against their original mixed-block predictions. Original probabilities must remain finite, bounded, normalized and nonconstant. Record each comparison before asserting so failures remain evidence.
 4. Record active fitted preprocessor configuration plus transformed-query equality/composition checks where exposed through the supported fitted estimator, without loading foreign serialized objects. Measure complete1000-row adapter runtime, actualT4 peak memory and code/config/input/checkpoint hashes.
-5. Root alone launches one reviewed private stable-dispatch diagnostic/verification job, fixed **1500seconds** including setup/download/fitting/checks. Previous81.7185+154.1300+1500seconds stays below the original1800second combined pilot envelope. Server cap also1500seconds. No automatic retry, relaxed tolerance or search for a passing block size.
+5. Only after explicit owner resumption, root alone may launch one reviewed private stable-dispatch diagnostic/verification job, fixed **1500seconds** including setup/download/fitting/checks. Previous81.7185+154.1300+1500seconds stays below the original1800second combined pilot envelope. Server cap also1500seconds. No automatic retry, relaxed tolerance or search for a passing block size. This is a proposed contract, not current launch authorization.
 6. Stop if any semantic/slot/permutation/replay check fails, or if resource/coverage/provenance fails. No full-fold training before numerical acceptance and a resource forecast. Passing this fix does not establish a score improvement.
 
 ## Progress

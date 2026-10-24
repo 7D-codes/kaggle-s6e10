@@ -2,6 +2,8 @@
 
 Owner: Codex / gpt-6.1-sol. Branch: `agent/codex/bounded-tabpfn`. Worktree: `.worktrees/codex-tabpfn`. The owner explicitly authorized execution of [the research plan](codex-breakthrough-research.md). Training/GPU pilots in its caps are resumed; competition submissions remain unauthorized.
 
+Latest boundary: the owner subsequently supplied AGENTS.md with an explicit training/GPU/remote-job pause and no reuse of past launch permission. That pause now controls. The following execution history is preserved; the replay fix is software-only until explicit resumption. Competition submissions remain prohibited.
+
 ## Scope and order
 
 1. Recover exact seed-42/2026 incumbent predictions and competition data using authorized Kaggle access; validate public-safe hashes and fold/ID/target alignment.
