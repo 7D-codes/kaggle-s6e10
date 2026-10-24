@@ -1,4 +1,4 @@
-"""Create the private 1,710-second TabPFN FP32 feasibility package. Never launches or submits."""
+"""Create the private 1,500-second TabPFN stable-dispatch feasibility package. Never launches or submits."""
 import json
 from pathlib import Path
 import py_compile
@@ -65,7 +65,7 @@ SUPERVISOR = '''import time
 STARTED = time.monotonic()
 import hashlib, json, os, signal, subprocess, sys
 from pathlib import Path
-TOTAL_BUDGET_SECONDS = 1710
+TOTAL_BUDGET_SECONDS = 1500
 
 def supervise(output, worker_source, deadline):
     started = time.monotonic()
@@ -126,11 +126,11 @@ def package():
     output.mkdir(exist_ok=False)
     runner = (root / 'train_tabpfn.py').read_text()
     worker = 'RUNNER_SOURCE = ' + repr(runner) + '\n' + WORKER
-    script = SUPERVISOR.replace('TOTAL_BUDGET_SECONDS = 1710',
-        'RUNNER_SOURCE = ' + repr(runner) + '\nWORKER_SOURCE = ' + repr(worker) + '\nTOTAL_BUDGET_SECONDS = 1710', 1)
+    script = SUPERVISOR.replace('TOTAL_BUDGET_SECONDS = 1500',
+        'RUNNER_SOURCE = ' + repr(runner) + '\nWORKER_SOURCE = ' + repr(worker) + '\nTOTAL_BUDGET_SECONDS = 1500', 1)
     (output / 'train.py').write_text(script)
     py_compile.compile(str(output / 'train.py'), doraise=True)
-    metadata = dict(id='wasidyms/s6e10-codex-tabpfn-fp32-pilot', title='S6E10 Codex TabPFN FP32 Pilot',
+    metadata = dict(id='wasidyms/s6e10-codex-tabpfn-stable-pilot', title='S6E10 Codex TabPFN Stable Pilot',
         code_file='train.py', language='python', kernel_type='script', is_private=True,
         enable_gpu=True, enable_internet=True, machine_shape='NvidiaTeslaT4',
         competition_sources=['playground-series-s6e10'], dataset_sources=[], kernel_sources=[], model_sources=[])
