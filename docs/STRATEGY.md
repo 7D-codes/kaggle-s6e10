@@ -50,7 +50,7 @@ Read `AGENTS.md`; pull first, publish your claim, work on nonoverlapping files, 
 
 ### Codex TabPFN runner — Codex / GPT-6
 
-- Status: IN PROGRESS narrow metadata follow-up by explicit root handoff; package title/ID regression only. Root retains sole launch/monitor ownership.
+- Status: COMPLETE narrow metadata follow-up by explicit root handoff; future package title now matches intended ID. RED reproduced slug mismatch, GREEN targeted packager suite 6 passed in 1.05s. Root retains sole launch/monitor ownership; no launch/restart/submission here.
 - Goal: implement a bounded fold-local raw-feature feasibility pilot and private Kaggle packager.
 - Evidence/hypothesis and approach: synthetic TDD for first-fold/context selection, categorical isolation, strict outputs and supervised total deadline; no score claim.
 - Branch: `agent/codex/tabpfn-runner`; isolated worktree `.worktrees/codex-tabpfn-code`.

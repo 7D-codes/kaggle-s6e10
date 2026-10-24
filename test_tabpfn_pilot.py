@@ -25,6 +25,7 @@ def test_package_embeds_exact_runner_and_private_single_gpu_contract(generated):
     assert namespace['RUNNER_SOURCE'] == (script.parents[1] / 'train_tabpfn.py').read_text()
     metadata = json.loads((script.parent / 'kernel-metadata.json').read_text())
     assert metadata['id'] == 'wasidyms/s6e10-codex-tabpfn-pilot'
+    assert '-'.join(metadata['title'].lower().split()) == metadata['id'].split('/')[1]
     assert metadata['is_private'] is True and metadata['enable_gpu'] is True
     assert metadata['enable_internet'] is True and metadata['machine_shape'] == 'NvidiaTeslaT4'
     assert metadata['competition_sources'] == ['playground-series-s6e10']
