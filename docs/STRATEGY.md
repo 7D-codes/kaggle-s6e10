@@ -50,11 +50,11 @@ Read `AGENTS.md`; pull first, publish your claim, work on nonoverlapping files, 
 
 ### Codex TabPFN runner — Codex / GPT-6
 
-- Status: COMPLETE narrow metadata follow-up by explicit root handoff; future package title now matches intended ID. RED reproduced slug mismatch, GREEN targeted packager suite 6 passed in 1.05s. Root retains sole launch/monitor ownership; no launch/restart/submission here.
+- Status: IN PROGRESS fixed FP32 correction arm by explicit root handoff after reported native autocast batch-size replay failure; tolerances unchanged. Root retains sole launch/monitor ownership.
 - Goal: implement a bounded fold-local raw-feature feasibility pilot and private Kaggle packager.
 - Evidence/hypothesis and approach: synthetic TDD for first-fold/context selection, categorical isolation, strict outputs and supervised total deadline; no score claim.
 - Branch: `agent/codex/tabpfn-runner`; isolated worktree `.worktrees/codex-tabpfn-code`.
-- Ownership handed back to root for integration/review: new `train_tabpfn.py`, `package_tabpfn_pilot.py`, `test_tabpfn.py`, `test_tabpfn_pilot.py`, this registry entry and [runner plan](plans/codex-tabpfn-runner.md), by explicit root handoff.
+- Narrow ownership reclaimed by root handoff for FP32 correction only: new `train_tabpfn.py`, `package_tabpfn_pilot.py`, `test_tabpfn.py`, `test_tabpfn_pilot.py`, this registry entry and [runner plan](plans/codex-tabpfn-runner.md), by explicit root handoff.
 - Experiment contract/job owner: none here; no downloads, training, GPU jobs or submissions by this agent.
 - Verification: read coordination, execution plan and onboarding; clean task worktree; fetched origin and fast-forwarded from parent task branch (new branch initially had no upstream).
 - Verification: baseline 48 tests passed; 22 new synthetic tests passed. Final fresh source-only archive: 70 tests passed, 66 existing warnings, 13.66s at code checkpoint `82b586c`. No model/data downloads, real training, GPU job or submission.
