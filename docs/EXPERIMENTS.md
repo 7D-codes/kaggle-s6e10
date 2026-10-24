@@ -83,6 +83,10 @@ All proposal gates are conditional on explicit training resumption and a finaliz
 - Independent specification PASS and quality APPROVE; root integrated 528072f fresh source-only suite passed 84 tests (66 existing warnings, 13.63s). Locally generated private package compiled; public-safe source hashes are in the linked plan. No native numerical/score acceptance follows from synthetic tests.
 - Retain public0.96111 and both prior failed pilot results. Full OOF gain, exact-Summit offline improvement, T4 numerical checks and runtime feasibility remain unknown. Draft PR#2 contains the software work; no merge to main.
 
+## Stable Pilot resumption — one verification only
+
+The owner explicitly authorized connecting with the supplied Kaggle information, checking quota first and pushing the reviewed pilot to a GPU. This resumes only the [1500-second native verification contract](plans/codex-tabpfn-replay-fix.md); full-fold training/search and submissions remain unauthorized. Root Codex alone owns launch/monitoring. Frozen model/data/seed/FP32/fixed128 settings and original tolerances remain unchanged. Quota/active-job preflight and exact remote source/privacy readback are required. No new result yet.
+
 ## Contract template for later authorized experiments
 
 Record before launching: agent/owner, hypothesis and evidence, control, exact fold seed, parameters/feature changes, fixed blend weights, versions/checkpoint/source hashes, execution location, resource/time cap, promotion and stop criteria, job/kernel version and monitor owner. After completion append actual device/smoke status, complete OOF verification, paired gains, replay results/caveats, decision, artifact location/access and submissions used. Preserve rejected results; never silently replace a historical record.

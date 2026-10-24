@@ -2,7 +2,7 @@
 
 ## Project state
 
-**Training: PAUSED under the owner's latest supplied AGENTS.md instructions.** The subsequent “fix it” request covers the demonstrated software defect; it does not explicitly resume training, GPU smokes or remote jobs. Earlier bounded-plan permission is historical and cannot authorize a new launch. Competition submissions remain prohibited.
+**GPU verification RESUMED for one capped Stable Pilot by the owner's latest instruction: “connect using the kaggle info in the image and push to the gpu, check qouta first.”** Check quota/active jobs first; root alone launches and monitors the reviewed1500-second pilot. Full-fold training/search remains paused. Competition submissions remain prohibited.
 
 Retained public ROC AUC: **0.96111**, submission **57568517**. Target ≥0.962 is an ambition, not an achieved result or a promise. Read [experiment history](EXPERIMENTS.md) before proposing work.
 
@@ -38,16 +38,16 @@ Read `AGENTS.md`; pull first, publish your claim, work on nonoverlapping files, 
 
 ### Codex execution — Codex / gpt-6.1-sol
 
-- Status: software replay correction COMPLETE and independently reviewed; native acceptance PENDING. Training, GPU verification and remote jobs are PAUSED; submissions prohibited.
+- Status: IN PROGRESS; software correction reviewed, one native verification pilot explicitly authorized. Quota/active-job checks precede launch; full-fold training and submissions unauthorized.
 - Goal: execute the sourced breakthrough plan, starting with exact comparator recovery and a TabPFN feasibility gate.
 - Evidence/hypothesis: in-context predictions may add signal to the retained three-model ensemble; no candidate gain is established.
 - Branch: `agent/codex/bounded-tabpfn`; isolated worktree `.worktrees/codex-tabpfn`.
 - Ownership: this entry/project-state update, `docs/plans/codex-bounded-tabpfn.md`, [Summit audit](plans/codex-summit-audit.md), linked ledger evidence and task-specific experiment runner/packager/tests, with explicit handoff before any subagent edits.
 - Plan: [codex-bounded-tabpfn.md](plans/codex-bounded-tabpfn.md).
 - Replay-fix steering: owner explicitly requested “fix it”; [root-cause evidence, fixed-dispatch contract and verification](plans/codex-tabpfn-replay-fix.md). Root owns this plan plus linked ledger/strategy updates; isolated implementation was reviewed and handed back before integration.
-- Job owner/monitor: root Codex only; autocast kernel140608582/v1 and FP32 kernel140610219/v1 both ended ERROR on cross-batch replay. FP32 failed6/64rows, max3.90410423e-6. No job remains running. Stable-dispatch verification capped1500seconds is predeclared, not launched. No duplicate jobs or competition submissions.
+- Job owner/monitor: root Codex only; previous autocast140608582/v1 and FP32140610219/v1 both ended ERROR. Planned private `wasidyms/s6e10-codex-tabpfn-stable-pilot`, fixed1500-second internal/server caps; version unknown before API readback. No duplicate launch/retry or competition submission.
 - Verification: specification PASS and quality APPROVE at code 336d971; each independently reran36 targeted tests. Integrated code 528072f fresh source-only suite: 84 passed, 66 existing warnings, 13.63s. Stable package generated/compiled locally with source/metadata hashes recorded. No new GPU job or submission during the software fix. Earlier recovery matched both incumbent ledger AUCs; failed pilot evidence preserved.
-- Next: draft PR#2 contains the software correction. Native fixed-dispatch verification requires explicit training/GPU resumption under the latest owner instructions. TabM deferred. Exact friend-Summit public ranking preserved; no matching OOF supplied. No score improvement established.
+- Next: quota/job preflight, publish unchanged package hashes/contract, launch exactly one private T4 pilot, verify remote source/privacy and monitor all native gates. Stop on any failure. No full-fold extension within this authorization; TabM deferred. No score improvement established.
 
 ### Codex TabPFN runner — Codex / GPT-6
 
@@ -89,6 +89,6 @@ Read `AGENTS.md`; pull first, publish your claim, work on nonoverlapping files, 
 
 ## Decisions
 
-- The latest owner-supplied pause supersedes earlier bounded execution permission. Software maintenance/research may continue; no new training, GPU smoke, remote job or submission.
+- Latest explicit owner instruction resumes only one capped Stable Pilot after quota checks. General training/search remains paused; submissions prohibited.
 - Current diagnosis suggests limited model diversity; TabPFN is only an unverified research lead. Its existence is not permission to install/download/launch it.
 - Preserve historical negative results and the incumbent. No new agent should start a fresh feature/epoch sweep by default.
