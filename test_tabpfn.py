@@ -1,5 +1,6 @@
 """Synthetic tests for bounded raw-feature TabPFN wiring; no torch/model download."""
 import json
+import sys
 from types import SimpleNamespace
 
 import numpy as np
@@ -93,6 +94,8 @@ def test_pilot_fits_only_first_50000_fold0_context_and_preserves_outputs(tmp_pat
     assert metadata['status'] == 'complete' and metadata['full_oof'] is False
     assert metadata['context_rows'] == 50000 and metadata['validation_rows'] == metadata['test_rows'] == 1000
     assert metadata['submissions'] == 0
+    assert metadata['model_parameters']['inference_precision'] == 'float32'
+    assert json.loads((output / 'metrics.json').read_text())['model_parameters']['inference_precision'] == 'float32'
     assert metadata['repeat_prediction']['rtol'] == 1e-6 and metadata['repeat_prediction']['atol'] == 1e-7
     assert metadata['hashes']['checkpoint'] == pilot.sha256(checkpoint)
     assert json.loads((output / 'metrics.json').read_text())['status'] == 'complete'
@@ -101,7 +104,7 @@ def test_pilot_fits_only_first_50000_fold0_context_and_preserves_outputs(tmp_pat
     assert (output / 'metrics.json').read_bytes() == original
 
 
-def test_repeat_prediction_difference_fails_without_partial_complete_claim(tmp_path):
+def test_batch_size_prediction_difference_fails_without_partial_complete_claim(tmp_path):
     train, test = frames(); data = tmp_path / 'data'; data.mkdir()
     train.to_csv(data / 'train.csv', index=False); test.to_csv(data / 'test.csv', index=False)
     checkpoint = tmp_path / 'model'; checkpoint.write_bytes(b'fake')
@@ -119,3 +122,19 @@ def test_repeat_prediction_difference_fails_without_partial_complete_claim(tmp_p
     assert failed['device']['requested'] == 'cuda:0'
     assert failed['device']['peak_allocated_bytes'] is None
     assert not (args.output / 'pilot-validation.csv').exists()
+
+
+def test_backend_receives_fixed_float32_without_changing_serialized_config(monkeypatch):
+    dtype = object()
+    torch = SimpleNamespace(float32=dtype, cuda=SimpleNamespace(is_available=lambda: True,
+        device_count=lambda: 1, set_device=lambda index: None, reset_peak_memory_stats=lambda index: None))
+    monkeypatch.setitem(sys.modules, 'torch', torch)
+    monkeypatch.setitem(sys.modules, 'tabpfn', SimpleNamespace(TabPFNClassifier=Estimator))
+    monkeypatch.setattr(pilot, 'version', lambda name: '9.0.0')
+    parameters = dict(pilot.MODEL_PARAMETERS)
+    model = pilot.make_model(**parameters)
+    assert model.parameters['inference_precision'] is dtype
+    assert parameters['inference_precision'] == 'float32'
+    assert json.loads(json.dumps(pilot.MODEL_PARAMETERS))['inference_precision'] == 'float32'
+    assert {key: value for key, value in model.parameters.items() if key != 'inference_precision'} == {
+        key: value for key, value in parameters.items() if key != 'inference_precision'}
