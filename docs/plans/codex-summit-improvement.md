@@ -2,6 +2,8 @@
 
 Owner: root Codex. Branch: `agent/codex/bounded-tabpfn`. Task: correct the working benchmark after the owner pointed out that the public-code result already exceeds0.96200. No new training/submission is launched by this baseline alignment.
 
+Latest steering: owner explicitly prefers adapting the existing composer and predictions, and rejects starting another model. The [direct composer adaptation](codex-summit-composer-adaptation.md) supersedes the proposed component-training direction below; preserve it as rationale/history only. No training or submission.
+
 ## Working baseline
 
 Use the exact supplied Summit Composer output as the baseline for candidate test predictions: scriptVersion361447722 / API version2. Source describes public ROC AUC0.96213, despite the0.96210URL title. The owner confirms their public-code result is already above0.96200. Its exact submitted score/receipt was not supplied; no independent leaderboard rescore is claimed. Historical own-model0.96111 remains archived as a secondary reproducible control, not the main target to beat.
