@@ -95,6 +95,12 @@ The owner clarified that their public-code result already exceeds0.96200. Treat 
 
 Exact public CSV frozen locally with299844competition test IDs/order, original CSV/rank hashes and byte-identical readback verified. [Corrected component-based approach and artifact evidence](plans/codex-summit-improvement.md). Public pool already includes TabPFN/TabM; exact-Summit OOF remains unavailable. No new job/submission or runtime code change in this alignment.
 
+## Direct Composer derivative — unscored
+
+Owner rejected starting another model and requested building directly on the public code. [Direct adaptation evidence](plans/codex-summit-composer-adaptation.md): recovered11hash-pinned public inputs, reproduced original ranking and CSV hashes exactly, then changed only TabPFN layer share0.08→0.07 with step5/other recipe settings fixed. Exported attributed edited notebook plus299844-row candidate CSV locally; fresh-process notebook replay matches candidate bytes. No training/GPU job/submission or repository runtime code change.
+
+Candidate CSV SHA256 `53d2f5bb522d18bedd1acc2e91fc56435b3ae39e67af48148350c5a45a1423f9`. Candidate AUC **unknown**; rank movement is descriptive, not improvement evidence. Keep the original0.96213public-code result as baseline. Matching exact-Summit OOF remains unavailable. No weight search, added model or private-input bypass.
+
 ## Contract template for later authorized experiments
 
 Record before launching: agent/owner, hypothesis and evidence, control, exact fold seed, parameters/feature changes, fixed blend weights, versions/checkpoint/source hashes, execution location, resource/time cap, promotion and stop criteria, job/kernel version and monitor owner. After completion append actual device/smoke status, complete OOF verification, paired gains, replay results/caveats, decision, artifact location/access and submissions used. Preserve rejected results; never silently replace a historical record.

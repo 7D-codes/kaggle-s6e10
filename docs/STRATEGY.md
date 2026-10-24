@@ -4,7 +4,7 @@
 
 **Authorized Stable Pilot COMPLETE; native numerical gate PASSED.** The owner's latest instruction resumed one capped GPU verification after quota checks; that single run is complete. Full-fold training/search remains paused. Competition submissions remain prohibited.
 
-Current task: directly adapt the supplied Summit Composer using its existing public prediction inputs. The owner rejected the new-model direction. Reproduce its unchanged output first, then prepare one controlled blend-setting derivative locally; no training, GPU job or submission. [Owned plan](plans/codex-summit-composer-adaptation.md).
+Direct Summit Composer adaptation COMPLETE:11public inputs hash-verified, original CSV/ranking reproduced exactly, one unscored derivative changes TabPFNshare8%to7%. Edited notebook and candidate exported locally, with exact fresh-process replay. No training, GPU job or submission. [Evidence/artifacts](plans/codex-summit-composer-adaptation.md).
 
 Historical own-model public ROC AUC: **0.96111**, submission **57568517**, retained for reproducible control/evidence. The owner's supplied public-code result already exceeds0.96200 and is the primary benchmark below. Read [experiment history](EXPERIMENTS.md) before proposing work.
 
@@ -42,7 +42,7 @@ Read `AGENTS.md`; pull first, publish your claim, work on nonoverlapping files, 
 
 ### Codex execution — Codex / gpt-6.1-sol
 
-- Status: IN PROGRESS on direct public-composer adaptation. Stable Pilot complete; new-model feature experiment deferred. Training/GPU jobs/submissions unauthorized.
+- Status: COMPLETE for direct public-composer reproduction and one unscored derivative. Stable Pilot complete; new-model feature experiment deferred. Training/GPU jobs/submissions unauthorized.
 - Goal: improve beyond the supplied Summit public-code result; preserve own-model controls and completed feasibility evidence.
 - Evidence/hypothesis: exact Summit CSV/source recovered, but not yet improved. Related181-member pool already includes TabPFN/TabM, so a family change alone does not establish new signal. [Corrected baseline task](plans/codex-summit-improvement.md).
 - Branch: `agent/codex/bounded-tabpfn`; isolated worktree `.worktrees/codex-tabpfn`.
@@ -51,7 +51,7 @@ Read `AGENTS.md`; pull first, publish your claim, work on nonoverlapping files, 
 - Replay-fix steering: owner explicitly requested “fix it”; [root-cause evidence, fixed-dispatch contract and verification](plans/codex-tabpfn-replay-fix.md). Root owns this plan plus linked ledger/strategy updates; isolated implementation was reviewed and handed back before integration.
 - Job owner/monitor: root Codex only; previous autocast140608582/v1 and FP32140610219/v1 both ended ERROR. Private `wasidyms/s6e10-codex-tabpfn-stable-pilot/1`, kernel140647663, COMPLETE after166.4433seconds; all15native comparisons exact, peak allocated3.312GB. Quota remaining29.88344hours. Exact source/privacy read back; no duplicate launch/retry or submission.
 - Verification: specification PASS and quality APPROVE at code 336d971; each independently reran36 targeted tests. Integrated code 528072f fresh source-only suite: 84 passed, 66 existing warnings, 13.63s. Stable package generated/compiled locally with source/metadata hashes recorded. No new GPU job or submission during the software fix. Earlier recovery matched both incumbent ledger AUCs; failed pilot evidence preserved.
-- Next: retrieve hash-pinned public inputs, reproduce exact original composer, then change only TAB_W0.08to0.07 and export an unscored candidate/edited notebook/receipts. Stop on any source/hash mismatch. No training or submission; exact-Summit OOF/score gain remains unavailable.
+- Verification/handoff:11public input hashes and299844IDs verified; unchanged composer matches original rank/CSV hashes; candidate setting-only comparison and fresh edited-notebook replay exact. Local `results/summit-composer-adaptation-v1/` contains candidate CSV/notebook/baseline/receipt; no restricted artifacts committed. Candidate AUC remains unknown; preserve0.96213reference and no-submission boundary.
 
 ### Codex TabPFN runner — Codex / GPT-6
 
