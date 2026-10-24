@@ -30,4 +30,12 @@ Raw notebook/public predictions and private receipts remain ignored under local 
 3. Continue the reviewed bounded TabPFN pilot. A later complete new member must first demonstrate incremental value on an auditable OOF control. Do not tune a Summit blend from test-only rank correlations or invent its offline AUC.
 4. If exact Summit OOF is available, verify its IDs/folds, recipe correspondence and base-model isolation before testing a fixed additive blend. If unavailable, clearly distinguish any later experimental Summit blend from an offline-validated improvement.
 
+Owner response: unsure whether exact OOF exists; friend used the public code. Proceed with public-source audit and the already verified controls, without assuming missing artifacts exist.
+
+### Independent model behind the public layer
+
+Inspected [Mehran's TabPFN source](https://www.kaggle.com/code/mehrankazeminia/1-airline-s6e10-tabpfn), API version1, SHA256 `c5a65903556fc1f9a2a40e95d6b853c38219dc78e0c38556fb308a7b5299a191`. It uses ten TabPFN-3.5 estimators, balanced300000-row subsampling, interaction target encodings and label-based feature selection, fitting all training rows without a matching OOF export. That is a different experiment from our raw50k one-estimator feasibility pilot. Its preprocessing/feature selection would need to be fitted independently within outer training folds for validation.
+
+Research implication: after compatibility is established, one predeclared interaction-feature view is more specific than blindly adding seeds or increasing blend extrapolation. Do not reuse its selected features or full-data target encodings as if independent of our evaluation labels. The public181-member pool already lists both TabPFN and a TabM member; model-family novelty alone cannot establish contribution to that pool. Existing pilot/control work establishes our own reproducible comparison path, not a promise to surpass the much larger public ensemble.
+
 No score above the friend's result has been demonstrated. No Summit-derived weights were optimized, no hidden labels used, and no competition submission occurred.

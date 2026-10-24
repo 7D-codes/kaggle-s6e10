@@ -57,3 +57,10 @@ The owner supplied [Summit Composer scriptVersionId361447722](https://www.kaggle
 - Generated private job source SHA256 `46723a730d1b0148fa08072dbd4409e6700d5da7eb10c3cf11f0601c357fb277`; metadata SHA256 `8f3d177f3ea8680c5ca4a6315b632b42c1e5352f6f54c16a9ef2b2c458c52d31`. Publication and source readback required before interpreting outputs.
 - Server runtime cap will also be1800seconds in addition to the internal full-process deadline. One pilot only; no automatic relaunch on an uncertain API result. Record returned kernel/version, actual runtime and outputs after launch.
 - [Summit audit](codex-summit-audit.md) verified the exact public ranking and a separate advertised OOF stack; no matching exact-Summit OOF was supplied. No claim of improvement over that public file.
+
+### First pilot launch
+
+- Launched exactly one private notebook version1, kernel140608582, at [wasidyms/s6e10-codex-tabpfn-feasibility-pilot](https://www.kaggle.com/code/wasidyms/s6e10-codex-tabpfn-feasibility-pilot). Kaggle canonicalized its slug from the title, differing from the originally requested id. Used the returned canonical URL for all monitoring; did not retry the launch.
+- Read back exact source SHA256 `46723a730d1b0148fa08072dbd4409e6700d5da7eb10c3cf11f0601c357fb277` and `is_private=true`. Server timeout1800seconds plus internal1800second deadline. Status observed RUNNING; no result yet. Root Codex is launch owner/monitor.
+- A narrow title/id consistency correction for future packaging was reviewed and tested independently (6packager tests). It does not change this running version's worker/runner source or restart the job. Historical launch metadata/hash above remains authoritative.
+- Draft integration PR: [#2](https://github.com/7D-codes/kaggle-s6e10/pull/2). No merge or competition submission performed.
