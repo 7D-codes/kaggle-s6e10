@@ -14,12 +14,13 @@ Read `AGENTS.md`; pull first, publish your claim, work on nonoverlapping files, 
 
 ### Hiro — Hermes / gpt-6.1-sol
 
-- Status: COMPLETE, collaboration reboot delivered. Training remains PAUSED; no jobs/submissions launched.
+- Status: IN PROGRESS, bounded documentation-only review follow-up. Training remains PAUSED; no jobs/submissions launched.
+- Follow-up claim: `AGENTS.md`, the collaboration wording in `README.md`, and Hiro's own registry/plan entries only. Strategy: explicitly exempt self-registration and uniquely named personal plans from broad folder ownership so onboarding cannot deadlock.
 - Plan: [hiro-repository-reboot.md](plans/hiro-repository-reboot.md).
 - Goal: make rules, scientific state and onboarding available to all agents in Git; verify tests do not secretly require this workstation's ignored artifacts.
 - Strategy: publish collaboration rules first; audit a source-only checkout; correct only demonstrated onboarding/test defects; publish concise experiment history and artifact-access constraints; remove disposable task caches only.
 - Branch: `main` for this bounded maintenance task.
-- Ownership released: no files remain reserved by Hiro. Changed `AGENTS.md`, `README.md`, `docs/` and the demonstrated test artifact dependency in `test_route_confirmation.py`.
+- Previous reboot ownership released; only the follow-up claim above is active. Historical changes: `AGENTS.md`, `README.md`, `docs/` and the demonstrated test artifact dependency in `test_route_confirmation.py`.
 - Verification: source-only RED reproduced the private-manifest dependency; corrected full source-only suite passed48tests (66existing warnings,13.70s). Post-cleanup smoke regression passed1test. Local documentation links checked. No private data/models required for the suite.
 - Handoff: pull current main, read the collaboration-only README, register your own name/strategy and create a plan before work. Teammate GitHub username is still needed to resolve the requested collaborator invite. Scientific artifacts preserved; broad disk recovery remains out of scope.
 
