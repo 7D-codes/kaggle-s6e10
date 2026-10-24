@@ -4,7 +4,7 @@
 
 **Authorized Stable Pilot COMPLETE; native numerical gate PASSED.** The owner's latest instruction resumed one capped GPU verification after quota checks; that single run is complete. Full-fold training/search remains paused. Competition submissions remain prohibited.
 
-Retained public ROC AUC: **0.96111**, submission **57568517**. Target ≥0.962 is an ambition, not an achieved result or a promise. Read [experiment history](EXPERIMENTS.md) before proposing work.
+Historical own-model public ROC AUC: **0.96111**, submission **57568517**, retained for reproducible control/evidence. The owner's supplied public-code result already exceeds0.96200 and is the primary benchmark below. Read [experiment history](EXPERIMENTS.md) before proposing work.
 
 **Primary working benchmark: the owner's supplied Summit Composer public-code result, already above0.96200.** Its pinned version describes0.96213public. Preserve0.96111 as historical own-model evidence; future candidate improvement must target Summit. See [corrected baseline/approach](plans/codex-summit-improvement.md). Exact owner submission receipt remains unknown; no independent rescore is claimed.
 

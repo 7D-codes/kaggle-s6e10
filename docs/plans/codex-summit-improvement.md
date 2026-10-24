@@ -18,4 +18,6 @@ Public CSV:299844rows, SHA256 `0c6d65f427725bd57ed2885826c451f6eb0952a983bd62ab8
 
 ## Progress and handoff
 
-Existing exact notebook/CSV and public atlas have been re-inspected. The baseline distinction and source-lineage constraint are now explicit. Freeze/readback verification pending. Next model work must target contribution beyond this supplied Summit result, with a separate bounded experiment contract if training is resumed. No improved candidate or score is claimed by this correction.
+Baseline alignment COMPLETE. Existing exact notebook/CSV and public atlas re-inspected. Frozen local `results/summit-baseline/submission.csv` is byte-identical to the public version2 output; all299844IDs/order, finite bounded nonconstant values, CSV hash and declared rank hash independently verified. Local manifest SHA256 `f78d7696620f3a3522d08777c7d73012e84290a9da559f36dd741d7389ae51bc`. No runtime code change, model fit, GPU job or submission occurred; assert-based artifact checks passed, so no model/test-suite rerun was needed. No raw predictions/manifest committed.
+
+The baseline distinction and source-lineage constraint are now explicit. Next model work must target contribution beyond this supplied Summit result, with a separate bounded experiment contract if training is resumed. No improved candidate or score is claimed by this correction. Earlier TabPFN work established reliable inference, not progress beyond Summit.

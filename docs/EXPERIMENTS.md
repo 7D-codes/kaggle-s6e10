@@ -89,6 +89,12 @@ The owner explicitly authorized connecting with the supplied Kaggle information,
 
 Result: private `wasidyms/s6e10-codex-tabpfn-stable-pilot/1`, kernel140647663, **COMPLETE/PASSED**. All15native comparisons exact at original tolerances;38backend calls128x21, fitted CPU checks exact. Runtime166.4433seconds, TeslaT4 peak allocated3312146944bytes;1000-query inference4.4328seconds. Independently verified CSV IDs/targets/folds/probabilities and all model/data/checkpoint/config hashes. Pilot-only1000-row AUC0.9583477202847794 is diagnostic, not full OOF or score improvement. Quota29.93146hours before,29.88344after; no prior active jobs and no duplicate launch/submission. Accept the tested canonical numerical recipe; full-fold context/resource forecast and full OOF require a separately authorized contract. Detailed hashes/versions/limits in the linked plan; retained public0.96111 unchanged.
 
+## Working benchmark correction — Summit first
+
+The owner clarified that their public-code result already exceeds0.96200. Treat the supplied Summit Composer version361447722/APIv2 output (source-reported0.96213) as the primary candidate baseline. Historical own-model0.96111 remains preserved as a secondary reproducible control. No improvement over Summit has yet been trained or established; the successful raw50kTabPFN pilot was inference verification only.
+
+Exact public CSV frozen locally with299844competition test IDs/order, original CSV/rank hashes and byte-identical readback verified. [Corrected component-based approach and artifact evidence](plans/codex-summit-improvement.md). Public pool already includes TabPFN/TabM; exact-Summit OOF remains unavailable. No new job/submission or runtime code change in this alignment.
+
 ## Contract template for later authorized experiments
 
 Record before launching: agent/owner, hypothesis and evidence, control, exact fold seed, parameters/feature changes, fixed blend weights, versions/checkpoint/source hashes, execution location, resource/time cap, promotion and stop criteria, job/kernel version and monitor owner. After completion append actual device/smoke status, complete OOF verification, paired gains, replay results/caveats, decision, artifact location/access and submissions used. Preserve rejected results; never silently replace a historical record.
