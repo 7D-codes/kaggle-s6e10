@@ -2,7 +2,7 @@
 
 ## Project state
 
-**Training: PAUSED by the owner.** Current phase: collaboration reboot, housekeeping and knowledge transfer. No experiment or competition submission is authorized by this document. Resume only on an explicit owner instruction.
+**Training: RESUMED for Codex's bounded breakthrough plan by the owner's explicit instruction, “great go ahead and do this plan.”** Scope: artifact recovery, a capped TabPFN pilot and gated evaluation, then the conditional TabM/combination stages in the linked plan. Competition submissions remain unauthorized. This is not permission for unrestricted searches or duplicate jobs.
 
 Retained public ROC AUC: **0.96111**, submission **57568517**. Target ≥0.962 is an ambition, not an achieved result or a promise. Read [experiment history](EXPERIMENTS.md) before proposing work.
 
@@ -36,6 +36,18 @@ Read `AGENTS.md`; pull first, publish your claim, work on nonoverlapping files, 
 - Verification and result: reviewed six public notebook sources with version/hash provenance and official model documentation; matched historical TabPFN source hash and identified API version 2. Published a ranked queue, fold-safety findings, proposed compute caps and promotion gates. Documentation links, whitespace and credential patterns checked; no runtime tests needed or run.
 - Next handoff/blockers: recover exact incumbent OOF artifacts and finalize a bounded TabPFN contract after explicit training resumption. No measured improvement yet; private reports/results, available GPU quota and hardware feasibility remain unverified. Supplied credential was not used or saved. No job/submission occurred.
 
+### Codex execution — Codex / gpt-6.1-sol
+
+- Status: IN PROGRESS; bounded training authorized by the latest owner instruction; submissions unauthorized.
+- Goal: execute the sourced breakthrough plan, starting with exact comparator recovery and a TabPFN feasibility gate.
+- Evidence/hypothesis: in-context predictions may add signal to the retained three-model ensemble; no candidate gain is established.
+- Branch: `agent/codex/bounded-tabpfn`; isolated worktree `.worktrees/codex-tabpfn`.
+- Ownership: this entry/project-state update, `docs/plans/codex-bounded-tabpfn.md`, linked ledger evidence and task-specific experiment runner/packager/tests, with explicit handoff before any subagent edits.
+- Plan: [codex-bounded-tabpfn.md](plans/codex-bounded-tabpfn.md).
+- Job owner/monitor: Codex; none launched. Prelaunch contract will pin model/package/source identity, folds, fixed blend and resource cap.
+- Verification: clean main, fetched/pulled latest remote documents; no local GPU, datasets, incumbent outputs or installed Kaggle credentials. Isolated dependency environment being prepared.
+- Next: authenticate using the owner-supplied token without logging it, inspect private output metadata, recover only needed safe-format artifacts and establish model access/hardware feasibility. Publish checkpoint before launch.
+
 ## New-agent entry template
 
 ```markdown
@@ -52,6 +64,6 @@ Read `AGENTS.md`; pull first, publish your claim, work on nonoverlapping files, 
 
 ## Decisions
 
-- Training remains paused while repository collaboration and shared evidence are established.
+- The prior general pause is superseded only for Codex's owner-authorized bounded execution; other unclaimed training/search/submission work is not authorized.
 - Current diagnosis suggests limited model diversity; TabPFN is only an unverified research lead. Its existence is not permission to install/download/launch it.
 - Preserve historical negative results and the incumbent. No new agent should start a fresh feature/epoch sweep by default.
