@@ -44,3 +44,16 @@ Access checks and isolated software verification in progress. Root owns coordina
 - Resource cap: hard1800seconds including package setup, checkpoint download and worker inference; worker subprocess group terminated at cap. One visible GPU even if notebook allocation exposes two. No use of second GPU for another arm. Pilot predictions and timing are screening evidence only.
 - Acceptance: finite [0,1] nonconstant predictions; exact row IDs and fold membership; no fit sees outer validation labels; repeated inference passes predeclared `rtol=1e-6, atol=1e-7`; checksum/runtime/source receipts complete. Stop on timeout, OOM, version/config mismatch, incomplete output or failed replay. Do not relax tolerance or silently shrink context.
 - Full-fold promotion remains conditional on pilot acceptance and a separately recorded <=2GPU-hour first-full-fold contract, followed by a forecast respecting <=10GPU-hour full seed42cap. No full-run quality decision from the 1000-row pilot.
+
+### Owner steering: Summit Composer comparison
+
+The owner supplied [Summit Composer scriptVersionId361447722](https://www.kaggle.com/code/mayankraaz/s6e10-summit-composer-0-96210?scriptVersionId=361447722) as a new benchmark to build on. This steers the active plan; the no-submission instruction persists. Root owns this source/provenance audit and a linked `docs/plans/codex-summit-audit.md`; pilot implementation remains separately owned and no job has launched. Use public-safe CSV/NPY/JSON only, preserve immutable source identity, do not assume a test-only public file has matching OOF or a measurable offline AUC.
+
+### Reviewed pilot software and prelaunch identity
+
+- Implementation handed back at `27bf29a`; independent specification and quality reviews approved. Specification reviewer reran22targeted tests and70full tests; quality reviewer reran22targeted tests and verified official v9 constructor/checkpoint compatibility. Actual CUDA remains unverified.
+- Integrated implementation without overwriting root coordination. Merged source-only suite: **70 passed**, 66 existing warnings, 11.65s. Recovered actual competition input schema also passes the runner's validation without fitting a model.
+- Runner SHA256 `cafbad3f4d85915e0b4c3d017368e65ee77ec492791007c34bed17c740ba8bc6`; packager SHA256 `c04dd833cc48ddd81b06cb2ec76fa507e06129087bc7738c43a38840cc43240c`.
+- Generated private job source SHA256 `46723a730d1b0148fa08072dbd4409e6700d5da7eb10c3cf11f0601c357fb277`; metadata SHA256 `8f3d177f3ea8680c5ca4a6315b632b42c1e5352f6f54c16a9ef2b2c458c52d31`. Publication and source readback required before interpreting outputs.
+- Server runtime cap will also be1800seconds in addition to the internal full-process deadline. One pilot only; no automatic relaunch on an uncertain API result. Record returned kernel/version, actual runtime and outputs after launch.
+- [Summit audit](codex-summit-audit.md) verified the exact public ranking and a separate advertised OOF stack; no matching exact-Summit OOF was supplied. No claim of improvement over that public file.

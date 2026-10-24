@@ -42,11 +42,11 @@ Read `AGENTS.md`; pull first, publish your claim, work on nonoverlapping files, 
 - Goal: execute the sourced breakthrough plan, starting with exact comparator recovery and a TabPFN feasibility gate.
 - Evidence/hypothesis: in-context predictions may add signal to the retained three-model ensemble; no candidate gain is established.
 - Branch: `agent/codex/bounded-tabpfn`; isolated worktree `.worktrees/codex-tabpfn`.
-- Ownership: this entry/project-state update, `docs/plans/codex-bounded-tabpfn.md`, linked ledger evidence and task-specific experiment runner/packager/tests, with explicit handoff before any subagent edits.
+- Ownership: this entry/project-state update, `docs/plans/codex-bounded-tabpfn.md`, [Summit audit](plans/codex-summit-audit.md), linked ledger evidence and task-specific experiment runner/packager/tests, with explicit handoff before any subagent edits.
 - Plan: [codex-bounded-tabpfn.md](plans/codex-bounded-tabpfn.md).
 - Job owner/monitor: Codex; none launched. Prelaunch contract will pin model/package/source identity, folds, fixed blend and resource cap.
 - Verification: source-only baseline48tests passed; authenticated owner credential in process memory; reported30GPUhours available; official checkpoint hash/revision verified. Recovered safe-format incumbent files and independently matched both ledger AUCs exactly. See execution plan for hashes and software pins.
-- Next: integrate and review synthetic-tested pilot runner from delegated `agent/codex/tabpfn-runner`, publish source/config contract and launch one capped private pilot. Owner explicitly reiterated no submissions. Root is sole launch/monitor owner.
+- Next: pilot software passed independent specification/quality review and70-test merged regression; source/config hashes published in execution plan. Launch one capped private pilot with root as sole launch/monitor owner. Exact friend-Summit public ranking verified, but matching OOF is pending. Owner explicitly reiterated no submissions.
 
 ### Codex TabPFN runner — Codex / GPT-6
 
