@@ -21,7 +21,7 @@ On macOS, install libomp if the LightGBM import requires it. Reuse the same depe
 
 ## Data and artifact access
 
-- Follow [README data setup](../README.md#data-setup) for official competition/original downloads. Accept competition terms and authenticate using your own account; do not redistribute competition CSVs through Git.
+- Follow [project data setup](PROJECT.md#data-setup) for official competition/original downloads. Accept competition terms and authenticate using your own account; do not redistribute competition CSVs through Git.
 - Fresh clones do not contain `data/`, `results/`, `reports/`, `research/` or generated `kaggle-*/` outputs. These are intentionally ignored, not missing Git commits.
 - Shared public-safe facts and provenance belong in `docs/`, not solely in ignored reports. Full artifacts remain in the project owner's local archive and/or the linked private Kaggle kernels. Ask the owner for appropriate Kaggle access or an authorized artifact transfer when needed; no shared artifact bucket is configured.
 - The linked private kernel versions are evidence/artifact locations, not publicly accessible deliverables. Do not download large checkpoint bundles before checking both permission and storage headroom.

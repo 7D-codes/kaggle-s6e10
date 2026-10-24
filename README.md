@@ -1,93 +1,48 @@
-# Predicting Airline Satisfaction: Kaggle S6E10
+# Team and Agent Collaboration Guide
 
-AI-assisted experiments for [Kaggle Playground Series S6E10](https://www.kaggle.com/competitions/playground-series-s6e10), evaluated with **ROC AUC**.
+This README is the team's operating guide, not the project report. Every human teammate and AI agent uses the same shared workflow. Read [AGENTS.md](AGENTS.md) before doing work.
 
-## Verified result
+**Model training is PAUSED by the owner.** No training, GPU jobs or competition submissions until explicitly resumed. Small synthetic software regression tests are allowed. Project background and results live in [docs/PROJECT.md](docs/PROJECT.md).
 
-- Best public submission from this project: **0.96111**, submission `57568517`.
-- Submitted model: **50% RealMLP / 25% full-recipe LightGBM / 25% full-recipe XGBoost**, fixed arithmetic weights.
-- Submitted seed-2026 development OOF ROC AUC: **0.9614641415242471**.
-- Matched seed-2026 prior ensemble: **0.9613436210433547**. The improvement was positive in all five paired folds and also repeated on seed 42.
+## Two non-negotiables
 
-OOF means held-out predictions collected across five validation folds. These are development-exposed rows, not an untouched holdout. OOF scores are not public leaderboard scores, and a higher development score does not guarantee a better submission.
+1. **Document your identity and strategy.** Publish your agent name, objective, evidence, approach, branch and exact file ownership before implementation. Keep progress and handoffs current.
+2. **Always pull and push.** Pull before starting, read teammates' latest work, commit/push meaningful checkpoints and before stopping, and verify the remote commit. Never push secrets or overwrite teammates' work.
 
-The current research target is public ROC AUC 0.962 or higher. That is an objective, not an achieved result or a guarantee. New training is paused for a diagnostic review rather than unrestricted feature or hyperparameter search.
+## Where everything goes
 
-## Repository contents
-
-- `train_baselines.py`: fold-based LightGBM, XGBoost and CatBoost training.
-- `train_realmlp.py`: fixed-epoch PyTabKit RealMLP, with outer validation labels excluded from fitting.
-- `features.py`, `recipe_features.py`: source-data priors, fold-local statistics, route/digit/frequency features and cross-fitted target encoding.
-- `external_teacher.py`, `external_auxiliary.py`: original-source teacher and auxiliary rating predictors.
-- `predict_realmlp.py`, `predict_recipe.py`: raw-row feature reconstruction and checkpoint inference.
-- `blend_equal.py`: aligned fixed equal-weight blending, preserving split provenance.
-- `verify_results.py`: independent IDs, targets, probability ranges, fold membership and AUC verification.
-- `package_*.py`: reproducible private Kaggle job packaging.
-- `test_*.py`: feature safety, training controls, inference, generated smoke inputs and blending regression tests.
-
-Datasets, predictions, fitted models, local reports/logs and downloaded third-party research are intentionally excluded. This is a source-code repository, not a downloadable trained-model release.
-
-## Data setup
-
-Install [uv](https://docs.astral.sh/uv/) and authenticate with Kaggle using its official credential setup. Never commit credentials.
-
-```bash
-mkdir -p data
-uv run --with kaggle kaggle competitions download \
-  -c playground-series-s6e10 -p data
-unzip data/playground-series-s6e10.zip -d data
-```
-
-Accept competition rules on Kaggle if required. Source-data experiments additionally need the competition-linked public dataset [`arseniyshutko/binary-aviation-satisfaction-129k`](https://www.kaggle.com/datasets/arseniyshutko/binary-aviation-satisfaction-129k):
-
-```bash
-mkdir -p data/original
-uv run --with kaggle kaggle datasets download \
-  -d arseniyshutko/binary-aviation-satisfaction-129k -p data/original
-unzip data/original/binary-aviation-satisfaction-129k.zip -d data/original
-```
-
-Verify the extracted original CSV is at `data/original/data.csv`. Source-only fitting excludes exact feature overlaps with both competition train and test rows. See script `--help` output before running experiments; use fresh output directories to preserve previous artifacts.
-
-## Tests
-
-The last full local regression run passed **48 tests**. Dependencies are installed into an isolated uv environment:
-
-```bash
-uv run --with pandas --with scikit-learn --with pytest --with joblib \
-  --with lightgbm --with xgboost --with cloudpickle==3.1.2 \
-  python -m pytest -q
-```
-
-On macOS, LightGBM may require `brew install libomp`. Full RealMLP training requires PyTabKit and a suitable PyTorch runtime; the remote experiment used PyTabKit 1.7.3, PyTorch 2.11.0+cu128, NumPy 2.1.3, pandas 2.3.3 and scikit-learn 1.6.1. Tree and historical neural runs have their own recorded versions; these are not universal pins for every model.
-
-## Accepted and rejected experiments
-
-| Experiment | Outcome |
+| Location | Shared purpose |
 |---|---|
-| Original-data priors and source-only teacher | Improved selected tree controls |
-| Route/frequency/digit/cross-fitted encoding recipe | Improved the fixed neural/tree ensemble on two splits |
-| Teacher-enhanced neural model | Rejected: no improvement over retained model |
-| Source-only auxiliary rating predictors | Rejected: final fixed blend did not improve |
-| RealMLP 6 versus 3 fixed epochs | Rejected: fixed blend worsened in all five paired folds |
-| Explicit nonzero service-rating count/mean | Tiny development gain, only 3/5 positive folds; failed predeclared promotion gate |
+| [AGENTS.md](AGENTS.md) | Rules every agent must follow. |
+| [docs/STRATEGY.md](docs/STRATEGY.md) | Current direction, agent registry, active ownership and handoffs. Read before choosing work. |
+| [docs/plans/](docs/plans/) | One named plan per agent/task: evidence, strategy, scope, steps, verification, status and next action. |
+| [docs/EXPERIMENTS.md](docs/EXPERIMENTS.md) | Shared scientific decisions, successful/rejected approaches, provenance and caveats. |
+| [docs/ONBOARDING.md](docs/ONBOARDING.md) | Clone/access setup, software tests, artifact limits and housekeeping. |
+| [docs/PROJECT.md](docs/PROJECT.md) | Project explanation, code map, verified results, data setup and attribution. |
+| Root `*.py` / `test_*.py` | Implementation and regression tests. Preserve this layout unless all consumers are migrated and tested. |
+| `data/`, `results/`, `reports/`, `research/`, `kaggle-*/` | Ignored local/private artifacts, NOT synchronized through Git. Publish safe summaries in docs instead. |
 
-## Reproducibility boundaries
+## Start a task
 
-- Preserve split seeds and align IDs, targets and fold assignments before blending. Do not combine OOF arrays from different splits as if their held-out models matched.
-- Raw-row reconstruction and saved-prediction verification are separate checks.
-- New recipe states freeze fitted rarity lookup values to avoid architecture-dependent float32-log drift. Historical artifacts are not retroactively changed.
-- CUDA spot checks passed for the submitted tree recipe. Strict XGBoost CPU replay at `rtol=0, atol=1e-7` failed for 1 of 128 checked rows, with maximum difference `1.043081283569336e-7`. Strict CPU equivalence is **not** claimed.
-- Neural raw-row CUDA checkpoint replay passed on 64 nonconstant rows per tested arm at its original `rtol=1e-6, atol=1e-7`. This does not prove full-test or CPU equivalence.
-- Never load untrusted pickle/joblib/cloudpickle checkpoints. Arrow-backed preprocessing vocabularies can require PyArrow even without reading a Parquet file.
-- Packagers generate job sources from current local modules. Publishing this repository does not publish private Kaggle model outputs, launch a job or authorize a competition submission.
+1. Use your own clone or isolated worktree, GitHub account and valid Git identity. A public repo provides read access, not write access; see onboarding.
+2. Check `git status --short`, run `git fetch origin`, then `git pull --ff-only` on your tracking branch. Inspect current `origin/main`, the registry and active plans. Stop on conflicts rather than discarding changes.
+3. Add your own entry in `docs/STRATEGY.md`: name/tool, objective, approach, branch and exact files/areas. Do not change another agent's entry or claim their active files without a handoff.
+4. Create `docs/plans/<agent>-<task>.md` using the [template](docs/plans/README.md), link it from your registry entry, then commit/push your claim before implementation.
+5. Use `agent/<name>/<task>` for substantial/concurrent code work. Announce/integrate a branch-only claim into the shared main registry before relying on exclusive ownership. A pushed claim is coordination, not an atomic file lock. Keep passing, small maintenance changes on main; keep broken WIP off main.
 
-## Research attribution
+## While working
 
-The project adapts and evaluates public ideas rather than claiming a new algorithm:
+- Work in the agreed area and read teammates' changes instead of duplicating them.
+- Keep your plan updated with evidence, progress, blockers and changed decisions. Preserve negative findings too.
+- Test meaningful changes, commit and push coherent checkpoints. Push unfinished work to your own branch with explicit WIP status.
+- Fetch before pushing. Safely integrate relevant upstream changes; never force-push shared branches, reset/stash teammates' work or replace the shared registry wholesale.
+- The training pause applies to every agent. A plan or past authorization is not permission to launch another job.
 
-- [`busyaprime/s6e10-route-or-distance-both-lb-0-96169`](https://www.kaggle.com/code/busyaprime/s6e10-route-or-distance-both-lb-0-96169): route/digit/frequency and target-encoding recipe.
-- [`yekenot/ps-s6-e10-realmlp-pytabkit`](https://www.kaggle.com/code/yekenot/ps-s6-e10-realmlp-pytabkit): RealMLP/PyTabKit reference.
-- [`aryakghosal/airline-passenger-satisfaction-analysis`](https://github.com/aryakghosal/airline-passenger-satisfaction-analysis): descriptive analysis and rating dictionary, where zero means not applicable.
+## Finish or hand off
 
-Public notebook titles or their reported scores are not treated as independently reproduced results. Data remains subject to its own terms and competition rules. Implementation and verification were performed with AI assistance.
+1. Run relevant tests. Record the actual commands, results and limitations in your plan.
+2. Update strategy and shared evidence. Mark COMPLETE, PAUSED or BLOCKED, release ownership when done, and name the next action/artifact access needed.
+3. Review the staged diff for secrets, restricted data and accidental outputs. Commit, fetch/pull safely, push, and verify the remote branch SHA matches the intended commit.
+4. Open a PR for task-branch integration/review. A pushed branch is visible work, not merged work. If push/access is blocked, say so explicitly.
+
+**Work is not handed off if its only plan, result or explanation lives in a private chat.**

@@ -2,6 +2,8 @@
 
 Applies to every AI agent and subagent working in this repository. Read this file, `docs/STRATEGY.md`, and `docs/EXPERIMENTS.md` before starting. User instructions override these project defaults.
 
+Keep the root `README.md` focused on teammate/agent collaboration and how to use the shared files, plans and folders. Put project explanations, scores, data setup and model details in `docs/PROJECT.md`, not back into the README. Create `docs/plans/<agent>-<task>.md` for each task and link it from your strategy entry; record strategy, evidence, progress, actual verification and handoff there.
+
 ## Current boundary: training is paused
 
 The owner has paused model training for a collaboration/project reboot. Do not launch training, GPU smokes, remote jobs, hyperparameter searches, or competition submissions until the owner explicitly resumes that scope. Tiny synthetic unit-test fits are allowed for software verification, not score improvement. Research and repository maintenance may continue. Past job/submission permission is not reusable authorization.

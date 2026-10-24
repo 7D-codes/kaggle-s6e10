@@ -18,7 +18,9 @@ def test_generated_smoke_inputs_run_shared_trainer(tmp_path):
         shutil.copy2(project / name, tmp_path / name)
     manifest = Path('results/batch6-route-recipe/route-full-xgboost/inference-manifest.json')
     (tmp_path / manifest).parent.mkdir(parents=True)
-    shutil.copy2(project / manifest, tmp_path / manifest)
+    # Packaging only embeds this mapping. This test executes smoke input setup,
+    # not teacher artifact validation, so it must not depend on private results.
+    (tmp_path / manifest).write_text('{"teacher_hashes": {}}')
     runpy.run_path(str(tmp_path / 'package_route_confirmation.py'))
     generated = tmp_path / 'kaggle-route-confirmation/train.py'
     tree = ast.parse(generated.read_text())
