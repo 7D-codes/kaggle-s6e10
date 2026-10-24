@@ -6,6 +6,8 @@
 
 Retained public ROC AUC: **0.96111**, submission **57568517**. Target ≥0.962 is an ambition, not an achieved result or a promise. Read [experiment history](EXPERIMENTS.md) before proposing work.
 
+**Primary working benchmark: the owner's supplied Summit Composer public-code result, already above0.96200.** Its pinned version describes0.96213public. Preserve0.96111 as historical own-model evidence; future candidate improvement must target Summit. See [corrected baseline/approach](plans/codex-summit-improvement.md). Exact owner submission receipt remains unknown; no independent rescore is claimed.
+
 ## Working agreement
 
 Read `AGENTS.md`; pull first, publish your claim, work on nonoverlapping files, push checkpoints and handoff. Keep entries from other agents intact. An unregistered teammate must add their own identity/plan; nobody should invent their entry. Separate clones share Git history, not local ignored files or credentials.
@@ -39,15 +41,15 @@ Read `AGENTS.md`; pull first, publish your claim, work on nonoverlapping files, 
 ### Codex execution — Codex / gpt-6.1-sol
 
 - Status: COMPLETE for the explicitly authorized Stable Pilot; native gates accepted for the tested configuration. Full OOF/score evaluation remains pending; full-fold training and submissions unauthorized.
-- Goal: execute the sourced breakthrough plan, starting with exact comparator recovery and a TabPFN feasibility gate.
-- Evidence/hypothesis: in-context predictions may add signal to the retained three-model ensemble; no candidate gain is established.
+- Goal: improve beyond the supplied Summit public-code result; preserve own-model controls and completed feasibility evidence.
+- Evidence/hypothesis: exact Summit CSV/source recovered, but not yet improved. Related181-member pool already includes TabPFN/TabM, so a family change alone does not establish new signal. [Corrected baseline task](plans/codex-summit-improvement.md).
 - Branch: `agent/codex/bounded-tabpfn`; isolated worktree `.worktrees/codex-tabpfn`.
-- Ownership: this entry/project-state update, `docs/plans/codex-bounded-tabpfn.md`, [Summit audit](plans/codex-summit-audit.md), linked ledger evidence and task-specific experiment runner/packager/tests, with explicit handoff before any subagent edits.
+- Ownership: this entry/project-state update, `docs/plans/codex-bounded-tabpfn.md`, [Summit audit](plans/codex-summit-audit.md), [Summit improvement plan](plans/codex-summit-improvement.md), linked ledger evidence and task-specific experiment runner/packager/tests, with explicit handoff before any subagent edits.
 - Plan: [codex-bounded-tabpfn.md](plans/codex-bounded-tabpfn.md).
 - Replay-fix steering: owner explicitly requested “fix it”; [root-cause evidence, fixed-dispatch contract and verification](plans/codex-tabpfn-replay-fix.md). Root owns this plan plus linked ledger/strategy updates; isolated implementation was reviewed and handed back before integration.
 - Job owner/monitor: root Codex only; previous autocast140608582/v1 and FP32140610219/v1 both ended ERROR. Private `wasidyms/s6e10-codex-tabpfn-stable-pilot/1`, kernel140647663, COMPLETE after166.4433seconds; all15native comparisons exact, peak allocated3.312GB. Quota remaining29.88344hours. Exact source/privacy read back; no duplicate launch/retry or submission.
 - Verification: specification PASS and quality APPROVE at code 336d971; each independently reran36 targeted tests. Integrated code 528072f fresh source-only suite: 84 passed, 66 existing warnings, 13.63s. Stable package generated/compiled locally with source/metadata hashes recorded. No new GPU job or submission during the software fix. Earlier recovery matched both incumbent ledger AUCs; failed pilot evidence preserved.
-- Next: preserve successful receipts and use the measured4.4328seconds/1000queries at50000context rows for a separately authorized full-fold resource contract. Larger context memory/runtime remains unverified. TabM deferred; no score improvement established. See replay-fix plan for independent audit/hashes and pilot-only AUC.
+- Next: freeze exact Summit baseline and choose component work from its actual lineage, with unchanged matched-fold control. Reuse accepted inference software only if that component needs it. Exact-Summit OOF remains unavailable; no gain established. Full-fold training remains paused; no new job/submission in baseline correction.
 
 ### Codex TabPFN runner — Codex / GPT-6
 
