@@ -50,15 +50,16 @@ Read `AGENTS.md`; pull first, publish your claim, work on nonoverlapping files, 
 
 ### Codex TabPFN runner — Codex / GPT-6
 
-- Status: IN PROGRESS fixed FP32 correction arm by explicit root handoff after reported native autocast batch-size replay failure; tolerances unchanged. Root retains sole launch/monitor ownership.
+- Status: COMPLETE fixed FP32 correction implementation after reported native autocast batch-size replay failure; both replay checks/tolerances unchanged. Root review/launch pending; no job/download/submission here.
 - Goal: implement a bounded fold-local raw-feature feasibility pilot and private Kaggle packager.
 - Evidence/hypothesis and approach: synthetic TDD for first-fold/context selection, categorical isolation, strict outputs and supervised total deadline; no score claim.
 - Branch: `agent/codex/tabpfn-runner`; isolated worktree `.worktrees/codex-tabpfn-code`.
-- Narrow ownership reclaimed by root handoff for FP32 correction only: new `train_tabpfn.py`, `package_tabpfn_pilot.py`, `test_tabpfn.py`, `test_tabpfn_pilot.py`, this registry entry and [runner plan](plans/codex-tabpfn-runner.md), by explicit root handoff.
+- Ownership handed back to root after FP32 correction verification: new `train_tabpfn.py`, `package_tabpfn_pilot.py`, `test_tabpfn.py`, `test_tabpfn_pilot.py`, this registry entry and [runner plan](plans/codex-tabpfn-runner.md), by explicit root handoff.
 - Experiment contract/job owner: none here; no downloads, training, GPU jobs or submissions by this agent.
 - Verification: read coordination, execution plan and onboarding; clean task worktree; fetched origin and fast-forwarded from parent task branch (new branch initially had no upstream).
 - Verification: baseline 48 tests passed; 22 new synthetic tests passed. Final fresh source-only archive: 70 tests passed, 66 existing warnings, 13.66s at code checkpoint `82b586c`. No model/data downloads, real training, GPU job or submission.
-- Next: root specification/quality review and integration; native TabPFN/CUDA feasibility and replay remain unverified until the separately owned bounded pilot. No full OOF or score-improvement claim.
+- FP32 verification: 23 targeted tests passed; fresh source-only archive at code `866e15b` passed 71 tests with 66 existing warnings in 10.02s. Dedicated FP32 kernel ID/title and fixed 1,710s cap; native FP32 numerical gate remains unverified.
+- Next: root review, new prelaunch contract publication and separately owned bounded FP32 pilot. No full OOF or score-improvement claim.
 
 ## New-agent entry template
 
