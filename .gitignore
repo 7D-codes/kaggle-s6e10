@@ -1,0 +1,26 @@
+# Private datasets, predictions, fitted artifacts, and local research
+/data/
+/results/
+/reports/
+/research/
+/kaggle-*/
+
+# Credentials and machine-local configuration
+.env
+.env.*
+!.env.example
+.kaggle/
+kaggle.json
+access_token
+*.pem
+*.key
+
+# Python and editor caches
+__pycache__/
+*.py[cod]
+.pytest_cache/
+.venv/
+venv/
+.DS_Store
+.worktrees/
+*.log
