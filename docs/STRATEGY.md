@@ -44,9 +44,10 @@ Read `AGENTS.md`; pull first, publish your claim, work on nonoverlapping files, 
 - Branch: `agent/codex/bounded-tabpfn`; isolated worktree `.worktrees/codex-tabpfn`.
 - Ownership: this entry/project-state update, `docs/plans/codex-bounded-tabpfn.md`, [Summit audit](plans/codex-summit-audit.md), linked ledger evidence and task-specific experiment runner/packager/tests, with explicit handoff before any subagent edits.
 - Plan: [codex-bounded-tabpfn.md](plans/codex-bounded-tabpfn.md).
-- Job owner/monitor: root Codex only; private `wasidyms/s6e10-codex-tabpfn-feasibility-pilot` v1, kernel140608582, ERROR after81.7seconds; rejected on batch-size replay. Predeclared FP32 correction under remaining1710second pilot budget, not launched yet. No duplicate jobs or competition submissions.
+- Replay-fix steering: owner explicitly requested “fix it”; [root-cause evidence and fixed-dispatch contract](plans/codex-tabpfn-replay-fix.md). Root owns this plan plus linked ledger/strategy updates; implementation handoff will use a separate worktree.
+- Job owner/monitor: root Codex only; autocast kernel140608582/v1 and FP32 kernel140610219/v1 both ended ERROR on cross-batch replay. FP32 failed6/64rows, max3.90410423e-6. No job remains running. Stable-dispatch verification capped1500seconds is predeclared, not launched. No duplicate jobs or competition submissions.
 - Verification: source-only baseline48tests passed; authenticated owner credential in process memory; reported30GPUhours available; official checkpoint hash/revision verified. Recovered safe-format incumbent files and independently matched both ledger AUCs exactly. See execution plan for hashes and software pins.
-- Next: review/publish the narrowly changed FP32 arm and test unchanged replay tolerance before any full-fold contract. Exact friend-Summit public ranking verified; no matching OOF supplied. Its independent TabPFN layer provides a conditional interaction-feature lead. Draft integration PR#2; owner explicitly prohibits competition submissions.
+- Next: synthetic TDD, independent review, then one native fixed-dispatch verification at unchanged tolerance with slot/permutation/padding checks. TabM deferred while fixing this failure. Exact friend-Summit public ranking preserved; no matching OOF supplied. Draft integration PR#2; owner explicitly prohibits competition submissions.
 
 ### Codex TabPFN runner — Codex / GPT-6
 
