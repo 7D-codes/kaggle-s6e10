@@ -57,7 +57,8 @@ Read `AGENTS.md`; pull first, publish your claim, work on nonoverlapping files, 
 - Ownership: new `train_tabpfn.py`, `package_tabpfn_pilot.py`, `test_tabpfn.py`, `test_tabpfn_pilot.py`, this registry entry and [runner plan](plans/codex-tabpfn-runner.md), by explicit root handoff.
 - Experiment contract/job owner: none here; no downloads, training, GPU jobs or submissions by this agent.
 - Verification: read coordination, execution plan and onboarding; clean task worktree; fetched origin and fast-forwarded from parent task branch (new branch initially had no upstream).
-- Next: baseline source-only suite, RED/GREEN synthetic checks, implementation checkpoint and root review.
+- Verification checkpoint: baseline 48 tests passed; 20 new synthetic tests passed; full suite 68 tests passed before final telemetry tightening. Source-only closeout and root review pending. No model/data downloads, real training, GPU job or submission.
+- Next: publish code checkpoint, fresh source-only suite and root specification/quality review.
 
 ## New-agent entry template
 
