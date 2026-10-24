@@ -26,3 +26,9 @@ Claim prepared after origin fetch and parent-branch fast-forward; initial branch
 - Pilot receipt includes context/validation/test row counts, exact model parameters, category vocabularies, versions, source/checkpoint/input SHA256, AUC explicitly labeled pilot-only, device/peak memory, runtime and submissions=0. Repeated 64-row nonconstant predictions must match one another and the original batch at unchanged rtol=1e-6/atol=1e-7.
 - Supervisor starts its deadline at script startup; installation/download and runner all execute in a separate process group. Deadline expiry kills descendants and records stage, return code and status. No retry. Package generation itself refuses overwrite.
 - Limits: synthetic estimator verifies wiring only; actual TabPFN/CUDA memory feasibility and native numerical replay remain unverified until root's separately owned authorized pilot.
+
+## Root review follow-up
+
+- Added exact competition train/test SHA256 verification before package setup, download or fitting, using hashes independently verified by root. Drift stops execution; no substitute input is accepted.
+- RED reproduced two issues before correction: missing worker input-hash verification, and malformed `stage.json` raising during failure-receipt handling. GREEN: 22 targeted tests passed in 2.23s.
+- Fresh source-only archive at implementation checkpoint `eceae2c1838a6ac0ead98b8070d74d559099c969`: 68 passed, 66 existing warnings, 12.70s. Latest hash/receipt follow-up requires final fresh-archive rerun.

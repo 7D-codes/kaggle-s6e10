@@ -73,3 +73,31 @@ def test_supervisor_does_not_start_work_after_budget_expiry(generated, tmp_path)
     result = namespace['supervise'](output, "raise AssertionError('must not execute')", time.monotonic() - 1)
     assert result['status'] == 'timeout'
     assert not (output / 'worker.log').exists()
+
+
+def test_worker_rejects_competition_file_drift_before_model_fit(generated, tmp_path):
+    import hashlib
+    _, namespace = generated
+    tree = ast.parse(namespace['WORKER_SOURCE'])
+    functions = [node for node in tree.body if isinstance(node, ast.FunctionDef)
+                 and node.name == 'verify_competition_inputs']
+    assert functions, 'Worker must verify known competition inputs before GPU pilot'
+    scope = {'hashlib': hashlib}
+    exec(compile(ast.Module(body=functions, type_ignores=[]), '<worker-input-check>', 'exec'), scope)
+    for name in ('train.csv', 'test.csv'): (tmp_path / name).write_text('drifted')
+    with pytest.raises(ValueError, match='SHA256 mismatch'):
+        scope['verify_competition_inputs'](tmp_path)
+    worker = namespace['WORKER_SOURCE']
+    assert '2313b65c74e6994f01c2628aae82d2f97aa6f74a81950172ff83864837c98b36' in worker
+    assert 'ff7932747f27c5274de904194ac38b4d088ea4f9bb005ae74f0d619fb893a9b6' in worker
+    assert worker.index('verify_competition_inputs(inputs[0].parent)') < worker.index("str(runner), '--data'")
+
+
+def test_supervisor_preserves_failure_receipt_when_stage_json_is_interrupted(generated, tmp_path):
+    _, namespace = generated
+    output = tmp_path / 'broken-stage'; output.mkdir()
+    worker = "from pathlib import Path\nPath('stage.json').write_text('{')\nraise RuntimeError('interrupted stage')"
+    result = namespace['supervise'](output, worker, time.monotonic() + 3)
+    assert result['status'] == 'failed'
+    assert 'worker_stage_error' in result
+    assert json.loads((output / 'execution.json').read_text())['status'] == 'failed'

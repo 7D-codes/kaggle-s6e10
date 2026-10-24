@@ -19,6 +19,20 @@ def remaining():
 def stage(name):
     (root / 'stage.json').write_text(json.dumps({'stage': name, 'remaining_seconds': remaining()}))
 
+def verify_competition_inputs(data):
+    expected = {'train.csv': '2313b65c74e6994f01c2628aae82d2f97aa6f74a81950172ff83864837c98b36',
+                'test.csv': 'ff7932747f27c5274de904194ac38b4d088ea4f9bb005ae74f0d619fb893a9b6'}
+    for name, digest in expected.items():
+        with (data / name).open('rb') as stream:
+            actual = hashlib.file_digest(stream, 'sha256').hexdigest()
+        if actual != digest:
+            raise ValueError(f'Competition {name} SHA256 mismatch')
+
+stage('input_validation')
+inputs = list(Path('/kaggle/input').rglob('playground-series-s6e10/train.csv'))
+if len(inputs) != 1:
+    raise ValueError('Expected exactly one competition train.csv')
+verify_competition_inputs(inputs[0].parent)
 stage('setup')
 subprocess.run([sys.executable, '-m', 'pip', 'install', '--disable-pip-version-check',
     '--upgrade-strategy', 'only-if-needed', 'tabpfn==9.0.0'], check=True, timeout=remaining())
@@ -39,9 +53,6 @@ if actual != 'ece4d67eadfea42eb0e610df5189bea60cb7f31073d81e9c7a019b76eacf0be3':
 stage('pilot')
 runner = root / 'train_tabpfn.py'
 runner.write_text(RUNNER_SOURCE)
-inputs = list(Path('/kaggle/input').rglob('playground-series-s6e10/train.csv'))
-if len(inputs) != 1:
-    raise ValueError('Expected exactly one competition train.csv')
 subprocess.run([sys.executable, str(runner), '--data', str(inputs[0].parent),
     '--checkpoint', str(checkpoint), '--output', str(root / 'pilot')], check=True, timeout=remaining())
 metrics = json.loads((root / 'pilot/metrics.json').read_text())
@@ -85,7 +96,10 @@ def supervise(output, worker_source, deadline):
     result['runner_source_sha256'] = hashlib.sha256(RUNNER_SOURCE.encode()).hexdigest()
     stage = output / 'stage.json'
     if stage.exists():
-        result['worker_stage'] = json.loads(stage.read_text())
+        try:
+            result['worker_stage'] = json.loads(stage.read_text())
+        except (OSError, json.JSONDecodeError) as error:
+            result['worker_stage_error'] = f'{type(error).__name__}: {error}'
     (output / 'execution.json').write_text(json.dumps(result, indent=2))
     return result
 
