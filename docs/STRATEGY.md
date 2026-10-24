@@ -48,6 +48,17 @@ Read `AGENTS.md`; pull first, publish your claim, work on nonoverlapping files, 
 - Verification: clean main, fetched/pulled latest remote documents; no local GPU, datasets, incumbent outputs or installed Kaggle credentials. Isolated dependency environment being prepared.
 - Next: authenticate using the owner-supplied token without logging it, inspect private output metadata, recover only needed safe-format artifacts and establish model access/hardware feasibility. Publish checkpoint before launch.
 
+### Codex TabPFN runner — Codex / GPT-6
+
+- Status: IN PROGRESS; software only. Root Codex is the sole authorized launch owner.
+- Goal: implement a bounded fold-local raw-feature feasibility pilot and private Kaggle packager.
+- Evidence/hypothesis and approach: synthetic TDD for first-fold/context selection, categorical isolation, strict outputs and supervised total deadline; no score claim.
+- Branch: `agent/codex/tabpfn-runner`; isolated worktree `.worktrees/codex-tabpfn-code`.
+- Ownership: new `train_tabpfn.py`, `package_tabpfn_pilot.py`, `test_tabpfn.py`, `test_tabpfn_pilot.py`, this registry entry and [runner plan](plans/codex-tabpfn-runner.md), by explicit root handoff.
+- Experiment contract/job owner: none here; no downloads, training, GPU jobs or submissions by this agent.
+- Verification: read coordination, execution plan and onboarding; clean task worktree; fetched origin and fast-forwarded from parent task branch (new branch initially had no upstream).
+- Next: baseline source-only suite, RED/GREEN synthetic checks, implementation checkpoint and root review.
+
 ## New-agent entry template
 
 ```markdown
