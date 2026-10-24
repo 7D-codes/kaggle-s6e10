@@ -2,7 +2,7 @@
 
 Owner: Codex / gpt-6.1-sol. Branch: `agent/codex/bounded-tabpfn`. Worktree: `.worktrees/codex-tabpfn`. The owner explicitly authorized execution of [the research plan](codex-breakthrough-research.md). Training/GPU pilots in its caps are resumed; competition submissions remain unauthorized.
 
-Latest boundary: the owner subsequently supplied AGENTS.md with an explicit training/GPU/remote-job pause and no reuse of past launch permission. That pause now controls. The following execution history is preserved; the replay fix is software-only until explicit resumption. Competition submissions remain prohibited.
+Latest boundary: after the owner's supplied training pause and software replay correction, the owner explicitly resumed one capped GPU verification after quota checks. That Stable Pilot is COMPLETE and passed; [native result and resource evidence](codex-tabpfn-replay-fix.md). Full-fold training/search remains paused; no automatic next launch. Competition submissions remain prohibited. The following earlier execution history is preserved.
 
 ## Scope and order
 
