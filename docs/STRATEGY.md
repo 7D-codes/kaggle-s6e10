@@ -38,16 +38,16 @@ Read `AGENTS.md`; pull first, publish your claim, work on nonoverlapping files, 
 
 ### Codex execution — Codex / gpt-6.1-sol
 
-- Status: IN PROGRESS; software replay correction only. Training, GPU verification and remote jobs are PAUSED; submissions prohibited.
+- Status: software replay correction COMPLETE and independently reviewed; native acceptance PENDING. Training, GPU verification and remote jobs are PAUSED; submissions prohibited.
 - Goal: execute the sourced breakthrough plan, starting with exact comparator recovery and a TabPFN feasibility gate.
 - Evidence/hypothesis: in-context predictions may add signal to the retained three-model ensemble; no candidate gain is established.
 - Branch: `agent/codex/bounded-tabpfn`; isolated worktree `.worktrees/codex-tabpfn`.
 - Ownership: this entry/project-state update, `docs/plans/codex-bounded-tabpfn.md`, [Summit audit](plans/codex-summit-audit.md), linked ledger evidence and task-specific experiment runner/packager/tests, with explicit handoff before any subagent edits.
 - Plan: [codex-bounded-tabpfn.md](plans/codex-bounded-tabpfn.md).
-- Replay-fix steering: owner explicitly requested “fix it”; [root-cause evidence and fixed-dispatch contract](plans/codex-tabpfn-replay-fix.md). Root owns this plan plus linked ledger/strategy updates; implementation handoff will use a separate worktree.
+- Replay-fix steering: owner explicitly requested “fix it”; [root-cause evidence, fixed-dispatch contract and verification](plans/codex-tabpfn-replay-fix.md). Root owns this plan plus linked ledger/strategy updates; isolated implementation was reviewed and handed back before integration.
 - Job owner/monitor: root Codex only; autocast kernel140608582/v1 and FP32 kernel140610219/v1 both ended ERROR on cross-batch replay. FP32 failed6/64rows, max3.90410423e-6. No job remains running. Stable-dispatch verification capped1500seconds is predeclared, not launched. No duplicate jobs or competition submissions.
-- Verification: source-only baseline48tests passed; authenticated owner credential in process memory; reported30GPUhours available; official checkpoint hash/revision verified. Recovered safe-format incumbent files and independently matched both ledger AUCs exactly. See execution plan for hashes and software pins.
-- Next: finish independent review and integrate the software correction into draft PR#2. Native fixed-dispatch verification requires explicit training/GPU resumption under the latest owner instructions. TabM deferred. Exact friend-Summit public ranking preserved; no matching OOF supplied. No score improvement established.
+- Verification: specification PASS and quality APPROVE at code 336d971; each independently reran36 targeted tests. Integrated code 528072f fresh source-only suite: 84 passed, 66 existing warnings, 13.63s. Stable package generated/compiled locally with source/metadata hashes recorded. No new GPU job or submission during the software fix. Earlier recovery matched both incumbent ledger AUCs; failed pilot evidence preserved.
+- Next: draft PR#2 contains the software correction. Native fixed-dispatch verification requires explicit training/GPU resumption under the latest owner instructions. TabM deferred. Exact friend-Summit public ranking preserved; no matching OOF supplied. No score improvement established.
 
 ### Codex TabPFN runner — Codex / GPT-6
 
