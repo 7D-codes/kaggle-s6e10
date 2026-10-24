@@ -64,13 +64,13 @@ Read `AGENTS.md`; pull first, publish your claim, work on nonoverlapping files, 
 
 ### Codex stable replay implementation — Codex / GPT-6
 
-- Status: IN PROGRESS; implementation only; no model job/download/submission authorized here.
+- Status: IMPLEMENTED; independent root review and fresh source-only closeout pending; no model job/download/submission authorized here.
 - Goal: repair native query-shape drift with one canonical 128-row padded dispatch, preserving all tolerances/model settings.
 - Evidence/hypothesis: repeated same-shape FP32 predictions passed while 64/1000 shape replay failed; fixed native execution shape should remove shape-dependent arithmetic if row/slot independence holds.
 - Branch: `agent/codex/tabpfn-replay-fix`; isolated worktree `.worktrees/codex-tabpfn/.worktrees/codex-tabpfn-replay-fix`.
 - Owned files by explicit root handoff: `train_tabpfn.py`, `package_tabpfn_pilot.py`, `test_tabpfn.py`, `test_tabpfn_pilot.py`, this entry and [implementation plan](plans/codex-stable-replay-implementation.md). Root retains scientific ledger/root plan ownership.
 - Approach: synthetic RED/GREEN, universal fixed dispatch, native anchor/subset/permutation/slot gates and provenance; private 1500-second packager only.
-- Verification: baseline running in existing source-only test environment; initial branch had no tracking upstream, so `git pull --ff-only` reported no tracking information after fetch. Latest origin/main coordination read; root branch already contains main.
+- Verification: baseline71passed; targeted final36passed, prior full81passed/66existingwarnings; expanded84-test source-only verification pending. Synthetic RED/GREEN reproduces shape drift, rejects true model/slot/composition drift and validates receipt/packager contract. Initial initial branch had no tracking upstream, so `git pull --ff-only` reported no tracking information after fetch. Latest origin/main coordination read; root branch already contains main.
 - Handoff: parent will perform specification/quality review and exclusively own any native launch. No GPU job, dataset/model download, training or submission here.
 
 ## New-agent entry template
