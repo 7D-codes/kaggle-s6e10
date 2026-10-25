@@ -11,4 +11,6 @@ Best observed eligible self-trained public ROC AUC: **0.96119**, verified Comple
 
 The model ZIP archives and source/evidence archive belong in the repository's GitHub Release assets. This folder contains the report, exact recipe and checksums. The actual submitted CSV is a separate release asset, not a Git-tracked raw prediction file. No copied public predictions are included. Model bytes are preserved from the completed campaign; exporting performed no retraining or quality rescoring.
 
-Planned artifact location (not published yet): https://github.com/7D-codes/kaggle-s6e10/releases/tag/airline-self-trained-20261025
+Published model release: https://github.com/7D-codes/kaggle-s6e10/releases/tag/airline-self-trained-20261025
+
+[Publication receipt and GitHub server digests](transfer_receipt.json) verify all 20 uploaded assets. The immutable build inventories were generated before publication; their preparation status describes that earlier snapshot, not the later transfer.
