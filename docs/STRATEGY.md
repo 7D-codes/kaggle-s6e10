@@ -124,15 +124,16 @@ Read `AGENTS.md`; pull first, publish your claim, work on nonoverlapping files, 
 
 ### Codex Airline Handoff — Codex / GPT-6
 
-- Status: IN PROGRESS; owner identified the signed-in Chrome profile with repository write access. Publishing this bounded handoff claim through GitHub UI; artifact export and verification are complete.
-- Goal: add the owner's completed Windows self-trained campaign findings and saved models as a separate handoff, without modifying the retained Batch 6 evidence or restarting training.
-- Evidence/approach: preserved receipt records a separate eligible public ROC AUC 0.96119; retain failed reference trials, paired-validation caveats, actual code/model hashes and exact recipe. Store model archives as authorized release assets, with public-safe findings/manifests in docs.
-- Branch: `agent/codex/airline-handoff-20261025`.
-- Owned files/areas requested: this registry subsection, `docs/plans/codex-airline-handoff-20261025.md`, `docs/handoffs/airline-self-trained-20261025/`, and the appended separate-campaign link in `docs/EXPERIMENTS.md`. Other agents' entries and runtime modules remain untouched.
-- Plan: [codex-airline-handoff-20261025.md](plans/codex-airline-handoff-20261025.md).
-- Experiment/job owner: none. No training, GPU jobs, scoring or Kaggle submission in this handoff task.
-- Verification: 103 existing model/encoder/context artifacts grouped into 17 ZIPs; original submitted-provenance hashes and ZIP CRC checks passed. No competition CSV data or vendor checkpoint copied. An own submitted-prediction CSV is prepared only as a release asset. Git fetch/pull succeeded; noninteractive push dry-run failed because no credentials are available.
-- Handoff: publish this registry claim, then the task-branch handoff and PR; upload release assets and verify remote artifacts. Git CLI credentials are unavailable, so use the owner's existing authenticated GitHub browser session.
+- Status: COMPLETE; findings and saved-model transfer published. Training remains PAUSED; no training/scoring/job/Kaggle submission in this handoff task.
+- Goal/result: separate owner-authorized Windows campaign handoff; eligible observed public ROC AUC **0.96119**, with comparison 0.96181/goal 0.96213 unmet. Retained Batch 6 evidence elsewhere remains unchanged.
+- Approach/evidence: preserve exact recipe, positive and negative trials, source/model hashes, replay/composition audits and adaptive-validation/portability caveats. Keep binaries and raw predictions outside Git history.
+- Branch: `agent/codex/airline-handoff-20261025`; [PR #4](https://github.com/7D-codes/kaggle-s6e10/pull/4) is the integration/review path; not claimed merged.
+- Plan: [completed handoff plan](https://github.com/7D-codes/kaggle-s6e10/blob/3a47b819c55d2a4410bb5401a4b376fdd376f70d/docs/plans/codex-airline-handoff-20261025.md).
+- Findings: [separate report and manifests](https://github.com/7D-codes/kaggle-s6e10/tree/3a47b819c55d2a4410bb5401a4b376fdd376f70d/docs/handoffs/airline-self-trained-20261025).
+- Models: [published release](https://github.com/7D-codes/kaggle-s6e10/releases/tag/airline-self-trained-20261025); 103 model/encoder/context artifacts in 17 ZIPs, plus own submitted CSV and hash manifests. All 20 GitHub asset digests and byte sizes match local files.
+- Verification: original provenance hashes, 17 ZIP CRCs, 444 archive-entry SHA256 checks, document/relative-link checks and remote branch readback passed. Runtime code unchanged. Exact source modules and external licensed inputs remain prerequisites; fresh-platform portability not fully tested.
+- Ownership released: own registry subsection, handoff directory, plan and appended ledger entry. Other agents' entries and historical scientific records preserved.
+- Handoff: review/integrate PR #4. All models/code/evidence preserved. No extra training authorization is implied by this transfer.
 
 ### Codex CatBoost implementation — Codex / GPT-6
 
