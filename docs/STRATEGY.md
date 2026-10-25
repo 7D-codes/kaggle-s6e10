@@ -79,6 +79,18 @@ Read `AGENTS.md`; pull first, publish your claim, work on nonoverlapping files, 
 - Verification: baseline71passed; targeted final36passed, prior full81passed/66existingwarnings; fresh source-only archive at code `336d971` passed84tests/66existingwarnings/11.89s. Synthetic RED/GREEN reproduces shape drift, rejects true model/slot/composition drift and validates receipt/packager contract. Initial branch had no tracking upstream, so `git pull --ff-only` reported no tracking information after fetch. Latest origin/main coordination read; root branch already contains main.
 - Handoff: parent will perform specification/quality review and exclusively own any native launch. No GPU job, dataset/model download, training or submission here.
 
+### Codex public context implementation — Codex / GPT-6
+
+- Status: REVIEW CORRECTION IMPLEMENTED; independent root re-review pending; synthetic fits only.
+- Goal: implement the frozen within-original-fold control/context experiment with strict input validation, complete receipts and unchanged numerical gates.
+- Branch: `agent/codex/public-context-stack`; isolated worktree `.worktrees/codex-public-context`.
+- Owned by explicit root handoff: new `stack_public_context.py`, `test_public_context.py`, this entry and [implementation plan](plans/codex-context-implementation.md). Root retains the scientific contract, ledger and all real fits.
+- Approach: synthetic RED/GREEN tests for isolation, provenance, metrics, bootstrap, inference and failure/export gates; no new dependencies or existing runner changes.
+- Verification: clean initial worktree; fetched origin and read latest main coordination. Initial pull reports no tracking branch; branch starts at frozen-contract commit `1cd0b17`.
+- Verification/result: targeted37passed; code `5546ac7` fresh source-only full suite121passed/66existingwarnings/21.65s. Strict manifest/identity/probability gates, within-original-fold paired metrics, JSON replay, cap receipts and conditional promotion implemented. Root review corrections preserved centroid ranks and nonconstant threshold.
+- Review correction: failed export paths quarantine candidate/partial bytes as `.INCOMPLETE.csv`, preserve scientific evidence and remove stale success claims; four RED/GREEN failure cases, targeted41passed; fresh source-only full125passed/66existingwarnings/29.86s.
+- Handoff: independent root re-review before any real run. Root will assert frozen top manifest SHA in launch wrapper. No GPU, download, real-data fit or submission occurred; no scientific gain claimed.
+
 ## New-agent entry template
 
 ```markdown
