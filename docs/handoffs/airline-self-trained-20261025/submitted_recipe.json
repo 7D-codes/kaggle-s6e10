@@ -1,0 +1,13 @@
+{
+  "mode": "rank",
+  "weights": {
+    "cat_twins_tabpfnteacher_v1": 0.1,
+    "nested_stack_reference233_services13_lgbm021_cat_twins_v3": 0.3,
+    "nested_stack_reference233_services13_lgbmteacher_catteacher_v5": 0.4,
+    "realmlp_lean_sigma2.33_twins_epochs6_lr025": 0.1,
+    "reference_catboost": 0.1
+  },
+  "primary_recipe_count": 5,
+  "derived_from_predeclared_case": "rank_replace_lgbm013",
+  "weight_search_performed": false
+}
