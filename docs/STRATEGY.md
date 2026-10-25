@@ -120,3 +120,16 @@ Read `AGENTS.md`; pull first, publish your claim, work on nonoverlapping files, 
 - Latest owner instruction explicitly resumes score-improvement training using available quota, with predeclared evidence/resource gates and root launch ownership. Submissions remain prohibited; earlier pause statements are historical.
 - Current diagnosis suggests limited model diversity; TabPFN is only an unverified research lead. Its existence is not permission to install/download/launch it.
 - Preserve historical negative results and the incumbent. No new agent should start a fresh feature/epoch sweep by default.
+
+
+### Codex Airline Handoff — Codex / GPT-6
+
+- Status: IN PROGRESS; owner identified the signed-in Chrome profile with repository write access. Publishing this bounded handoff claim through GitHub UI; artifact export and verification are complete.
+- Goal: add the owner's completed Windows self-trained campaign findings and saved models as a separate handoff, without modifying the retained Batch 6 evidence or restarting training.
+- Evidence/approach: preserved receipt records a separate eligible public ROC AUC 0.96119; retain failed reference trials, paired-validation caveats, actual code/model hashes and exact recipe. Store model archives as authorized release assets, with public-safe findings/manifests in docs.
+- Branch: `agent/codex/airline-handoff-20261025`.
+- Owned files/areas requested: this registry subsection, `docs/plans/codex-airline-handoff-20261025.md`, `docs/handoffs/airline-self-trained-20261025/`, and the appended separate-campaign link in `docs/EXPERIMENTS.md`. Other agents' entries and runtime modules remain untouched.
+- Plan: [codex-airline-handoff-20261025.md](plans/codex-airline-handoff-20261025.md).
+- Experiment/job owner: none. No training, GPU jobs, scoring or Kaggle submission in this handoff task.
+- Verification: 103 existing model/encoder/context artifacts grouped into 17 ZIPs; original submitted-provenance hashes and ZIP CRC checks passed. No competition CSV data or vendor checkpoint copied. An own submitted-prediction CSV is prepared only as a release asset. Git fetch/pull succeeded; noninteractive push dry-run failed because no credentials are available.
+- Handoff: publish this registry claim, then the task-branch handoff and PR; upload release assets and verify remote artifacts. Git CLI credentials are unavailable, so use the owner's existing authenticated GitHub browser session.
