@@ -93,7 +93,7 @@ Read `AGENTS.md`; pull first, publish your claim, work on nonoverlapping files, 
 
 ### Codex Kumo implementation — Codex / GPT-6
 
-- Status: IMPLEMENTED; root independent specification then quality review pending. No native fits/downloads/jobs/submissions here.
+- Status: REVIEW CORRECTION IN PROGRESS after explicit root handoff; own runtime files temporarily reclaimed to fix native class label ordering. No native fits/downloads/jobs/submissions here.
 - Goal: frozen paired raw/FE native Kumo runner with context-only statistics/schema and strict complete-output/replay/resource gates.
 - Branch: `agent/codex/kumo-pair`; isolated worktree `.worktrees/codex-kumo-pair`.
 - Ownership: `train_kumo_pair.py`, `package_kumo_pair.py`, `test_kumo_pair.py`, this unique entry and [implementation plan](plans/codex-kumo-implementation.md). Root retains scientific contract/ledger and launch ownership.

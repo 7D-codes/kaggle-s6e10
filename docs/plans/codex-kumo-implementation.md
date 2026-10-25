@@ -21,3 +21,7 @@ Callers: new runner CLI and private package only. Existing source-only tests mus
 ## Handoff
 
 Runtime files handed back to root at `9f3da25` for independent specification then quality review. Clean code checkpoint and remote SHA read back. Staged whitespace and credential-pattern checks passed; only source/tests/public-safe coordination docs committed. No model install/download, real-data fit, GPU job, remote launch or competition submission occurred. Native GPU calibration, output feasibility and timing remain unverified.
+
+## Native class-order review correction
+
+Root quality review identified that native default target category shifting can return named columns1,0. Explicit handoff reclaims only train_kumo_pair.py/test_kumo_pair.py plus this plan/entry. Reproduce a nonconstant reversed-column output, require exactly the two named classes, reorder to0,1, and reject duplicate/missing/extra labels. Frozen model settings and numerical tolerances remain unchanged. Targeted/source-only checks and root re-review pending.
