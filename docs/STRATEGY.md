@@ -49,7 +49,7 @@ Read `AGENTS.md`; pull first, publish your claim, work on nonoverlapping files, 
 
 ### Codex — existing CatBoost read-only audit
 
-- Status: COMPLETE; training remains PAUSED.
+- Status: read-only audit COMPLETE; score-improvement goal BLOCKED pending explicit training/comparison resumption. Training remains PAUSED.
 - Goal: resolve state and artifact completeness of existing CatBoost kernel 140747734/v1 without launching or fitting anything.
 - Evidence/hypothesis and approach: last authoritative status RUNNING at 09:52 UTC; poll the same job, preserve terminal outputs, audit source/configuration/native/coverage evidence, report unknowns honestly.
 - Branch: `main` for documentation; historical artifacts remain in the bounded-tabpfn worktree.

@@ -44,3 +44,13 @@ The Cat component is integrity-qualified. Council's later Kumo control should in
 No promoted Summit correction or verified public improvement exists. The original Summit bytes and all negative/partial Kumo evidence remain preserved. On explicit resumption, run the existing frozen comparison once; do not tune depths, features, weights or C after the outcome. No competition submission.
 
 Documentation-only tracked changes: local-link, whitespace and credential-pattern checks passed. Runtime source was unchanged, so no full runtime suite was rerun. Final publication and remote readback are recorded in Git history.
+
+## Score-goal blocker audit
+
+The preceding goal turn made progress by completing the terminal/native/coverage audit. The training-pause condition has persisted across at least three consecutive goal turns; permitted read-only checks are now complete. Refetched main and reread its explicit pause: no owner resumption has arrived, and the asynchronous clarification remains pending. The historical goal's permission does not override the later instruction that past job permission is not reusable.
+
+Revalidated the independent receipt as valid/full OOF/full test and the prepared comparison source against frozen SHA256 `5928390764f92c5e4e381975620290ae341ca0358cf6654e3a27747f855591b9`. No comparison output directory exists; no comparison fits have run. The next concrete action is the unchanged eleven-versus-twelve-member comparison, requiring new logistic fitting and therefore explicit scope resumption.
+
+Also inspected preserved Kumo dispatch receipts read-only: raw completed with 3475 canonical calls, FE snapshot had 1132 calls and was in test inference. They contain no separate arm/inference duration measurements. A conservative complete-work forecast cannot be claimed from those counters; it needs the proposed bounded first-complete-pair experiment, also forbidden during the pause. No new source/control/model search is justified to bypass this boundary.
+
+Score-improvement work is BLOCKED pending owner resumption; the requested higher score is not achieved. All useful artifacts, source snapshots and frozen gates remain preserved. No live job remains from the audited Cat run, and no new job, fit or submission occurred during this blocker audit. On resumption, use the same audited artifacts and frozen comparison; do not retrain or duplicate CatBoost.
