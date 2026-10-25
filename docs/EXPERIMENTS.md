@@ -101,6 +101,12 @@ Owner rejected starting another model and requested building directly on the pub
 
 Candidate CSV SHA256 `53d2f5bb522d18bedd1acc2e91fc56435b3ae39e67af48148350c5a45a1423f9`. Candidate AUC **unknown**; rank movement is descriptive, not improvement evidence. Keep the original0.96213public-code result as baseline. Matching exact-Summit OOF remains unavailable. No weight search, added model or private-input bypass.
 
+## Active goal: public context-stack contrast — rejected
+
+Latest owner explicitly resumes training using available Kaggle quota, requires llm-council and permits at most two Astra calls; submissions remain prohibited. [Active goal](plans/codex-summit-score-goal.md), [frozen contract/results](plans/codex-public-context-stack.md). Council/Astra1of2 selected a cheap fold-isolated contrast before GPU spending. Source audit excluded mixed5/10folds,seed33andunverified/leaky producer paths; nine public raw-TFM arrays remain author-attested, plus exact-own-source fixed-epoch RealMLP. This is conditional development evaluation, not exact Summit OOF.
+
+Single20-fit CPUrun completed39.8seconds; unchanged-global primaryAUC **0.9616903989417003**, Personal-context candidate **0.9616459129388231**, gain **-0.00004448600287722911**.0/5positivefolds; conditionalbootstrap95%CI[-0.000068917,-0.000023635]. Independently audited all row/fold/cell identities, metrics, coefficient replay and hashes. Rejected; no Summit candidate exported. All artifacts preserved locally. No new GPU job/submission, quota29.88344hours remains. New path requires council and a fresh predeclared contract; do not tune this rejected arm to pass. No score above Summit established.
+
 ## Contract template for later authorized experiments
 
 Record before launching: agent/owner, hypothesis and evidence, control, exact fold seed, parameters/feature changes, fixed blend weights, versions/checkpoint/source hashes, execution location, resource/time cap, promotion and stop criteria, job/kernel version and monitor owner. After completion append actual device/smoke status, complete OOF verification, paired gains, replay results/caveats, decision, artifact location/access and submissions used. Preserve rejected results; never silently replace a historical record.

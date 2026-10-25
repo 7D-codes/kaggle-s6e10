@@ -42,3 +42,18 @@ Additional source-metric audit: all nine public TFM OOF AUCs independently repro
 Root will assert the exact frozen manifest/source SHA before launching the CLI under its10800-second deadline and a separate process-group supervisor with the same wall cap. Single local CPU run, four threads, no Kaggle API credential passed to training, no GPU job/submission. Fresh output `results/summit-public-context-v1/`; exclusive launch receipt/log under ignored `reports/summit-score-goal/`. No retry/overwrite of that run. First complete original fold's four fits provide the fixed projection gate. No actual fit has started at this prelaunch checkpoint.
 
 Status: reviewed/published software ready for the frozen real comparison; active score goal remains unfulfilled. No new GPU job or submission.
+
+## Actual run — rejected
+
+Single local CPU run launched2026-10-25T04:53:27UTC after commit4f48a47was pushed/read back. Source/manifest/config hashes above matched. Supervisor returned0 in **39.8238seconds**; runner39.3489seconds. All20fits converged (72–312iterations), complete699635-row coverage, ten cells, five original folds. No GPU job or submission.
+
+| Statistic | Global control | Personal-context candidate | Difference |
+|---|---:|---:|---:|
+| Primary pair-weighted within-cell AUC | 0.9616903989417003 | 0.9616459129388231 | -0.00004448600287722911 |
+| Secondary pooled OOF AUC | 0.9616797580747023 | 0.9616340165274584 | -0.00004574154724390489 |
+
+All five original-fold aggregates were negative; only3/10individual cells positive. Conditional200-replicate paired bootstrap95%gain interval **[-0.00006891698408490978,-0.000023634788598405203]**. All five leave-one-original-fold-out primary differences were negative. The frozen gate failed; no test counterpart or Summit candidate was exported. Do not retry this arm with context/regularization changes after seeing these scores.
+
+Independent audit recomputed official IDs/targets/folds/half-cell assignments, primary metrics from reloaded CSV, all20fit/validation index hashes, artifact hashes and every JSON-coefficient prediction against stored OOF. Maximum replay difference2.220446049250313e-16 at original tolerances. Metrics SHA256 `f26d90a64f00691aa72976fc8beeb0e287e2eb09ba8c3aeea723cf29e87b04d1`. Full scientific artifacts retained under ignored `results/summit-public-context-v1/`; launch/log/independent audit under `reports/summit-score-goal/`.
+
+Decision: reject Personal Travel meta-weight interactions in this fixed protocol. Preserve unchanged global control and exact Summit0.96213reference. This is a negative conditional development result, not a measured public-score loss. Active goal remains unfulfilled. Re-convene council before choosing a new source of information; GPU quota remains29.88344hours because this run used none.
