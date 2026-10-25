@@ -299,3 +299,35 @@ def test_replay_failure_prevents_large_validation_and_test_calls(monkeypatch,tmp
     assert not (out/'fold0/raw_test.csv').exists()
     assert not (out/'first-fold-complete.json').exists()
     assert json.loads((out/'metrics.json').read_text())['status']=='failed'
+
+
+def native_output_adapter(columns):
+    from contextlib import nullcontext
+    from types import SimpleNamespace
+    class Tensor:
+        def __init__(self,array):self.array=np.asarray(array)
+        def __getitem__(self,key):return Tensor(self.array[key])
+        def detach(self):return self
+        def float(self):return self
+        def cpu(self):return self
+        def numpy(self):return self.array
+    model=runner().NativeModel.__new__(runner().NativeModel)
+    model.table=lambda values:values
+    model.torch=SimpleNamespace(amp=SimpleNamespace(autocast=lambda *args:nullcontext()),float16='fp16')
+    model.model=SimpleNamespace(predict=lambda values:SimpleNamespace(numerical_columns=columns,numerical=Tensor(values)))
+    return model
+
+
+def test_native_reversed_class_columns_are_reordered_by_label():
+    m=runner(); values=np.array([[.2,.8],[.7,.3],[.4,.6]])
+    actual=native_output_adapter(['1','0']).predict_proba(values)
+    np.testing.assert_array_equal(actual,values[:,[1,0]])
+    np.testing.assert_array_equal(m.probabilities(actual,len(values)),values[:,0])
+    np.testing.assert_array_equal(native_output_adapter(['0','1']).predict_proba(values),values)
+
+
+@pytest.mark.parametrize('columns',[['0'],['1'],['0','0'],['1','1'],['0','1','2'],['0','other']])
+def test_native_missing_duplicate_and_extra_class_columns_rejected(columns):
+    values=np.full((3,len(columns)),.5)
+    with pytest.raises(ValueError,match='classes'):
+        native_output_adapter(columns).predict_proba(values)

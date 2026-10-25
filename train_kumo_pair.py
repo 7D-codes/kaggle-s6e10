@@ -195,9 +195,10 @@ class NativeModel:
     def predict_proba(self, values):
         with self.torch.amp.autocast('cuda', self.torch.float16):
             output = self.model.predict(self.table(values))
-        if list(output.numerical_columns) != ['0', '1']:
-            raise ValueError('Expected native classes in 0,1 order')
-        return output.numerical.detach().float().cpu().numpy()
+        columns = list(output.numerical_columns)
+        if len(columns) != 2 or set(columns) != {'0', '1'}:
+            raise ValueError('Expected exactly native classes 0,1')
+        return output.numerical[:, [columns.index('0'), columns.index('1')]].detach().float().cpu().numpy()
 
     def transformed(self, values):
         execution = self.model._cache['recipe_execution']
