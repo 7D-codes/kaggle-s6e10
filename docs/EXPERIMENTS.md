@@ -70,4 +70,8 @@ All proposal gates are conditional on explicit training resumption and a finaliz
 
 ## Contract template for later authorized experiments
 
+### Codex resumption — 2026-10-26
+
+Owner explicitly resumed training/evaluation after the pause discussion. [Frozen CatBoost comparison](plans/codex-resumed-catboost-comparison.md): compare eleven-member control versus identical control plus complete audited CatBoost; twenty same-original-fold CPU meta fits, unchanged seed/configuration/gates. No CatBoost retraining, GPU launch or competition submission in this comparison. Actual outcome pending; do not infer a gain from standalone OOF or source/native success.
+
 Record before launching: agent/owner, hypothesis and evidence, control, exact fold seed, parameters/feature changes, fixed blend weights, versions/checkpoint/source hashes, execution location, resource/time cap, promotion and stop criteria, job/kernel version and monitor owner. After completion append actual device/smoke status, complete OOF verification, paired gains, replay results/caveats, decision, artifact location/access and submissions used. Preserve rejected results; never silently replace a historical record.

@@ -2,7 +2,7 @@
 
 ## Project state
 
-**Training: PAUSED by the owner.** Current phase: collaboration reboot, housekeeping and knowledge transfer. No experiment or competition submission is authorized by this document. Resume only on an explicit owner instruction.
+**Training/evaluation RESUMED for Codex's score-improvement effort on 2026-10-26.** The owner explicitly said "GO AHEAD YOU HAVE FULL RIGHTS" after the pause discussion. Start with the frozen CatBoost ensemble comparison; any later GPU experiment retains its preregistered checks/caps and sole launch owner. Competition submissions remain prohibited. Historical PAUSED entries below describe their original tasks, not the new authorization.
 
 Retained public ROC AUC: **0.96111**, submission **57568517**. Target ≥0.962 is an ambition, not an achieved result or a promise. Read [experiment history](EXPERIMENTS.md) before proposing work.
 
@@ -58,6 +58,17 @@ Read `AGENTS.md`; pull first, publish your claim, work on nonoverlapping files, 
 - Job identity: existing `wasidyms/s6e10-codex-catboost-ctr-v1/1`; root Codex monitors, no duplicate launch or restart.
 - Verification/handoff: API COMPLETE 09:59:34 UTC; 49 own output files preserved. Independent full ID/target/fold/hash/test-average audit passed; all five folds and 60 remote native checks complete, 9965 independently replayed rows exact. Standalone development ROC AUC 0.9610177594499577; ensemble contribution not measured. Quota 27.8253 hours remaining at 10:03 UTC. Cat is integrity-qualified for later control irrespective of its score gate. Frozen comparison fitting awaits explicit resumption clarification; no new fit, job mutation or submission. Documentation and audit self-checks passed; no runtime source change.
 
+### Codex — resumed CatBoost ensemble comparison
+
+- Status: IN PROGRESS; explicitly owner-authorized resumption, no submissions.
+- Goal: measure the completed CatBoost member's incremental contribution under the unchanged frozen comparison.
+- Evidence/hypothesis and approach: native/full-coverage audit passed; run the existing twenty within-original-fold CPU meta fits once, reproduce unchanged control, enforce predeclared gain/fold/conditional-interval gates without tuning.
+- Branch: `main` for documentation; preserved `agent/codex/bounded-tabpfn` for execution/artifacts.
+- Owned files/areas: this subsection, `docs/plans/codex-resumed-catboost-comparison.md` and the linked appended ledger entry. No runtime source edits planned.
+- Plan: [resumed comparison](plans/codex-resumed-catboost-comparison.md).
+- Job owner: root Codex; one local four-thread/10800-second CPU comparison. No Cat retraining or GPU launch; no duplicate output/retry.
+- Verification/handoff: claim prepared; fitting starts after publication/readback. Preserve actual result and scientific limits; subsequent Kumo direction remains bounded by the existing council decision.
+
 ## New-agent entry template
 
 ```markdown
@@ -74,7 +85,7 @@ Read `AGENTS.md`; pull first, publish your claim, work on nonoverlapping files, 
 
 ## Decisions
 
-- Training remains paused while repository collaboration and shared evidence are established.
+- The owner explicitly resumed Codex training/evaluation on 2026-10-26; historical pause records remain preserved. Submission permission was not granted.
 - Current diagnosis suggests limited model diversity; TabPFN is only an unverified research lead. Its existence is not permission to install/download/launch it.
 - Preserve historical negative results and the incumbent. No new agent should start a fresh feature/epoch sweep by default.
 
