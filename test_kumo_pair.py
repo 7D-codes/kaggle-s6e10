@@ -267,3 +267,18 @@ def test_failed_input_receipt_is_preserved_before_model_construction(monkeypatch
     with pytest.raises(ValueError,match='SHA256'):m.run(args,forbidden)
     meta=json.loads((Path(args.output)/'metrics.json').read_text())
     assert meta['status']=='failed' and not meta['full_oof'] and not meta['folds']
+
+
+def test_native_transform_missing_values_compare_equal():
+    m=runner();raw=frame(1000);state,_=m.fit_preprocessor(raw,np.arange(1000)%2,0)
+    class Model:
+        fit_mode='fit_with_cache'
+        def predict_proba(self,x):
+            p=.1+.8*np.asarray(x[:,2],dtype=float)/6
+            return np.column_stack([1-p,p])
+        def transformed(self,x):
+            result=np.asarray(x[:,2:3],dtype=float).copy();result[result==0]=np.nan
+            return [result]
+    model=Model();meta=m.calibration_metadata();x=m.transform(raw,state,'raw').to_numpy()
+    m.verify_raw_replay(model,raw,state,'raw',m.predict_fixed(model,x),meta)
+    json.dumps(meta,allow_nan=False)

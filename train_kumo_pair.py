@@ -221,8 +221,14 @@ def verify_raw_replay(model, raw_rows, state, arm, expected, metadata):
         appended = model.transformed(np.concatenate([independent[:128], independent[-17:]]))
         subset = model.transformed(independent[:17])
         for i, (before, after, small) in enumerate(zip(base, appended, subset, strict=True)):
-            compare_predictions(metadata, f'native_transform_append_member{i}', before, after[:len(before)])
-            compare_predictions(metadata, f'native_transform_subset_member{i}', before[:17], small)
+            for name, actual, expected_transform in (
+                (f'native_transform_append_member{i}', before, after[:len(before)]),
+                (f'native_transform_subset_member{i}', before[:17], small)):
+                metadata['native_calibration']['comparisons'].append(dict(name=name, rows=len(actual),
+                    rtol=1e-6, atol=1e-7, equal_nan=True,
+                    max_abs_error=float(np.nanmax(np.abs(actual - expected_transform), initial=0)),
+                    passed=bool(np.allclose(actual, expected_transform, rtol=1e-6, atol=1e-7, equal_nan=True))))
+                np.testing.assert_allclose(actual, expected_transform, rtol=1e-6, atol=1e-7, equal_nan=True)
 
 
 def run(args, model_factory=None):
