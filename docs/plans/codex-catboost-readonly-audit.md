@@ -16,3 +16,12 @@ Resolve the actual state and completeness of existing private job `wasidyms/s6e1
 ## Progress and handoff
 
 Claim published before audit work. Actual terminal outputs, GPU acceptance, full OOF and score remain unknown. Any new training or score-improvement fitting requires explicit resumption; submission remains forbidden.
+
+## Checkpoint: 2026-10-25 09:57 UTC
+
+- Claim commit `4216d2f5dfd07d8ef3eda60b20599a68bb8f5b27` matched remote main readback.
+- Exact-job API polls at 09:54:18, 09:55:53 and 09:57:21 UTC all returned `KernelWorkerStatus.RUNNING`, empty failure message. This is a verified live wait, not a terminal failure or permission to restart.
+- Available live-log snapshot contained zero characters. No terminal output receipt/directory exists locally; fold progress, actual execution start, acceptance and predictive quality cannot be inferred from elapsed launch wall time.
+- Inspected the frozen runner's receipt structure: outer/inner index hashes, selected iteration count, GPU runtime parameters, native replay checks, completed-fold list and final output hashes must be audited on terminal outputs. Full OOF/test requires all five folds; native reference tolerance remains rtol=1e-6/atol=1e-7.
+- No executable source changed; no models loaded, new fits, job mutations or submissions. Documentation whitespace, links and credential-pattern checks are the relevant validation; runtime tests are not needed.
+- Handoff: keep monitoring this same version. If terminal, preserve and audit outputs before any predictive conclusion. Training pause remains in force and the score objective remains unfulfilled.

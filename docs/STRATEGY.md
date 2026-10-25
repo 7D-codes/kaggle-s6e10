@@ -56,7 +56,7 @@ Read `AGENTS.md`; pull first, publish your claim, work on nonoverlapping files, 
 - Owned files/areas: this registry subsection and `docs/plans/codex-catboost-readonly-audit.md`; no runtime files.
 - Plan: [read-only CatBoost audit](plans/codex-catboost-readonly-audit.md).
 - Job identity: existing `wasidyms/s6e10-codex-catboost-ctr-v1/1`; root Codex monitors, no duplicate launch or restart.
-- Verification/handoff: pending current status. No new job, fit or submission authorized by this task.
+- Verification/handoff: same-version polls through 09:57:21 UTC confirmed RUNNING with empty failure message; available live log was empty. No terminal outputs or score yet. Frozen receipt structure inspected; continue exact-job monitoring, then audit complete or partial outputs without fitting. Documentation checks passed; no runtime change/test, job mutation or submission.
 
 ## New-agent entry template
 
