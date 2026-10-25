@@ -109,6 +109,10 @@ Single20-fit CPUrun completed39.8seconds; unchanged-global primaryAUC **0.961690
 
 ## Contract template for later authorized experiments
 
+### Codex resumption — 2026-10-26
+
+Owner explicitly resumed training/evaluation after the pause discussion. [Frozen CatBoost comparison and evidence](plans/codex-resumed-catboost-comparison.md): eleven-member control versus identical control plus complete audited CatBoost; twenty same-original-fold CPU meta fits, unchanged seed/configuration/gates. Primary developmentROC AUC **0.9616869424637373→0.9617919079329712**, gain **0.00010496546923383286**,5/5positive folds; conditional95%gain interval[0.00007762420,0.00014243317]. Passed frozen gate in47.9543seconds. Independent full-coverage/coefficient/AUC/fixed-candidate audit passed. Fixed UNSCORED Summit correction SHA256 `93282e7daa51ffa02f411fa186324edbb83143df49790933a6415087721cbd6b`; no exact-Summit/public improvement established. No CatBoost retraining, GPU launch or competition submission in this comparison.
+
 Record before launching: agent/owner, hypothesis and evidence, control, exact fold seed, parameters/feature changes, fixed blend weights, versions/checkpoint/source hashes, execution location, resource/time cap, promotion and stop criteria, job/kernel version and monitor owner. After completion append actual device/smoke status, complete OOF verification, paired gains, replay results/caveats, decision, artifact location/access and submissions used. Preserve rejected results; never silently replace a historical record.
 
 ## Council-selected paired Kumo — contract and control qualification
