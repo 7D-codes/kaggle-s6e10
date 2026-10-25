@@ -36,6 +36,17 @@ Read `AGENTS.md`; pull first, publish your claim, work on nonoverlapping files, 
 - Verification and result: reviewed six public notebook sources with version/hash provenance and official model documentation; matched historical TabPFN source hash and identified API version 2. Published a ranked queue, fold-safety findings, proposed compute caps and promotion gates. Documentation links, whitespace and credential patterns checked; no runtime tests needed or run.
 - Next handoff/blockers: recover exact incumbent OOF artifacts and finalize a bounded TabPFN contract after explicit training resumption. No measured improvement yet; private reports/results, available GPU quota and hardware feasibility remain unverified. Supplied credential was not used or saved. No job/submission occurred.
 
+### Codex — current direction council
+
+- Status: IN PROGRESS; advisory only, training remains PAUSED.
+- Goal: assess whether the Summit improvement effort is testing incremental signal and identify the next defensible action.
+- Evidence/hypothesis and approach: reconcile the completed five-advisor, anonymous-peer-review council with latest owner boundaries; distinguish software/native success, conditional offline gain and actual public improvement.
+- Branch: `main` for bounded documentation.
+- Owned files/areas: this registry subsection and `docs/plans/codex-council-current-direction.md`; no runtime files.
+- Plan: [current council direction](plans/codex-council-current-direction.md).
+- Experiment contract/job owner: none in this task. Historical job status is not current launch permission.
+- Verification and handoff: council source/remote provenance recovered; final corrected verdict pending. No new training or submission.
+
 ## New-agent entry template
 
 ```markdown
