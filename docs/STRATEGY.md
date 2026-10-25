@@ -49,14 +49,14 @@ Read `AGENTS.md`; pull first, publish your claim, work on nonoverlapping files, 
 
 ### Codex — existing CatBoost read-only audit
 
-- Status: IN PROGRESS; training remains PAUSED.
+- Status: COMPLETE; training remains PAUSED.
 - Goal: resolve state and artifact completeness of existing CatBoost kernel 140747734/v1 without launching or fitting anything.
 - Evidence/hypothesis and approach: last authoritative status RUNNING at 09:52 UTC; poll the same job, preserve terminal outputs, audit source/configuration/native/coverage evidence, report unknowns honestly.
 - Branch: `main` for documentation; historical artifacts remain in the bounded-tabpfn worktree.
-- Owned files/areas: this registry subsection and `docs/plans/codex-catboost-readonly-audit.md`; no runtime files.
+- Ownership released: this registry subsection and `docs/plans/codex-catboost-readonly-audit.md`; no runtime files.
 - Plan: [read-only CatBoost audit](plans/codex-catboost-readonly-audit.md).
 - Job identity: existing `wasidyms/s6e10-codex-catboost-ctr-v1/1`; root Codex monitors, no duplicate launch or restart.
-- Verification/handoff: same-version polls through 09:57:21 UTC confirmed RUNNING with empty failure message; available live log was empty. No terminal outputs or score yet. Frozen receipt structure inspected; continue exact-job monitoring, then audit complete or partial outputs without fitting. Documentation checks passed; no runtime change/test, job mutation or submission.
+- Verification/handoff: API COMPLETE 09:59:34 UTC; 49 own output files preserved. Independent full ID/target/fold/hash/test-average audit passed; all five folds and 60 remote native checks complete, 9965 independently replayed rows exact. Standalone development ROC AUC 0.9610177594499577; ensemble contribution not measured. Quota 27.8253 hours remaining at 10:03 UTC. Cat is integrity-qualified for later control irrespective of its score gate. Frozen comparison fitting awaits explicit resumption clarification; no new fit, job mutation or submission. Documentation and audit self-checks passed; no runtime source change.
 
 ## New-agent entry template
 
