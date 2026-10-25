@@ -69,6 +69,17 @@ Read `AGENTS.md`; pull first, publish your claim, work on nonoverlapping files, 
 - Job owner: root Codex; one local four-thread/10800-second CPU comparison. No Cat retraining or GPU launch; no duplicate output/retry.
 - Verification/handoff: primary0.96168694246→0.96179190793, gain0.00010496547;5/5positive folds, conditional95%gain interval[0.00007762420,0.00014243317],47.95CPU seconds. Independent full-coverage/AUC/coefficient/candidate-formula audit passed with exact replay. Fixed UNSCORED candidate preserved; no verified Summit/public gain. Next Kumo direction remains bounded by council3.
 
+### Codex — next complementary signal, 2026-10-26
+
+- Status: IN PROGRESS; owner explicitly requests further improvement, no submissions.
+- Goal: choose and execute the next bounded complementary experiment after the measured CatBoost gain.
+- Evidence/hypothesis and approach: fresh five-perspective/anonymous-review council incorporates the qualified twelve-member control and prior Kumo resource failure; select one falsifiable experiment, publish its fixed contract, verify software/native identity and quota before launch.
+- Branch: `main` for decision/contract; isolated task branch for substantial code.
+- Owned files/areas: this subsection and `docs/plans/codex-next-signal-20261026.md`; runtime ownership will be handed off explicitly after selection.
+- Plan: [next-signal decision and execution](plans/codex-next-signal-20261026.md).
+- Job owner/monitor: root Codex only. No new job yet; both allowed Astra calls already used.
+- Verification/handoff: new CatBoost gain independently audited; fresh quota preflight/council in progress. Preserve the existing unsubmitted candidate and scientific proof limits.
+
 ## New-agent entry template
 
 ```markdown
