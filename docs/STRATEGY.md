@@ -47,6 +47,17 @@ Read `AGENTS.md`; pull first, publish your claim, work on nonoverlapping files, 
 - Experiment contract/job owner: none in this task. Historical job status is not current launch permission.
 - Verification and handoff: five advisors, five anonymous peer reviews and revised chairman verdict reconciled. Read-only existing CatBoost v1 check at 09:52 UTC: RUNNING, failure message empty; no local terminal outputs yet. Proposed next experiment is bounded canonical-128 Kumo continuation only after explicit resumption, with eight cumulative GPU hours including prior consumption. Documentation links/whitespace/credential scope checked; no runtime tests needed. No job or submission launched.
 
+### Codex — existing CatBoost read-only audit
+
+- Status: IN PROGRESS; training remains PAUSED.
+- Goal: resolve state and artifact completeness of existing CatBoost kernel 140747734/v1 without launching or fitting anything.
+- Evidence/hypothesis and approach: last authoritative status RUNNING at 09:52 UTC; poll the same job, preserve terminal outputs, audit source/configuration/native/coverage evidence, report unknowns honestly.
+- Branch: `main` for documentation; historical artifacts remain in the bounded-tabpfn worktree.
+- Owned files/areas: this registry subsection and `docs/plans/codex-catboost-readonly-audit.md`; no runtime files.
+- Plan: [read-only CatBoost audit](plans/codex-catboost-readonly-audit.md).
+- Job identity: existing `wasidyms/s6e10-codex-catboost-ctr-v1/1`; root Codex monitors, no duplicate launch or restart.
+- Verification/handoff: pending current status. No new job, fit or submission authorized by this task.
+
 ## New-agent entry template
 
 ```markdown
