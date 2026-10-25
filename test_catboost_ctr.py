@@ -71,6 +71,9 @@ def test_inner_selection_outer_refit_exact_and_no_outer_labels(tmp_path):
     assert json.loads((tmp_path/'inner-preprocessor.json').read_text())!=state
     assert [(name,cap) for name,cap in stages if cap is not None]==[('inner_fit',1800),('refit',1800)]
     assert (tmp_path/'inner.cbm').is_file() and (tmp_path/'outer.cbm').is_file()
+    saved_receipt=json.loads((tmp_path/'selection.json').read_text())
+    assert 'selection.json' not in saved_receipt['hashes']
+    assert all(digest==m.sha256(tmp_path/name) for name,digest in saved_receipt['hashes'].items())
 
 
 def test_class_order_and_native_replay_reject_drift():
@@ -234,6 +237,8 @@ def test_runner_full_coverage_or_partial_failure_receipt(tmp_path,monkeypatch,fa
         result=pd.read_csv(out/'oof.csv');assert len(result)==100 and np.array_equal(result.id,np.arange(100))
         assert result.fold.value_counts().to_dict()=={i:20 for i in range(5)}
         assert (out/'first-fold-complete.json').exists() and len(pd.read_csv(out/'test.csv'))==100
+        for receipt in meta['folds']:
+            assert receipt['hashes']['selection.json']==m.sha256(out/f"fold{receipt['fold']}"/'selection.json')
 
 
 def test_native_factory_rejects_cpu_without_constructing(monkeypatch):

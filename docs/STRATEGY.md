@@ -137,11 +137,12 @@ Read `AGENTS.md`; pull first, publish your claim, work on nonoverlapping files, 
 
 ### Codex CatBoost implementation — Codex / GPT-6
 
-- Status: IMPLEMENTED; root specification/quality review pending; synthetic CPU verification only, no real fits/jobs/submissions.
+- Status: RECEIPT CORRECTION IMPLEMENTED; root delta specification/quality review pending; synthetic CPU verification only, no real fits/jobs/submissions.
 - Goal: fixed source-derived native CatBoost CTR fallback with isolated inner selection, outer refit, immutable teacher input and strict native/resource gates.
 - Branch: `agent/codex/catboost-ctr`; isolated worktree `.worktrees/codex-catboost-ctr`.
 - Ownership by explicit root handoff: new `train_catboost_ctr.py`, `package_catboost_ctr.py`, `test_catboost_ctr.py`, this unique subsection and [implementation plan](plans/codex-catboost-implementation.md). Root owns the scientific contract/ledger and all launches.
 - Approach: synthetic TDD, reuse recipe constants/hash/native comparison and process-group supervision; lazy CatBoost import; preserve partial evidence.
 - Verification: read AGENTS, strategy, experiments, onboarding and latest origin/main; clean initial branch at `1a78a80`; fetch succeeded; initial pull reports no tracking branch.
 - Verification checkpoint: runtime `47e6af1` published/read back;19targetedchecks passed including actual tiny native CPU CatBoost1.2.8 CBM replay. Fresh source-only full suite169passed/66existingwarnings/32.66seconds. Generated source closure imports outside the repository. Latest main`9dfbfc8` registry update integrated deliberately; no runtime changes.
-- Handoff: root specification then quality review before any native GPU run. Kumo140724253/v1 remains sole active job; no launch by this agent.
+- Receipt correction: RED reproduced stale selection.json self-hash; own receipt now excludes itself, with every listed hash checked against disk and final run metrics independently pinning the completed selection file. Runtime correction`b41e03c`published/read back; targeted19passed, fresh source-only full169passed/66existingwarnings/33.02seconds.
+- Handoff: root delta specification then quality review before any native GPU run; no launch by this agent.
