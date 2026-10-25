@@ -136,10 +136,11 @@ Read `AGENTS.md`; pull first, publish your claim, work on nonoverlapping files, 
 
 ### Codex CatBoost implementation — Codex / GPT-6
 
-- Status: IN PROGRESS; software preparation only, synthetic CPU fits allowed; no real fits/jobs/submissions.
+- Status: IMPLEMENTED; root specification/quality review pending; synthetic CPU verification only, no real fits/jobs/submissions.
 - Goal: fixed source-derived native CatBoost CTR fallback with isolated inner selection, outer refit, immutable teacher input and strict native/resource gates.
 - Branch: `agent/codex/catboost-ctr`; isolated worktree `.worktrees/codex-catboost-ctr`.
 - Ownership by explicit root handoff: new `train_catboost_ctr.py`, `package_catboost_ctr.py`, `test_catboost_ctr.py`, this unique subsection and [implementation plan](plans/codex-catboost-implementation.md). Root owns the scientific contract/ledger and all launches.
 - Approach: synthetic TDD, reuse recipe constants/hash/native comparison and process-group supervision; lazy CatBoost import; preserve partial evidence.
 - Verification: read AGENTS, strategy, experiments, onboarding and latest origin/main; clean initial branch at `1a78a80`; fetch succeeded; initial pull reports no tracking branch.
+- Verification checkpoint: 19 targeted checks passed including actual native CPU CatBoost1.2.8 CBM replay; full workstation suite169passed/66existingwarnings before final missing-key correction. Generated source closure imports outside the repository. Fresh source-only suite pending.
 - Handoff: root specification then quality review before any native GPU run. Kumo140724253/v1 remains sole active job; no launch by this agent.
