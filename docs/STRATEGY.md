@@ -2,7 +2,7 @@
 
 ## Project state
 
-**Authorized Stable Pilot COMPLETE; native numerical gate PASSED.** The owner's latest instruction resumed one capped GPU verification after quota checks; that single run is complete. Full-fold training/search remains paused. Competition submissions remain prohibited.
+**Historical Stable Pilot COMPLETE; native numerical gate PASSED.** Current training authority is the active-goal instruction below. Competition submissions remain prohibited.
 
 **Latest active-goal authorization: training RESUMED for root Codex's score-improvement work using available Kaggle quota; submissions prohibited.** The owner requires llm-council at major decisions and allows at most two Astra calls. [Current owned goal/evidence](plans/codex-summit-score-goal.md). Fresh quota29.88344hours remaining, no active jobs. Original objective remains unfulfilled; an unscored file is not a gain.
 
@@ -53,7 +53,7 @@ Read `AGENTS.md`; pull first, publish your claim, work on nonoverlapping files, 
 - Replay-fix steering: owner explicitly requested “fix it”; [root-cause evidence, fixed-dispatch contract and verification](plans/codex-tabpfn-replay-fix.md). Root owns this plan plus linked ledger/strategy updates; isolated implementation was reviewed and handed back before integration.
 - Job owner/monitor: root Codex only; previous autocast140608582/v1 and FP32140610219/v1 both ended ERROR. Private `wasidyms/s6e10-codex-tabpfn-stable-pilot/1`, kernel140647663, COMPLETE after166.4433seconds; all15native comparisons exact, peak allocated3.312GB. Quota remaining29.88344hours. Exact source/privacy read back; no duplicate launch/retry or submission.
 - Verification: specification PASS and quality APPROVE at code 336d971; each independently reran36 targeted tests. Integrated code 528072f fresh source-only suite: 84 passed, 66 existing warnings, 13.63s. Stable package generated/compiled locally with source/metadata hashes recorded. No new GPU job or submission during the software fix. Earlier recovery matched both incumbent ledger AUCs; failed pilot evidence preserved.
-- Verification/handoff: unchanged Summit reproduced exactly; fresh quota29.88344hours remaining/no active jobs. Council completed with Astra1/2; producer audit excluded mixed/unverified public members. [Frozen ten-member public context-stack contract](plans/codex-public-context-stack.md) uses within-original-fold meta halves, matched global/context LR arms,3CPUhourcap/zeroGPUhours. Root owns contract, own coordination and real run; new `stack_public_context.py`/`test_public_context.py` will be isolated/delegated. No new training run/submission yet; score goal active.
+- Verification/handoff: unchanged Summit reproduced exactly; quota29.88344hours remaining/no active GPU jobs. Council/Astra1/2 and producer audit froze a ten-member within-original-fold context-stack contrast. Code ownership returned and integrated; both reviews approve, merged source-only125tests passed. [Exact prelaunch hashes/contract](plans/codex-public-context-stack.md),3hCPUwallcap/fourthreads/zeroGPUhours. Root owns code/contract/real run; no new real fit/submission at this checkpoint. Score goal active.
 
 ### Codex TabPFN runner — Codex / GPT-6
 

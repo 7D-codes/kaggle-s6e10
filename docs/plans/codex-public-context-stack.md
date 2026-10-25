@@ -31,4 +31,14 @@ Only on passing the frozen gate, prepare a Summit-anchored unsubmitted candidate
 
 Implementation scope: new `stack_public_context.py` and `test_public_context.py`; reuse standard NumPy/pandas/SciPy/sklearn and current validation conventions. No refactor or original runner change. Synthetic TDD must cover fold isolation/disjoint coverage, context features, probability/hash/ID/fold rejection, primary weighting versus pooled AUC, deterministic paired uncertainty, non-overwrite, convergence failures and nonconstant native/manual replay. Fresh source-only full suite required. No competition artifacts in Git.
 
-Status: CONTRACT FROZEN, implementation pending; no new model fit/GPU job/submission. Active score goal remains unfulfilled.
+## Reviewed implementation and prelaunch identity
+
+Implementation integrated at `ec09b61696a3a701f52c6976e3ac1565ccf1ee07` from published child branch `agent/codex/public-context-stack` / [PR#3](https://github.com/7D-codes/kaggle-s6e10/pull/3), handoffd548f5c; code6d15c44. Specification and quality reviewers independently approved, including rerunning four export-failure cases. Failed exports are staged/quarantined as `.INCOMPLETE.csv`; failure receipts clear valid/gate success while preserving OOF/coefficients/evidence. No scientific gate or tolerance changed.
+
+Merged fresh source-only Git archive `/tmp/s6e10-context-integrated-jxgxhy_u`: **125tests passed**,66existing warnings,29.81s. Targeted41tests passed; independent post-fix regressions4passed for both reviewers. No private data/model required for software tests. Actual source SHA256 `b20c9043c05eebe17d5673839312af6e12466db50577f303800ed16e15e010ec`; tests `28f570f29585fa67fde379afc9d9e1ab6ff2aaf7c9005f4c731ab890362ebb16`; configuration SHA256 `07e6ab173418fa95480d6c888db728cb6bb2a3285cf4138480329eacf65d39dd`.
+
+Additional source-metric audit: all nine public TFM OOF AUCs independently reproduce the producer's six-decimal table. This strengthens row-order consistency but does not replace author-attested fold/preprocessing provenance; no member was selected/dropped by these scores. Local audit SHA256 `cae57c053802e0e27a76f266259cdfc6e014bb678a4b27ddd9cb4fa490e44946`.
+
+Root will assert the exact frozen manifest/source SHA before launching the CLI under its10800-second deadline and a separate process-group supervisor with the same wall cap. Single local CPU run, four threads, no Kaggle API credential passed to training, no GPU job/submission. Fresh output `results/summit-public-context-v1/`; exclusive launch receipt/log under ignored `reports/summit-score-goal/`. No retry/overwrite of that run. First complete original fold's four fits provide the fixed projection gate. No actual fit has started at this prelaunch checkpoint.
+
+Status: reviewed/published software ready for the frozen real comparison; active score goal remains unfulfilled. No new GPU job or submission.
