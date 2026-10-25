@@ -38,4 +38,10 @@ If Kumo fails feasibility or complete promotion, one CatBoost fallback is author
 
 Minimal new `train_kumo_pair.py`, `package_kumo_pair.py`, `test_kumo_pair.py`; reuse existing source-hash/ID/fold/meta/supervisor helpers without broad refactor. New pure preprocessing and orchestration get synthetic tests: context isolation, unseen/missing/category consistency, TE label exclusion, paired selection identity, dispatch/replay failures, deadlines, incomplete receipts, hashes/IDs. Lazy torch/SDM imports keep source-only tests runnable without heavyweight installs. Independent specification then quality review, fresh source-only full suite, publication/readback before real launch. No third-party source/data/predictions/checkpoint/credentials committed.
 
-Status: contract frozen; qualified control not yet scored; runtime implementation and checkpoint digest pending. No new GPU job/submission.
+## Qualified control result and checkpoint pin
+
+The predeclared teacher contrast completed20CPUfits in37.2583seconds: old10primary0.9616903989417003, frozen11primary0.9616869424637373, difference-0.000003456477962860063; conditional95%interval[-0.00001584801229768136,0.000008613751834826516]. This is consistent with no useful incremental teacher signal. Keep all11members as frozen rather than selecting a control after its result. Independent officialID/target/fold/cell/index-hash audit and all20JSONcoefficient replays passed, maximumerror2.220446049250313e-16. MetricsSHA256`00bf57a54eda879bc2185e10ce3e907daf3eddb672e57b997f58886ef27c42e6`; artifacts local`results/summit-teacher-control-v1/`; no test candidate exported.
+
+Official immutable checkpoint resolve HEAD reports109936978bytes and LFS SHA256`1ff91f484e19021aaf7d9eff6cc07e6d95a60b4aaad473e83e2ab2c3bfd2b617`. Verify actual downloaded bytes and immutable revision above before native constructor. Source-only implementation handed to isolated`agent/codex/kumo-pair` / `.worktrees/codex-kumo-pair`, runtimefiles plus implementation-specific plan/entry only; root retains scientific decisions and launch.
+
+Status: contract/control frozen and scored; runtime implementation under way. No new GPU job/submission. No higher Summit/public score established.

@@ -110,3 +110,9 @@ Single20-fit CPUrun completed39.8seconds; unchanged-global primaryAUC **0.961690
 ## Contract template for later authorized experiments
 
 Record before launching: agent/owner, hypothesis and evidence, control, exact fold seed, parameters/feature changes, fixed blend weights, versions/checkpoint/source hashes, execution location, resource/time cap, promotion and stop criteria, job/kernel version and monitor owner. After completion append actual device/smoke status, complete OOF verification, paired gains, replay results/caveats, decision, artifact location/access and submissions used. Preserve rejected results; never silently replace a historical record.
+
+## Council-selected paired Kumo — contract and control qualification
+
+[Frozen paired Kumo contract](plans/codex-kumo-paired.md): second council/Astra2of2 selected matched raw versus8route-feature Kumo as a plausible information source beyond Summit; native firstfold1GPUhour/full8, one fixed CatBoost fallback6h if needed. No new GPU launch yet. Cached source-only teacher qualified against exact producer/data/ID/overlap checks; it excluded21competition train/test overlaps. Frozen control includes this teacher regardless of observed score, plus the existing10eligible neural/TFMmembers. Cached outer-stopped trees remain excluded.
+
+Teacher comparison reused the same fivefold42/within-originalfold half-crossfit protocol: old10primaryAUC0.9616903989417003; frozen11AUC0.9616869424637373; delta-0.000003456477962860063, conditionalinterval[-0.00001584801229768136,0.000008613751834826516]. All20CPUfits/completecoverage/JSONcoefficientreplays passed,37.26seconds, no promoted candidate. This is not evidence of public improvement. Teacher/metric/checkpoint hashes, source assurance and exact next gate are in the linked contract. Training authorized by latest owner; submissions prohibited.
