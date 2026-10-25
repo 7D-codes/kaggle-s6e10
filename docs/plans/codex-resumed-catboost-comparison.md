@@ -23,3 +23,15 @@ Fetched/pulled current main, read current coordination/onboarding documents and 
 ## Handoff
 
 If comparison fails, close this CatBoost addition without tuning. Complete integrity-qualified Cat remains eligible in the subsequent council-predeclared Kumo control regardless of its gain. Any GPU continuation needs its concrete published cumulative resource contract, fresh quota/no-active-job check and source/native review. Submissions remain forbidden.
+
+## Measured result and independent audit
+
+The unchanged comparison completed in **47.9543 seconds** and passed every frozen gate. Primary development ROC AUC: control **0.9616869424637373**, plus-Cat candidate **0.9617919079329712**, gain **0.00010496546923383286**. All five original-fold gains are positive: 0.00005782429, 0.00011800100, 0.00008761002, 0.00012774616, 0.00013364573. Conditional fixed-prediction bootstrap95%gain interval **[0.00007762420, 0.00014243317]**; 200replicates/seed314159. This is conditional development evidence, not an untouched or public score.
+
+Independent audit verified all699635IDs/targets/folds/cells and one-time coverage; all20coefficient states, split-index hashes, original-fold exclusion and convergence; recomputed primary/per-fold/pooled AUC and gates. Coefficient-based replay exactly matches every saved OOF and test meta prediction (maximum error0). Original eleven-member control also reproduced its prior predictions. Full299844-row candidate exactly follows the predeclared0.05rank-correction formula on saved averaged-meta inputs; original Summit file/hash preserved. Bootstrap algorithm/seed/gate inspected, not redundantly rerun.
+
+Candidate: `results/summit-catboost-comparison-v1/candidate-catboost-UNSCORED.csv`, SHA256 **93282e7daa51ffa02f411fa186324edbb83143df49790933a6415087721cbd6b**. Comparison metrics SHA256 `a052c32c500db64ccbac5cb6a80024dd4c5df774e831e82231659241fcf06fd4`. Local independent receipt `reports/summit-score-goal/catboost-execution/independent-comparison-audit.json`. These paths are in the preserved bounded-tabpfn worktree; no raw predictions enter Git.
+
+Decision: retain the qualified unsubmitted candidate. **Do not add the offline gain to Summit's reported0.96213 or claim a new public score.** Exact Summit OOF is missing, public producer assurances remain conditional, and test inputs are averaged before meta inference. Actual public>0.96218 remains unverified. Submissions0; no GPU/Cat training spent in this comparison. Runtime Python3.13.11/NumPy2.5.4/pandas3.1.0/sklearn1.9.1/SciPy1.18.1, four CPU threads.
+
+Ownership released for this completed comparison. Next: the existing council's one bounded canonical128Kumo experiment, with Cat retained in its frozen control regardless of this positive outcome. No rescue tuning or broader search is triggered by the pass.

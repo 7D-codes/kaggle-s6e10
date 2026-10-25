@@ -60,14 +60,14 @@ Read `AGENTS.md`; pull first, publish your claim, work on nonoverlapping files, 
 
 ### Codex — resumed CatBoost ensemble comparison
 
-- Status: IN PROGRESS; explicitly owner-authorized resumption, no submissions.
+- Status: COMPLETE; frozen development comparison passed, no submissions.
 - Goal: measure the completed CatBoost member's incremental contribution under the unchanged frozen comparison.
 - Evidence/hypothesis and approach: native/full-coverage audit passed; run the existing twenty within-original-fold CPU meta fits once, reproduce unchanged control, enforce predeclared gain/fold/conditional-interval gates without tuning.
 - Branch: `main` for documentation; preserved `agent/codex/bounded-tabpfn` for execution/artifacts.
-- Owned files/areas: this subsection, `docs/plans/codex-resumed-catboost-comparison.md` and the linked appended ledger entry. No runtime source edits planned.
+- Ownership released: this subsection, `docs/plans/codex-resumed-catboost-comparison.md` and linked ledger entry. No runtime source edits.
 - Plan: [resumed comparison](plans/codex-resumed-catboost-comparison.md).
 - Job owner: root Codex; one local four-thread/10800-second CPU comparison. No Cat retraining or GPU launch; no duplicate output/retry.
-- Verification/handoff: claim prepared; fitting starts after publication/readback. Preserve actual result and scientific limits; subsequent Kumo direction remains bounded by the existing council decision.
+- Verification/handoff: primary0.96168694246→0.96179190793, gain0.00010496547;5/5positive folds, conditional95%gain interval[0.00007762420,0.00014243317],47.95CPU seconds. Independent full-coverage/AUC/coefficient/candidate-formula audit passed with exact replay. Fixed UNSCORED candidate preserved; no verified Summit/public gain. Next Kumo direction remains bounded by council3.
 
 ## New-agent entry template
 
