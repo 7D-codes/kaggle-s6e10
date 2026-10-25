@@ -133,3 +133,13 @@ Read `AGENTS.md`; pull first, publish your claim, work on nonoverlapping files, 
 - Experiment/job owner: none. No training, GPU jobs, scoring or Kaggle submission in this handoff task.
 - Verification: 103 existing model/encoder/context artifacts grouped into 17 ZIPs; original submitted-provenance hashes and ZIP CRC checks passed. No competition CSV data or vendor checkpoint copied. An own submitted-prediction CSV is prepared only as a release asset. Git fetch/pull succeeded; noninteractive push dry-run failed because no credentials are available.
 - Handoff: publish this registry claim, then the task-branch handoff and PR; upload release assets and verify remote artifacts. Git CLI credentials are unavailable, so use the owner's existing authenticated GitHub browser session.
+
+### Codex CatBoost implementation — Codex / GPT-6
+
+- Status: IN PROGRESS; software preparation only, synthetic CPU fits allowed; no real fits/jobs/submissions.
+- Goal: fixed source-derived native CatBoost CTR fallback with isolated inner selection, outer refit, immutable teacher input and strict native/resource gates.
+- Branch: `agent/codex/catboost-ctr`; isolated worktree `.worktrees/codex-catboost-ctr`.
+- Ownership by explicit root handoff: new `train_catboost_ctr.py`, `package_catboost_ctr.py`, `test_catboost_ctr.py`, this unique subsection and [implementation plan](plans/codex-catboost-implementation.md). Root owns the scientific contract/ledger and all launches.
+- Approach: synthetic TDD, reuse recipe constants/hash/native comparison and process-group supervision; lazy CatBoost import; preserve partial evidence.
+- Verification: read AGENTS, strategy, experiments, onboarding and latest origin/main; clean initial branch at `1a78a80`; fetch succeeded; initial pull reports no tracking branch.
+- Handoff: root specification then quality review before any native GPU run. Kumo140724253/v1 remains sole active job; no launch by this agent.
