@@ -175,7 +175,7 @@ def fit_fold(raw, labels, teacher, fold, directory, stage, model_factory=None):
     receipt['outer_device']=getattr(model, '_codex_device', None)
     if model_factory is None and receipt['outer_parameters'].get('task_type')!='GPU':raise RuntimeError('Outer model did not fit on GPU')
     model.save_model(directory / 'outer.cbm')
-    receipt['hashes']={p.name:sha256(p) for p in directory.iterdir() if p.is_file()}
+    receipt['hashes']={p.name:sha256(p) for p in directory.iterdir() if p.is_file() and p.name != 'selection.json'}
     write_json(directory / 'selection.json',receipt)
     return model,state,receipt
 

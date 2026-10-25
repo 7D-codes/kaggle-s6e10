@@ -31,3 +31,7 @@ Runtime checkpoint `47e6af18604aae35a547890cb2ed3e2402350bf8` published and remo
 Fetched latest origin/main`9dfbfc8`; inspected its only change (Airline Handoff registry completion/release links) and deliberately merged it at`2dfa005`, preserving both that entry and the CatBoost entry after an append-context conflict. Runtime files unchanged by merge. Source/staged diff checked for whitespace, credentials and restricted artifacts; only the three new runtime/test files and public-safe coordination evidence belong to this task.
 
 Handoff to root for independent SPEC then QUALITY review. No real-data fit, GPU smoke, remote job, competition submission or model-weight download occurred; no scientific score improvement is claimed. Native GPU operation/performance and full production inference remain unverified. Training/submission/launch authority stays with root under the frozen contract.
+
+## Receipt self-hash correction
+
+Root explicitly returned runtime ownership for one metadata correction before launch. RED: the synthetic inner-selection test found selection.json listed its pre-rewrite bytes in its own hashes. Minimal fix excludes selection.json from that receipt's own hash map; every remaining listed artifact must match disk. The full-run synthetic success check separately requires final metrics to hash each completed selection.json externally. No model, tolerance, fit settings, launch or submission changes. Targeted and fresh source-only verification pending.
