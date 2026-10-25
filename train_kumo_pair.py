@@ -281,19 +281,21 @@ def run(args, model_factory=None):
                     receipt['configuration_sha256'] = hashlib.sha256(json.dumps(dict(model=MODEL_PARAMETERS, state=state, arm=arm, seed=42+fold,
                         context=fold_receipt['context_indices_sha256']), sort_keys=True).encode()).hexdigest()
                     model = (model_factory or NativeModel)(checkpoint, state, arm, fold)
-                    model.fit(context, y[selected]); receipt['stage'] = 'validation'; save()
-                    prediction = predict_fixed(model, valid, receipt['inference_dispatch'], nonconstant=True)
-                    pd.DataFrame({'id': train.id.iloc[validation], 'prediction': prediction}).to_csv(fold_dir / f'{arm}_validation.csv', index=False)
-                    receipt['stage'] = 'test'; save()
-                    test_prediction = predict_fixed(model, testing, receipt['inference_dispatch'], nonconstant=True)
-                    pd.DataFrame({'id': test.id, 'prediction': test_prediction}).to_csv(fold_dir / f'{arm}_test.csv', index=False)
-                    receipt['stage'] = 'native_replay'; save()
-                    verify_native(model, valid[:1000], prediction[:1000], receipt)
-                    verify_raw_replay(model, train.iloc[validation[:1000]], state, arm, prediction[:1000], receipt)
+                    model.fit(context, y[selected]); receipt['stage'] = 'native_calibration'; save()
+                    anchor = predict_fixed(model, valid[:1000], receipt['inference_dispatch'], nonconstant=True)
+                    verify_native(model, valid[:1000], anchor, receipt)
+                    verify_raw_replay(model, train.iloc[validation[:1000]], state, arm, anchor, receipt)
                     if hasattr(model, 'archive'):
                         path = fold_dir / f'{arm}_native_preprocessor.json'
                         path.write_text(json.dumps(model.archive(), allow_nan=False))
                         receipt['native_preprocessor_sha256'] = sha256(path)
+                    receipt['stage'] = 'validation'; save()
+                    prediction = predict_fixed(model, valid, receipt['inference_dispatch'], nonconstant=True)
+                    compare_predictions(receipt, 'full_validation_calibration_prefix', prediction[:len(anchor)], anchor)
+                    pd.DataFrame({'id': train.id.iloc[validation], 'prediction': prediction}).to_csv(fold_dir / f'{arm}_validation.csv', index=False)
+                    receipt['stage'] = 'test'; save()
+                    test_prediction = predict_fixed(model, testing, receipt['inference_dispatch'], nonconstant=True)
+                    pd.DataFrame({'id': test.id, 'prediction': test_prediction}).to_csv(fold_dir / f'{arm}_test.csv', index=False)
                     if model_factory is None:
                         import torch
                         receipt['device'] = dict(name=torch.cuda.get_device_name(0), peak_allocated=torch.cuda.max_memory_allocated(0), peak_reserved=torch.cuda.max_memory_reserved(0))

@@ -129,12 +129,12 @@ def test_supervisor_first_pair_timeout_preserves_evidence(tmp_path):
     assert result['runtime_seconds']<2
 
 
-def synthetic_run(monkeypatch, tmp_path, factory=None):
+def synthetic_run(monkeypatch, tmp_path, factory=None, rows=1000):
     import time
     from types import SimpleNamespace
     m=runner(); data=tmp_path/'data'; data.mkdir()
-    train=frame(1000).assign(id=np.arange(1000), satisfaction=np.arange(1000)%2)
-    test=frame(300).assign(id=np.arange(1000,1300))
+    train=frame(rows).assign(id=np.arange(rows), satisfaction=np.arange(rows)%2)
+    test=frame(300).assign(id=np.arange(rows,rows+300))
     train.to_csv(data/'train.csv',index=False);test.to_csv(data/'test.csv',index=False)
     checkpoint=tmp_path/'checkpoint';checkpoint.write_bytes(b'synthetic')
     monkeypatch.setattr(m,'INPUT_HASHES',{name:m.sha256(data/name) for name in ('train.csv','test.csv')})
@@ -282,3 +282,20 @@ def test_native_transform_missing_values_compare_equal():
     model=Model();meta=m.calibration_metadata();x=m.transform(raw,state,'raw').to_numpy()
     m.verify_raw_replay(model,raw,state,'raw',m.predict_fixed(model,x),meta)
     json.dumps(meta,allow_nan=False)
+
+
+def test_replay_failure_prevents_large_validation_and_test_calls(monkeypatch,tmp_path):
+    m,args,factory=synthetic_run(monkeypatch,tmp_path,rows=6000)
+    calls=[]; original=m.predict_fixed
+    def predict(model,query,*args,**kwargs):
+        calls.append(len(query));return original(model,query,*args,**kwargs)
+    def fail(*args):raise AssertionError('synthetic native replay drift')
+    monkeypatch.setattr(m,'predict_fixed',predict)
+    monkeypatch.setattr(m,'verify_native',fail)
+    with pytest.raises(AssertionError,match='replay drift'):m.run(args,factory)
+    assert calls==[1000]
+    out=Path(args.output)
+    assert not (out/'fold0/raw_validation.csv').exists()
+    assert not (out/'fold0/raw_test.csv').exists()
+    assert not (out/'first-fold-complete.json').exists()
+    assert json.loads((out/'metrics.json').read_text())['status']=='failed'
