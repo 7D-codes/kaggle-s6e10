@@ -1,0 +1,59 @@
+# Frozen experiment: fold-isolated public context stack
+
+Owner/launch monitor: root Codex. Branch: `agent/codex/bounded-tabpfn`; implementation will be handed to an isolated branch/worktree. Latest owner authorizes training; no submissions. Council and first Astra review support this experiment before spending GPU quota. This builds on existing public predictions and preserves Summit as the exact test anchor.
+
+## Hypothesis and unchanged control
+
+Relative model reliability may differ for Personal Travel. Control is L2 logistic regression on ten member logits, adapting the public CDeotte stack recipe to CPU and a stricter evaluation split. Candidate uses exactly the same members/model parameters plus Personal Travel indicator and its interactions with each member's deviation from that row's mean member logit. No other context, model, seed, feature or weight search. Existing historical subgroup inspection motivates this choice; it is not a pristine discovery.
+
+Eligible members are frozen: CDeotte raw zero-shot Causilo, EXAONE, Kumo-large, Kumo-small, LimiX2, Mitra2, TabFM, TabICL2 and TabPFN3.5, plus the existing own fixed-three-epoch RealMLP. The nine public arrays have author-attested five-fold shuffled seed42/raw21-feature generation and competition row order; the offline producer/custom-cache implementations are not independently replayed. Their assurance is conditional and must remain visible in every result. Do not call this a fully certified pristine validation set.
+
+Own RealMLP source `wasidyms/s6e10-batch2-realmlp-gpu/2` SHA256 `d550d436a279ca5b7e5aed33fc8a980abfb4ae2431b7b3617b9c1f6b64a549f9` read back: three fixed epochs, `use_early_stopping=False`, empty validation indices, fold-local categories/counts/cross-fitted TE, no original-data teacher. Exact IDs/targets/folds independently match competition train and the declared split. Public tuned XGB/RealMLP lack inspected selection provenance and are excluded. Public124pool/megayak/arhan members are excluded due mixed folds, seed33, missing producers, global preprocessing, unfiltered original overlaps or fixed-epoch outer-label exposure. Source audit preserved under ignored `research/summit-score-goal/producer-audit/`.
+
+Frozen ignored input manifest `reports/summit-score-goal/context-input-manifest.json`, SHA256 **857531628a486634bb2d983f5cd6adc4b793a4ef8918f7348a4735c8bb155ccb**. It records every input/hash/source assurance, official train/test hashes, IDs/targets/fold hashes and original Summit baseline hash. No candidate metric has been read during this freeze. Original fold-vector SHA256 `85b453ca1f318618a40db1de2f578ecbe59e43181e1a1b7ba2c9b075b46a7d7e`.
+
+## Evaluation and fixed parameters
+
+- Original base folds: `StratifiedKFold(5, shuffle=True, random_state=42)` in official competition row order. For each original foldk, split its rows into two stratified halves using `StratifiedShuffleSplit(n_splits=1, test_size=0.5, random_state=20261025+k)`. Fit meta-model only on one half of that same original fold, predict the other; reverse. All base features used for a cell must originate from models excluding the entire original fold. Never fit the meta-model on other original folds. This closes the ordinary meta-CV label path conditional on producer attestation, not historical model-selection exposure.
+- All ten input members are probabilities. Convert in float64 with clip[1e-15,1-1e-15], logit, clip[-30,30]. No fitted scaling. Control featuresX. Candidate features `[X, personal, personal*(X-X.mean(axis=1,keepdims=True))]`, where personal exactly matches `Type of Travel == 'Personal Travel'`. Category values must be one of the two official values. No label-based category/statistic fitting.
+- CPU sklearn LogisticRegression `C=1.0, solver='lbfgs', max_iter=2000, tol=1e-7, fit_intercept=True`; L2 default penalty. Both arms identical. ConvergenceWarning is a failure, not accepted success. Preserve finite bounded normalized nonconstant inference and native/manual logistic replay at `rtol=1e-6, atol=1e-7`. JSON coefficients only; no pickle.
+- Twenty fits total: two arms × two halves × five original folds. Log progress and runtime after each cell/fold, with complete coverage required before a final score. Primary statistic is positive–negative-pair-count-weighted mean of the ten within-cell AUCs; five original-fold aggregates and pooled OOF AUC are secondary. Do not use pooled calibration across different scorers as the primary gate.
+- Paired stratified bootstrap of fixed predictions within each cell,200replicates, seed314159, same sampled indices for both arms, fixed cell pair-count weights; report2.5/97.5percentile primary-gain interval. It is a conditional diagnostic: it omits training/selection variation and cross-cell dependence. Also report leave-one-original-fold-out primary gains. No significance or public-score guarantee follows.
+- Frozen screening gate: primary gain≥0.00005, positive in≥4/5original-fold aggregates and≥8/10cells, conditional bootstrap lower endpoint>0, complete provenance/coverage/convergence/replay checks. Wide uncertainty or any failed requirement means inconclusive/rejected; do not tune to pass. The gate can support a conditional development improvement only, never an exact-Summit/public-score claim.
+
+## Resources, outputs and stop rule
+
+Cap3CPUhours, four BLAS/OpenMP threads, zeroGPUhours. Measure first complete original fold's four fits; stop if projected full run/uncertainty exceeds the cap. Publish source/config hashes and software tests before the real run. Root alone starts and monitors the local process; no remote job or submission. No duplicate launch. Use fresh output directory and write running/failure receipts before any complete claim.
+
+Retain complete IDs/folds/cell memberships and control/candidate OOF predictions, ten cell and five fold metrics, primary/pooled AUCs, diagnostics, coefficients/config/runtime/input hashes and source-assurance caveats locally. If the screening gate passes, generate test counterparts by averaging the ten frozen meta-models per arm on the provided averaged base test predictions. This differs from unavailable per-base-fold test inputs and must be disclosed. Verify native/manual inference, all299844test IDs/order and hashes.
+
+Only on passing the frozen gate, prepare a Summit-anchored unsubmitted candidate: `pct(original_Summit_rank + 0.05*(context_test_probability-control_test_probability))`. The correction weight0.05 is fixed now, not selected from test changes or scores. The exact Summit CSV/ranking remains archived. This file remains unscored against Summit even if the component experiment passes. Otherwise preserve failure evidence and do not export a promoted Summit candidate. No leaderboard fitting/hidden-label inference.
+
+Implementation scope: new `stack_public_context.py` and `test_public_context.py`; reuse standard NumPy/pandas/SciPy/sklearn and current validation conventions. No refactor or original runner change. Synthetic TDD must cover fold isolation/disjoint coverage, context features, probability/hash/ID/fold rejection, primary weighting versus pooled AUC, deterministic paired uncertainty, non-overwrite, convergence failures and nonconstant native/manual replay. Fresh source-only full suite required. No competition artifacts in Git.
+
+## Reviewed implementation and prelaunch identity
+
+Implementation integrated at `ec09b61696a3a701f52c6976e3ac1565ccf1ee07` from published child branch `agent/codex/public-context-stack` / [PR#3](https://github.com/7D-codes/kaggle-s6e10/pull/3), handoffd548f5c; code6d15c44. Specification and quality reviewers independently approved, including rerunning four export-failure cases. Failed exports are staged/quarantined as `.INCOMPLETE.csv`; failure receipts clear valid/gate success while preserving OOF/coefficients/evidence. No scientific gate or tolerance changed.
+
+Merged fresh source-only Git archive `/tmp/s6e10-context-integrated-jxgxhy_u`: **125tests passed**,66existing warnings,29.81s. Targeted41tests passed; independent post-fix regressions4passed for both reviewers. No private data/model required for software tests. Actual source SHA256 `b20c9043c05eebe17d5673839312af6e12466db50577f303800ed16e15e010ec`; tests `28f570f29585fa67fde379afc9d9e1ab6ff2aaf7c9005f4c731ab890362ebb16`; configuration SHA256 `07e6ab173418fa95480d6c888db728cb6bb2a3285cf4138480329eacf65d39dd`.
+
+Additional source-metric audit: all nine public TFM OOF AUCs independently reproduce the producer's six-decimal table. This strengthens row-order consistency but does not replace author-attested fold/preprocessing provenance; no member was selected/dropped by these scores. Local audit SHA256 `cae57c053802e0e27a76f266259cdfc6e014bb678a4b27ddd9cb4fa490e44946`.
+
+Root will assert the exact frozen manifest/source SHA before launching the CLI under its10800-second deadline and a separate process-group supervisor with the same wall cap. Single local CPU run, four threads, no Kaggle API credential passed to training, no GPU job/submission. Fresh output `results/summit-public-context-v1/`; exclusive launch receipt/log under ignored `reports/summit-score-goal/`. No retry/overwrite of that run. First complete original fold's four fits provide the fixed projection gate. No actual fit has started at this prelaunch checkpoint.
+
+Status: reviewed/published software ready for the frozen real comparison; active score goal remains unfulfilled. No new GPU job or submission.
+
+## Actual run — rejected
+
+Single local CPU run launched2026-10-25T04:53:27UTC after commit4f48a47was pushed/read back. Source/manifest/config hashes above matched. Supervisor returned0 in **39.8238seconds**; runner39.3489seconds. All20fits converged (72–312iterations), complete699635-row coverage, ten cells, five original folds. No GPU job or submission.
+
+| Statistic | Global control | Personal-context candidate | Difference |
+|---|---:|---:|---:|
+| Primary pair-weighted within-cell AUC | 0.9616903989417003 | 0.9616459129388231 | -0.00004448600287722911 |
+| Secondary pooled OOF AUC | 0.9616797580747023 | 0.9616340165274584 | -0.00004574154724390489 |
+
+All five original-fold aggregates were negative; only3/10individual cells positive. Conditional200-replicate paired bootstrap95%gain interval **[-0.00006891698408490978,-0.000023634788598405203]**. All five leave-one-original-fold-out primary differences were negative. The frozen gate failed; no test counterpart or Summit candidate was exported. Do not retry this arm with context/regularization changes after seeing these scores.
+
+Independent audit recomputed official IDs/targets/folds/half-cell assignments, primary metrics from reloaded CSV, all20fit/validation index hashes, artifact hashes and every JSON-coefficient prediction against stored OOF. Maximum replay difference2.220446049250313e-16 at original tolerances. Metrics SHA256 `f26d90a64f00691aa72976fc8beeb0e287e2eb09ba8c3aeea723cf29e87b04d1`. Full scientific artifacts retained under ignored `results/summit-public-context-v1/`; launch/log/independent audit under `reports/summit-score-goal/`.
+
+Decision: reject Personal Travel meta-weight interactions in this fixed protocol. Preserve unchanged global control and exact Summit0.96213reference. This is a negative conditional development result, not a measured public-score loss. Active goal remains unfulfilled. Re-convene council before choosing a new source of information; GPU quota remains29.88344hours because this run used none.
