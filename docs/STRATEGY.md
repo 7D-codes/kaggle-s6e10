@@ -38,14 +38,14 @@ Read `AGENTS.md`; pull first, publish your claim, work on nonoverlapping files, 
 
 ### Codex — current direction council
 
-- Status: IN PROGRESS; advisory only, training remains PAUSED.
+- Status: COMPLETE; advisory only, training remains PAUSED.
 - Goal: assess whether the Summit improvement effort is testing incremental signal and identify the next defensible action.
 - Evidence/hypothesis and approach: reconcile the completed five-advisor, anonymous-peer-review council with latest owner boundaries; distinguish software/native success, conditional offline gain and actual public improvement.
 - Branch: `main` for bounded documentation.
-- Owned files/areas: this registry subsection and `docs/plans/codex-council-current-direction.md`; no runtime files.
+- Ownership released: this registry subsection and `docs/plans/codex-council-current-direction.md`; no runtime files.
 - Plan: [current council direction](plans/codex-council-current-direction.md).
 - Experiment contract/job owner: none in this task. Historical job status is not current launch permission.
-- Verification and handoff: council source/remote provenance recovered; final corrected verdict pending. No new training or submission.
+- Verification and handoff: five advisors, five anonymous peer reviews and revised chairman verdict reconciled. Read-only existing CatBoost v1 check at 09:52 UTC: RUNNING, failure message empty; no local terminal outputs yet. Proposed next experiment is bounded canonical-128 Kumo continuation only after explicit resumption, with eight cumulative GPU hours including prior consumption. Documentation links/whitespace/credential scope checked; no runtime tests needed. No job or submission launched.
 
 ## New-agent entry template
 
