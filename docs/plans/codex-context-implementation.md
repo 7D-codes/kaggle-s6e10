@@ -19,3 +19,12 @@ Verification/results:
 - Public-nine source assurance stays conditional on attestation; historical development exposure and averaged-base-test input mismatch remain explicit. No exact-Summit/public improvement is claimed.
 
 Handoff: implementation ready for independent root specification/quality review. Only synthetic fits executed; no real-data fit, GPU job, downloads or submission. Source-only tests establish software behavior, not real runtime feasibility or scientific improvement. Staged paths/whitespace/credential patterns reviewed before publication; no restricted artifacts included.
+
+
+## Export-failure review correction
+
+Root quality review reproduced a promoted candidate remaining after baseline-copy failure. Four synthetic regressions cover baseline-copy failure, partial candidate write, post-publication hash failure and final completion-receipt failure. They failed before the corresponding corrections. The last regression also caught stale success-decision/artifact-name bookkeeping.
+
+The runner now copies and verifies the exact Summit archive before staging the candidate as `summit-candidate.INCOMPLETE.csv`; successful writing atomically renames it to the promoted filename. Any later failure quarantines a published candidate back to the incomplete name, resets `valid`/`gate_passed` and the decision to failure, and remaps any existing candidate artifact hash. OOF, coefficients, diagnostics and partial export bytes remain available. No screening threshold or scientific contract changed.
+
+Verification: targeted **41 passed, 19.74s**, no warnings. Fresh source-only full verification: `git archive HEAD` plus the exact two owned modified source/test files in `/tmp/s6e10-context-review-fix-hefrEl`: **125 passed, 66 existing warnings, 29.86s**. Publication pending after automatic Git approval-review timeout; one permitted retry will follow. Source SHA256 `b20c9043c05eebe17d5673839312af6e12466db50577f303800ed16e15e010ec`; test SHA256 `28f570f29585fa67fde379afc9d9e1ab6ff2aaf7c9005f4c731ab890362ebb16`. No real fit, GPU job, download or submission.

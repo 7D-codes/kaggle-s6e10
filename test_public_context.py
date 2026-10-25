@@ -286,3 +286,57 @@ def test_bootstrap_matches_fixed_pair_weighted_stratified_paired_oracle():
     result = m.bootstrap_gain(y, control, context, cell)
     assert result['fixed_cell_pair_weights'] == [4, 9]
     np.testing.assert_array_equal(result['interval95'], np.percentile(values, [2.5, 97.5]))
+
+
+@pytest.mark.parametrize('failure', ['baseline_copy', 'partial_candidate_write', 'after_candidate_publish', 'completion_receipt'])
+def test_failed_exports_quarantine_candidate_and_preserve_evidence(inputs, monkeypatch, failure):
+    m, root, manifest, path, save = inputs
+    monkeypatch.setattr(m, 'screening_gate', lambda metrics: True)
+    out = root / failure
+    if failure == 'baseline_copy':
+        def fail_copy(*args):
+            raise OSError('synthetic baseline copy failure')
+        monkeypatch.setattr(m.shutil, 'copyfile', fail_copy)
+    elif failure == 'partial_candidate_write':
+        original = pd.DataFrame.to_csv
+        def fail_write(frame, destination, *args, **kwargs):
+            if destination.name in ('summit-candidate.csv', 'summit-candidate.INCOMPLETE.csv'):
+                destination.write_text('id,satisfaction\npartial export\n')
+                raise OSError('synthetic partial candidate write failure')
+            return original(frame, destination, *args, **kwargs)
+        monkeypatch.setattr(pd.DataFrame, 'to_csv', fail_write)
+    elif failure == 'after_candidate_publish':
+        original = m.sha256
+        def fail_hash(destination):
+            if destination.name == 'summit-candidate.csv':
+                raise OSError('synthetic post-publication hash failure')
+            return original(destination)
+        monkeypatch.setattr(m, 'sha256', fail_hash)
+    else:
+        original = m.write_json
+        def fail_receipt(destination, value):
+            if isinstance(value, dict) and value.get('status') == 'complete':
+                raise OSError('synthetic completion receipt failure')
+            return original(destination, value)
+        monkeypatch.setattr(m, 'write_json', fail_receipt)
+    with pytest.raises(OSError, match='synthetic'):
+        m.run(root, path, out)
+    receipt = json.loads((out / 'metrics.json').read_text())
+    assert receipt['status'] == 'failed' and not receipt['gate_passed']
+    assert not (out / 'summit-candidate.csv').exists()
+    assert (out / 'oof.csv').exists() and (out / 'coefficients.json').exists()
+    incomplete = out / 'summit-candidate.INCOMPLETE.csv'
+    if failure == 'baseline_copy':
+        assert not incomplete.exists()
+    else:
+        assert incomplete.exists()
+        assert m.sha256(out / 'summit-baseline.csv') == manifest['baseline_sha256']
+        if failure == 'partial_candidate_write':
+            assert 'partial export' in incomplete.read_text()
+        else:
+            assert len(pd.read_csv(incomplete)) == manifest['test_rows']
+
+    if failure == 'completion_receipt':
+        assert receipt['decision'] == 'failed; no promoted candidate accepted'
+        assert 'summit-candidate.csv' not in receipt['artifacts']
+        assert 'summit-candidate.INCOMPLETE.csv' in receipt['artifacts']

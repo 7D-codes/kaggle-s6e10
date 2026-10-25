@@ -300,16 +300,22 @@ def run(root, manifest_path, output):
             score = baseline_rank + .05 * (test_prediction[:, 1] - test_prediction[:, 0])
             candidate = pd.DataFrame(dict(id=test.id, satisfaction=(rankdata(score, method='average') - .5) / len(test)))
             exact_column(candidate, 'id', test.id)
-            candidate.to_csv(output / 'summit-candidate.csv', index=False)
             shutil.copyfile(data['baseline_path'], output / 'summit-baseline.csv')
             if sha256(output / 'summit-baseline.csv') != m['baseline_sha256']:
                 raise ValueError('archived Summit baseline hash mismatch')
+            candidate.to_csv(output / 'summit-candidate.INCOMPLETE.csv', index=False)
+            (output / 'summit-candidate.INCOMPLETE.csv').replace(output / 'summit-candidate.csv')
         metrics['artifacts'] = {path.name: sha256(path) for path in sorted(output.iterdir()) if path.name != 'metrics.json'}
         metrics.update(status='complete', decision='conditional development gate passed; unsubmitted/unscored against Summit' if metrics['gate_passed'] else 'rejected/inconclusive; no Summit candidate exported')
         receipt()
         return metrics
     except BaseException as error:
-        metrics.update(status='failed', error=f'{type(error).__name__}: {error}')
+        if (output / 'summit-candidate.csv').exists():
+            (output / 'summit-candidate.csv').replace(output / 'summit-candidate.INCOMPLETE.csv')
+            if 'summit-candidate.csv' in metrics.get('artifacts', {}):
+                metrics['artifacts']['summit-candidate.INCOMPLETE.csv'] = metrics['artifacts'].pop('summit-candidate.csv')
+        metrics.update(status='failed', valid=False, gate_passed=False,
+                       decision='failed; no promoted candidate accepted', error=f'{type(error).__name__}: {error}')
         receipt()
         raise
 
