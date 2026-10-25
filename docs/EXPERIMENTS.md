@@ -71,3 +71,9 @@ All proposal gates are conditional on explicit training resumption and a finaliz
 ## Contract template for later authorized experiments
 
 Record before launching: agent/owner, hypothesis and evidence, control, exact fold seed, parameters/feature changes, fixed blend weights, versions/checkpoint/source hashes, execution location, resource/time cap, promotion and stop criteria, job/kernel version and monitor owner. After completion append actual device/smoke status, complete OOF verification, paired gains, replay results/caveats, decision, artifact location/access and submissions used. Preserve rejected results; never silently replace a historical record.
+
+## Separate owner-authorized Windows campaign handoff — 2026-10-25
+
+[Findings, exact recipe and model inventory](handoffs/airline-self-trained-20261025/README.md) document a distinct completed local campaign. Its preserved receipt records an eligible self-trained public ROC AUC **0.96119** on 2026-10-25; this does not rewrite the separate retained Batch 6 submission 57568517 or its replay caveats above. The requested 0.96213 and comparison 0.96181 thresholds were not reached. Numeric CatBoost V5 supplied a positive fixed rank replacement; bounded TabPFN adaptations, native CatBoost, XGBoost and fixed consensus failed their local promotion screens. Both DEV assignments reuse rows, and conditional intervals do not correct adaptive experiment selection.
+
+Model/encoder files, source snapshots and audits have been packaged with hashes; release upload is pending authenticated write access. No data/checkpoint/raw prediction files are committed to Git. The original exact 0.96213 copied ensemble is excluded. This handoff task starts no training/scoring/job/submission, and the shared training pause remains in force. [Task plan and publication status](plans/codex-airline-handoff-20261025.md).
