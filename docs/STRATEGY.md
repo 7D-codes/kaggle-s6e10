@@ -93,12 +93,12 @@ Read `AGENTS.md`; pull first, publish your claim, work on nonoverlapping files, 
 
 ### Codex Kumo implementation — Codex / GPT-6
 
-- Status: IN PROGRESS; implementation only, no native fits/downloads/jobs/submissions here.
+- Status: IMPLEMENTED; root independent specification then quality review pending. No native fits/downloads/jobs/submissions here.
 - Goal: frozen paired raw/FE native Kumo runner with context-only statistics/schema and strict complete-output/replay/resource gates.
 - Branch: `agent/codex/kumo-pair`; isolated worktree `.worktrees/codex-kumo-pair`.
 - Ownership: `train_kumo_pair.py`, `package_kumo_pair.py`, `test_kumo_pair.py`, this unique entry and [implementation plan](plans/codex-kumo-implementation.md). Root retains scientific contract/ledger and launch ownership.
 - Approach: synthetic TDD; reuse fixed128 dispatcher and existing supervisor; lazy native imports; preserve partial receipts; no candidate export.
-- Verification: read AGENTS/strategy/ledger/onboarding and latest origin/main; initial branch has no upstream. Git metadata requires escalated writes in this worktree; fetch succeeded. Independent root specification then quality review required.
+- Verification: published/read-back claim and code through `9f3da25`; 18 targeted synthetic tests passed. Final code `9f3da25` fresh source-only full suite143passed/66existingwarnings/30.91s. Read AGENTS/strategy/ledger/onboarding/latest origin/main; initial branch no upstream, then tracking established. Git metadata uses authorized escalated writes.
 - Handoff: checkpoint digest supplied by root; native CUDA feasibility remains unverified. No model install/download, real-data fit or submission authorized for this agent.
 
 ## New-agent entry template
