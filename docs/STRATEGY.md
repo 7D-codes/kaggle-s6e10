@@ -209,5 +209,5 @@ Read `AGENTS.md`; pull first, publish your claim, work on nonoverlapping files, 
 - Branch: `agent/codex/kumo-comparison-20261027`; isolated `.worktrees/codex-kumo-compare`.
 - Owned files: NEW `stack_kumo_continuation.py`, NEW `test_kumo_stack.py`, this subsection, [implementation plan](plans/codex-kumo-stack-implementation.md). Root retains all other coordination/scientific files and actual execution.
 - Job owner: root only; existing141062725/v1 untouched. No real-data fitting, downloads, GPU job, submission or delegation here.
-- Verification: clean initial worktree; fetched and integrated latest origin/main coordination; no upstream existed initially. Implementation/tests pending.
+- Verification: claim13922ee published/read back; missing-runner RED reproduced;36synthetic checks passing, including thirty native/manual replay fits, retained-control drift, input/receipt guards, both-gate failures and export quarantine. Full/fresh source-only verification pending. Helper unchanged.
 - Handoff: publish tested code for independent specification then quality review; all score/export gates remain unmeasured.
