@@ -1,0 +1,59 @@
+# Bounded Kumo continuation implementation and experiment contract
+
+> Agentic implementation uses subagent-driven-development with an isolated worktree, TDD, specification review, then quality review. Root Codex owns scientific decisions and the single launch; implementer cannot train or launch.
+
+Owner: Codex / GPT-6. Explicit owner training/evaluation resumption persists; no submissions. Preserve CatBoost candidate SHA256 `93282e7daa51ffa02f411fa186324edbb83143df49790933a6415087721cbd6b`. This is one newly disclosed resource contract after v1's first-pair timeout, not a hidden restart or a quality rescue.
+
+## Hypothesis and frozen comparison
+
+Kumo's eight context-fitted engineered features may add ranking information beyond the qualified twelve-member Cat-containing ensemble plus an identical-context raw Kumo member. Reuse the original raw/FE experiment's fixed100kcontexts, twoestimators, fp16/nativecache, fourcategoricals, folds/seed42, torch42+fold, TE314159+fold/smoothing20, canonical128rowqueries/padlast and original21native checks per arm at rtol1e-6/atol1e-7. No capacity, feature, precision, checkpoint, native preprocessing or query-shape change.
+
+SDM source `fdc8372b510e19148f122681461438576916062a`; official checkpoint commit `3c3e10bbdb590ace29e7026847f92db3c603096d`, SHA256 `1ff91f484e19021aaf7d9eff6cc07e6d95a60b4aaad473e83e2ab2c3bfd2b617`. Exact official train/test/source/runtime guards and all old native checks remain. The reduced configuration differs from the cited public full-context/eight-estimator/nine-feature recipe; no reproduction claim.
+
+Control12 = previously frozen eleven-member control (manifestSHA256 `72ab4f3c6dd81f63cbb342f763bfbf01713e79e9a85a5b55c320cd5a00f3729e`) plus complete integrity-qualified CatBoost OOF/test (SHA256 `17765f1e736d17cc80444d5654b928e0f20e43a8d8acf3ec03a96fc6cf40530b` / `46df1eebea22434b09a320b75a916e67a1942e439800ec354c1db8808f149c50`). Include Cat because of integrity/coverage, independently of its already measured positive gain. Before launch seal a new twelve-member manifest and all source/package hashes.
+
+Use unchanged within-original-fold reversed-half meta protocol:10cells, halfseed20261025+fold, logitclip1e-15then[-30,30], L2logisticC1/lbfgs2000/tol1e-7, fourthreads, primarypair-count-weightedcellROC AUC, pooledsecondary,200conditionalfixed-predictionstratifiedbootstrapseed314159. Fit three arms: control12; control12+matchedraw13; identical13+FE14. Primary FE contrast14vs13 and mandatory retained-control contrast14vs12 must each gain>=0.00002, improve>=4/5originalfolds and have positive lower conditional95%gain bound, with complete integrity/convergence/coverage. Raw13vs12 is descriptive secondary only; no raw-only promotion under this contract. Failure does not establish equivalence or a precise null.
+
+Only a qualifying full run may export the fixed UNSCORED correction: `pct(rank(existing CatBoost candidate)+0.05*(meta14_test-meta12_test))`, using the same average-rank convention and ten-model averaged meta predictions. Never tune weights or test ranks. Preserve the original Summit and CatBoost bytes. Exact Summit OOF is absent; public producer assurance, adaptive development, conditional bootstrap and averaged-test-input limitations remain. No offline gain is added to a public score.
+
+## Resource and artifact policy
+
+- Fresh preflight2026-10-26T22:54UTC:27.82529GPUhremaining,15own kernels allterminal/noactivejobs. Recheck immediately before launch; root alone launches unique private `wasidyms/s6e10-codex-kumo-continuation-v1`, version recorded/read back, no ambiguous retry.
+- **Eight cumulative GPU hours including v1.** Round prior~1.001551667h upward to3606seconds. New worker cap **24900seconds**, plus294seconds reserved for provider overhead, totals28800seconds. All installation/checkpoint download/reconstruction/native checks/full validation/test/cleanup are counted. Refresh actual charged quota afterward and disclose any discrepancy; no cap extension.
+- First complete pair <=**5400additional seconds**, but the stronger completion-projection gate also applies: `1.25*5*elapsed_including_setup <=24900`. Thus a pair can meet its90minute ceiling and still fail economics. Existing process-group supervisor enforces both deadlines while native calls block. Record setup/context-preparation, fit/cache, native checks, validation, test and per-arm totals separately. No first-fold AUC selection.
+- Regenerate all five raw/FE pairs from the same contexts/model/inference; **do not reuse v1 predictions or KV caches**. This avoids unproven artifact transport/inference reuse. Old partial outputs stay preserved. The repeat must fit the cumulative remainder; no budget credit for old partial work.
+- Require100%OOF/testcoverage, unique official orderedIDs/targets/folds, all five matched pairs and native acceptances. Stop on identity/native/provenance/OOM/resource/projectionfailure. No larger batches, tolerance relaxation, sweep, silent retry or partial-OOF blending.
+
+## Minimal implementation and verification
+
+Owned implementation handoff: existing `train_kumo_pair.py` (only resource constants/check and receipt timings), new `package_kumo_continuation.py`, new `test_kumo_continuation.py`, implementer's unique registry subsection and plan. Preserve `package_kumo_pair.py`, existing statistical/model/native logic and original-v1 defaults. CatBoost packager imports the old Kumo supervisor and relies on its literal original constants; changing that supervisor would silently break its replacement logic, so keep it byte-identical. Reuse its packaging/supervisor behavior through a distinct continuation builder with guarded replacements or equivalent small reuse; no runtime dependency additions.
+
+- [ ] Reproduce missing continuation builder/resource contract with targeted RED tests. Verify existing callers via rg before edits.
+- [ ] Add default runner first-pair/total constants3600/28800 and replace the hardcoded guard with them, preserving v1 behavior. Add separate monotonic receipt timings without changing computations/random calls/query shapes.
+- [ ] Build a distinct private continuation package embedding the same runner with only its two budget constants5400/24900 changed; update the supervisor's matching constants, preserve process-group cleanup, timeout/failed receipts and all input/checkpoint/native guards. Generated metadata uses the unique continuation slug; compile source. No launch in the packager.
+- [ ] Targeted tests must cover source/model/inference invariance, matching runner/supervisor caps, full regeneration, strict complete-output/marker logic, exact economic projection at boundaries, private metadata, old packager/CatBoost compatibility and blocked-worker timeout cleanup. Run targeted then full source-only suite using the existing synthetic fixtures. Fresh source-only archive verification must not use private artifacts. No real-data fit, native GPU smoke, weights download or job by implementer/reviewers.
+- [ ] Commit/push/read back coherent checkpoints, SPEC review then QUALITY review; fix failures before launch. Root seals reviewed source/config/control/package hashes, obtains fresh quota/no-active-job receipt, then launches once and monitors the exact canonical version. Observer timeouts never justify restart.
+
+## Council decision and current state
+
+Council4 completed five independent perspectives, five anonymous peer reviews and a standard-model chairman; no new Astra calls (2/2used). Unanimous next-experiment recommendation; reviews added the retained-control safeguard, clarified13vs14contrast and rejected treating a failed gate as a precise null. Chairman accepted the24900secondworker/5400firstpair/25%projection contract. Full native/source-only baseline169tests passed before the interruption; temporary environments were removed between sessions, then restored in ignored project directories without altering scientific artifacts.
+
+No new GPU job launched at contract publication. Root owns this contract/scientific ledger; runtime files handed off only as listed. Current validated improvement remains the CatBoost offline gain, not a new public score.
+
+## Sealed prelaunch evidence
+
+Runtime code `28d73afd09d85ed96588f0020fbd071aa5aed529`, final published branch checkpoint `a6baf34dc1618cefc66e500843b659a4fce88417` on `agent/codex/next-signal-20261026`. Root inspected the actual diff. Independent SPEC PASS and QUALITY APPROVE, each independently54targetedtests. Full checkout179passed/66existingwarnings35.93s; fresh source-only `git archive`179passed/66existingwarnings35.85s. No private artifacts entered the archive. Old packager and numerical/native/dispatch logic preserved; tests pin exact generated-source differences, original21checks, both blocking-worker deadlines/process cleanup and3984secondprojection boundary. No real-data fit or GPU execution in verification.
+
+Generated package SHA256 **be660467fadff101cd49655f1258ab3c794dc329426e24103971ae5d4a756c3f**; metadata **380b0cde512aacc13319a688b799adf6c3f0790ae452d0fd03db348bf3cac238**. Physical default runner **57666fdf19d24a03bd0e25243e3688a9c00918f9d145bcae504ff50af7d25de4**; embedded continuation runner with only5400/24900constants changed **06d2591cb2df585f36ec4d8236dbe7e50fa58347d56211ab9e475f97cb7e9ff0**. Unchanged dispatcher6880f479…; all full helper hashes retained in the local sealed identity receipt. Generated source compiled and embedded worker/source equality independently checked.
+
+Frozen control12 manifest SHA256 **91a6fac84d243482579d18ef5c2ab52b33b6ecf5ad22c22c457bcddf094d628d**, sealed before new Kumo quality observations. Original Cat/native/input/baseline hashes independently revalidated. Root's durable private launch helper self-check rejects stale quota, active jobs, insufficient quota and existing kernel identity; exclusive receipt fences the one API request, returned version/source/privacy read back. No credential is printed or persisted; owner-provided screenshot token is used only in process memory. Monitor has no restart path. Helpers live in ignored project-local access folder, not ephemeral `/tmp`; scientific artifacts were preserved when temporary environments disappeared.
+
+After this checkpoint is published and remote SHA read back, root will refresh quota/all-own-job states and launch exactly one private `wasidyms/s6e10-codex-kumo-continuation-v1`. All resource/integrity/native/full-coverage/quality/public-proof gates above remain unchanged. No submission.
+
+## Actual single private launch
+
+Published/read-back prelaunch checkpoint `3d85a6fa620bd6ee62d210ea82a2db8a545edb1a`. Fresh quota/job preflight2026-10-26T23:05:15UTC:27.8252897222hours remaining,15own kernels allterminal/noactivejobs. Root's single request at **23:05:27UTC** returned [wasidyms/s6e10-codex-kumo-continuation-v1/1](https://www.kaggle.com/code/wasidyms/s6e10-codex-kumo-continuation-v1), kernel **141062725**, version **1**. Saved remote source exactly matches sealedbe660467…package, privacyTrue. Authoritative API at23:06:05UTC reports **RUNNING**, emptyfailuremessage. No retry, other new job or competition submission.
+
+Root solelaunchowner/monitor. Durable receipt `reports/summit-score-goal/kumo-continuation-execution/launch.json`; terminal target `results/summit-kumo-continuation-v1/`, both in the preserved bounded-tabpfn worktree. Observation timeouts never permit restart. Initial native GPU acceptance, first-pair economics, full five-fold coverage and quality gates remain unverified while the job runs. Source-only tests prove software behavior, not predictive improvement.
+
+Software integration/review path: [draft PR5](https://github.com/7D-codes/kaggle-s6e10/pull/5), stacked on the preserved scientific-code branch; not merged. Current source runtime checkpoint and frozen candidate remain unchanged. Training goal remains active/unfulfilled; no public improvement claimed.

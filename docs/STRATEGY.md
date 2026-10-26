@@ -2,9 +2,9 @@
 
 ## Project state
 
-**Historical Stable Pilot COMPLETE; native numerical gate PASSED.** Current training authority is the active-goal instruction below. Competition submissions remain prohibited.
+**Training/evaluation RESUMED for Codex's score-improvement effort on 2026-10-26.** The owner explicitly said "GO AHEAD YOU HAVE FULL RIGHTS" after the pause discussion. Start with the frozen CatBoost ensemble comparison; any later GPU experiment retains its preregistered checks/caps and sole launch owner. Competition submissions remain prohibited. Historical PAUSED entries below describe their original tasks, not the new authorization.
 
-**Latest active-goal authorization: training RESUMED for root Codex's score-improvement work using available Kaggle quota; submissions prohibited.** The owner requires llm-council at major decisions and allows at most two Astra calls. [Current owned goal/evidence](plans/codex-summit-score-goal.md). Fresh quota29.88344hours remaining, no active jobs. Original objective remains unfulfilled; an unscored file is not a gain.
+**Latest active-goal authorization: training RESUMED for root Codex's score-improvement work using available Kaggle quota; submissions prohibited.** The owner requires llm-council at major decisions and allows at most two Astra calls. [Current owned goal/evidence](plans/codex-summit-score-goal.md). Historical pre-pilot quota was29.88344hours; current preflight2026-10-25T21:31UTC reports27.82529hours remaining and no active jobs. Original objective remains unfulfilled; an unscored file is not a gain.
 
 Direct Summit Composer adaptation COMPLETE:11public inputs hash-verified, original CSV/ranking reproduced exactly, one unscored derivative changes TabPFNshare8%to7%. Edited notebook and candidate exported locally, with exact fresh-process replay. No training, GPU job or submission. [Evidence/artifacts](plans/codex-summit-composer-adaptation.md).
 
@@ -102,6 +102,50 @@ Read `AGENTS.md`; pull first, publish your claim, work on nonoverlapping files, 
 - Verification: published/read-back claim and code through `9f3da25`; 18 targeted synthetic tests passed. Class-label correction `6c518da`:25targetedpassed; fresh source-only full suite150passed/66existingwarnings/30.55s. Read AGENTS/strategy/ledger/onboarding/latest origin/main; initial branch no upstream, then tracking established. Git metadata uses authorized escalated writes.
 - Handoff: checkpoint digest supplied by root; native CUDA feasibility remains unverified. No model install/download, real-data fit or submission authorized for this agent.
 
+### Codex — current direction council
+
+- Status: COMPLETE; advisory only, training remains PAUSED.
+- Goal: assess whether the Summit improvement effort is testing incremental signal and identify the next defensible action.
+- Evidence/hypothesis and approach: reconcile the completed five-advisor, anonymous-peer-review council with latest owner boundaries; distinguish software/native success, conditional offline gain and actual public improvement.
+- Branch: `main` for bounded documentation.
+- Ownership released: this registry subsection and `docs/plans/codex-council-current-direction.md`; no runtime files.
+- Plan: [current council direction](plans/codex-council-current-direction.md).
+- Experiment contract/job owner: none in this task. Historical job status is not current launch permission.
+- Verification and handoff: five advisors, five anonymous peer reviews and revised chairman verdict reconciled. Read-only existing CatBoost v1 check at 09:52 UTC: RUNNING, failure message empty; no local terminal outputs yet. Proposed next experiment is bounded canonical-128 Kumo continuation only after explicit resumption, with eight cumulative GPU hours including prior consumption. Documentation links/whitespace/credential scope checked; no runtime tests needed. No job or submission launched.
+
+### Codex — existing CatBoost read-only audit
+
+- Status: read-only audit COMPLETE; score-improvement goal BLOCKED pending explicit training/comparison resumption. Training remains PAUSED.
+- Goal: resolve state and artifact completeness of existing CatBoost kernel 140747734/v1 without launching or fitting anything.
+- Evidence/hypothesis and approach: last authoritative status RUNNING at 09:52 UTC; poll the same job, preserve terminal outputs, audit source/configuration/native/coverage evidence, report unknowns honestly.
+- Branch: `main` for documentation; historical artifacts remain in the bounded-tabpfn worktree.
+- Ownership released: this registry subsection and `docs/plans/codex-catboost-readonly-audit.md`; no runtime files.
+- Plan: [read-only CatBoost audit](plans/codex-catboost-readonly-audit.md).
+- Job identity: existing `wasidyms/s6e10-codex-catboost-ctr-v1/1`; root Codex monitors, no duplicate launch or restart.
+- Verification/handoff: API COMPLETE 09:59:34 UTC; 49 own output files preserved. Independent full ID/target/fold/hash/test-average audit passed; all five folds and 60 remote native checks complete, 9965 independently replayed rows exact. Standalone development ROC AUC 0.9610177594499577; ensemble contribution not measured. Quota 27.8253 hours remaining at 10:03 UTC. Cat is integrity-qualified for later control irrespective of its score gate. Frozen comparison fitting awaits explicit resumption clarification; no new fit, job mutation or submission. Documentation and audit self-checks passed; no runtime source change.
+
+### Codex — resumed CatBoost ensemble comparison
+
+- Status: COMPLETE; frozen development comparison passed, no submissions.
+- Goal: measure the completed CatBoost member's incremental contribution under the unchanged frozen comparison.
+- Evidence/hypothesis and approach: native/full-coverage audit passed; run the existing twenty within-original-fold CPU meta fits once, reproduce unchanged control, enforce predeclared gain/fold/conditional-interval gates without tuning.
+- Branch: `main` for documentation; preserved `agent/codex/bounded-tabpfn` for execution/artifacts.
+- Ownership released: this subsection, `docs/plans/codex-resumed-catboost-comparison.md` and linked ledger entry. No runtime source edits.
+- Plan: [resumed comparison](plans/codex-resumed-catboost-comparison.md).
+- Job owner: root Codex; one local four-thread/10800-second CPU comparison. No Cat retraining or GPU launch; no duplicate output/retry.
+- Verification/handoff: primary0.96168694246→0.96179190793, gain0.00010496547;5/5positive folds, conditional95%gain interval[0.00007762420,0.00014243317],47.95CPU seconds. Independent full-coverage/AUC/coefficient/candidate-formula audit passed with exact replay. Fixed UNSCORED candidate preserved; no verified Summit/public gain. Next Kumo direction remains bounded by council3.
+
+### Codex — next complementary signal, 2026-10-26
+
+- Status: IN PROGRESS; owner explicitly requests further improvement, no submissions.
+- Goal: choose and execute the next bounded complementary experiment after the measured CatBoost gain.
+- Evidence/hypothesis and approach: fresh five-perspective/anonymous-review council incorporates the qualified twelve-member control and prior Kumo resource failure; select one falsifiable experiment, publish its fixed contract, verify software/native identity and quota before launch.
+- Branch: `main` for decision/contract; isolated task branch for substantial code.
+- Owned files/areas: this subsection and `docs/plans/codex-next-signal-20261026.md`; runtime ownership will be handed off explicitly after selection.
+- Plan: [next-signal decision and execution](plans/codex-next-signal-20261026.md).
+- Job owner/monitor: root Codex only. Private `wasidyms/s6e10-codex-kumo-continuation-v1/1`, kernel141062725, launched23:05:27UTC2026-10-26; RUNNING23:06:05UTC, emptyfailuremessage, remote source/privacy exact. No duplicate/restart; both allowed Astra calls already used.
+- Verification/handoff: council4 complete5advisors/5anonymousreviews/chairman, noAstra remaining. [Frozen Kumo continuation](plans/codex-kumo-continuation-contract.md): canonical128/rawFE, qualifiedCatcontrol, gates14vs13and14vs12;24900newworkerseconds/5400firstpair/25%projection/8cumulativeh. Regenerateallpairs,no reuse. Code28d73af SPEC PASS/QUALITY APPROVE,54targeted each; full/freshsource-only179passed. Published branch a6baf34/[draft PR5](https://github.com/7D-codes/kaggle-s6e10/pull/5), packagebe660467…/control91a6fac8… sealed. Prelaunch3d85a6f remoteverified, fresh27.82529h/noactivejobs; one launch confirmed. NativeGPU/firstpair/fullOOF/quality pending; submissions0.
+
 ## New-agent entry template
 
 ```markdown
@@ -118,7 +162,7 @@ Read `AGENTS.md`; pull first, publish your claim, work on nonoverlapping files, 
 
 ## Decisions
 
-- Latest owner instruction explicitly resumes score-improvement training using available quota, with predeclared evidence/resource gates and root launch ownership. Submissions remain prohibited; earlier pause statements are historical.
+- The owner explicitly resumed Codex training/evaluation on 2026-10-26; historical pause records remain preserved. Submission permission was not granted.
 - Current diagnosis suggests limited model diversity; TabPFN is only an unverified research lead. Its existence is not permission to install/download/launch it.
 - Preserve historical negative results and the incumbent. No new agent should start a fresh feature/epoch sweep by default.
 
@@ -147,3 +191,12 @@ Read `AGENTS.md`; pull first, publish your claim, work on nonoverlapping files, 
 - Verification checkpoint: runtime `47e6af1` published/read back;19targetedchecks passed including actual tiny native CPU CatBoost1.2.8 CBM replay. Fresh source-only full suite169passed/66existingwarnings/32.66seconds. Generated source closure imports outside the repository. Latest main`9dfbfc8` registry update integrated deliberately; no runtime changes.
 - Receipt correction: RED reproduced stale selection.json self-hash; own receipt now excludes itself, with every listed hash checked against disk and final run metrics independently pinning the completed selection file. Runtime correction`b41e03c`published/read back; targeted19passed, fresh source-only full169passed/66existingwarnings/33.02seconds.
 - Handoff: root delta specification then quality review before any native GPU run; no launch by this agent.
+
+### Codex Kumo continuation implementation — Codex / GPT-6
+
+- Status: IMPLEMENTATION COMPLETE, synthetic software only; owned runtime files handed back to root for independent SPEC then QUALITY review. Root retains scientific decisions and sole launch/monitor authority.
+- Objective/evidence: implement the [frozen continuation contract](plans/codex-kumo-continuation-contract.md), reusing original packaging and numerical code with only new resource caps and monotonic receipts. Regenerate all five pairs; no v1 predictions/cache reuse.
+- Branch/worktree: `agent/codex/next-signal-20261026`, `.worktrees/codex-next-signal`.
+- Ownership explicitly handed off by root: `train_kumo_pair.py` resource constants/guard and receipt timings only; new `package_kumo_continuation.py`, new `test_kumo_continuation.py`, this subsection and [implementation plan](plans/codex-kumo-continuation-implementation.md). Old packager, statistical/native code and other coordination remain outside ownership.
+- Approach/verification: inspect callers; targeted RED/GREEN; source/dispatch/default/cap/metadata/economics/deadline/receipt invariance; full source-only suite and fresh archive. No real-data fits, model downloads, GPU smokes, remote jobs or submissions.
+- Verification/handoff: code `28d73af`;54targeted tests passed4.49seconds, full checkout179passed/66existingwarnings35.93seconds and fresh source-only archive179passed/66existingwarnings35.85seconds. Generated package compiled; worker/source/dispatch/native/default invariance, matching5400/24900caps, economic boundary3984seconds,21syntheticreplaychecks, fullregeneration and process-group cleanup verified. No real fit/download/GPU/job/submission; native T4 operation/runtime remain unverified. Package/hashes and detailed evidence are in the linked plan.

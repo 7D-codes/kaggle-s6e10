@@ -25,6 +25,8 @@ GROUP_COLUMNS = ['Class', 'Type of Travel', 'Customer Type', 'Age', 'Online boar
 ENGINEERED = ['route_mean_' + name for name in GROUP_COLUMNS] + ['route_count', 'route_target']
 MODEL_PARAMETERS = dict(task='classification', size='small', device='cuda:0',
                         num_estimators=2, estimator_batch_size=1, precision='float16')
+FIRST_PAIR_SECONDS = 3600
+TOTAL_BUDGET_SECONDS = 28800
 
 
 def verify_hash(path, expected):
@@ -239,7 +241,7 @@ def run(args, model_factory=None):
     supervisor_start = float(os.environ.get('KUMO_STARTED_MONOTONIC', start))
     metadata = dict(status='running', full_oof=False, submissions=0, completed_folds=[], folds=[],
                     model_parameters=MODEL_PARAMETERS, source_commit=SOURCE_COMMIT, checkpoint_commit=CHECKPOINT_COMMIT,
-                    versions={'python': platform.python_version()}, hashes={})
+                    versions={'python': platform.python_version()}, hashes={}, timings={})
     metrics = output / 'metrics.json'
     def save():
         metadata['runtime_seconds'] = time.monotonic() - start
@@ -261,7 +263,9 @@ def run(args, model_factory=None):
         expected_folds = np.full(len(train), -1)
         splits = list(StratifiedKFold(5, shuffle=True, random_state=42).split(train, y))
         for fold, (_, validation) in enumerate(splits): expected_folds[validation] = fold
+        metadata['timings']['setup_seconds'] = time.monotonic() - supervisor_start
         for fold, (outer_train, validation) in enumerate(splits):
+            context_start = time.monotonic()
             selected = select_context(outer_train, y)
             fold_dir = output / f'fold{fold}'
             fold_dir.mkdir()
@@ -269,10 +273,12 @@ def run(args, model_factory=None):
             state, te = fit_preprocessor(train.iloc[selected], y[selected], fold)
             (fold_dir / 'preprocessor.json').write_text(json.dumps(state, sort_keys=True, allow_nan=False))
             fold_receipt = dict(fold=fold, status='running', context_rows=len(selected), validation_rows=len(validation), test_rows=len(test),
-                context_indices_sha256=sha256(fold_dir / 'context_indices.npy'), preprocessor_sha256=sha256(fold_dir / 'preprocessor.json'), arms={})
+                context_indices_sha256=sha256(fold_dir / 'context_indices.npy'), preprocessor_sha256=sha256(fold_dir / 'preprocessor.json'),
+                context_preparation_seconds=time.monotonic() - context_start, arms={})
             metadata['folds'].append(fold_receipt); save()
             for arm in ('raw', 'fe'):
-                receipt = calibration_metadata(); receipt.update(status='running', seed=42 + fold)
+                arm_start = stage_start = time.monotonic()
+                receipt = calibration_metadata(); receipt.update(status='running', seed=42 + fold, stage='transform', timings={})
                 fold_receipt['arms'][arm] = receipt; save()
                 model = None
                 try:
@@ -281,8 +287,12 @@ def run(args, model_factory=None):
                     testing = transform(test, state, arm).to_numpy()
                     receipt['configuration_sha256'] = hashlib.sha256(json.dumps(dict(model=MODEL_PARAMETERS, state=state, arm=arm, seed=42+fold,
                         context=fold_receipt['context_indices_sha256']), sort_keys=True).encode()).hexdigest()
+                    receipt['timings']['transform_seconds'] = time.monotonic() - stage_start
+                    stage_start = time.monotonic(); receipt['stage'] = 'fit'; save()
                     model = (model_factory or NativeModel)(checkpoint, state, arm, fold)
-                    model.fit(context, y[selected]); receipt['stage'] = 'native_calibration'; save()
+                    model.fit(context, y[selected])
+                    receipt['timings']['fit_seconds'] = time.monotonic() - stage_start
+                    stage_start = time.monotonic(); receipt['stage'] = 'native_calibration'; save()
                     anchor = predict_fixed(model, valid[:1000], receipt['inference_dispatch'], nonconstant=True)
                     verify_native(model, valid[:1000], anchor, receipt)
                     verify_raw_replay(model, train.iloc[validation[:1000]], state, arm, anchor, receipt)
@@ -290,13 +300,16 @@ def run(args, model_factory=None):
                         path = fold_dir / f'{arm}_native_preprocessor.json'
                         path.write_text(json.dumps(model.archive(), allow_nan=False))
                         receipt['native_preprocessor_sha256'] = sha256(path)
-                    receipt['stage'] = 'validation'; save()
+                    receipt['timings']['native_calibration_seconds'] = time.monotonic() - stage_start
+                    stage_start = time.monotonic(); receipt['stage'] = 'validation'; save()
                     prediction = predict_fixed(model, valid, receipt['inference_dispatch'], nonconstant=True)
                     compare_predictions(receipt, 'full_validation_calibration_prefix', prediction[:len(anchor)], anchor)
                     pd.DataFrame({'id': train.id.iloc[validation], 'prediction': prediction}).to_csv(fold_dir / f'{arm}_validation.csv', index=False)
-                    receipt['stage'] = 'test'; save()
+                    receipt['timings']['validation_seconds'] = time.monotonic() - stage_start
+                    stage_start = time.monotonic(); receipt['stage'] = 'test'; save()
                     test_prediction = predict_fixed(model, testing, receipt['inference_dispatch'], nonconstant=True)
                     pd.DataFrame({'id': test.id, 'prediction': test_prediction}).to_csv(fold_dir / f'{arm}_test.csv', index=False)
+                    receipt['timings']['test_seconds'] = time.monotonic() - stage_start
                     if model_factory is None:
                         import torch
                         receipt['device'] = dict(name=torch.cuda.get_device_name(0), peak_allocated=torch.cuda.max_memory_allocated(0), peak_reserved=torch.cuda.max_memory_reserved(0))
@@ -307,7 +320,10 @@ def run(args, model_factory=None):
                     receipt.update(status='failed', error=f'{type(error).__name__}: {error}')
                     raise
                 finally:
+                    if receipt['stage'] != 'complete':
+                        receipt['timings'][receipt['stage'] + '_seconds'] = time.monotonic() - stage_start
                     if model is not None: model.clear()
+                    receipt['timings']['total_seconds'] = time.monotonic() - arm_start
                     save()
             oof.loc[validation, 'fold'] = fold
             fold_receipt['status'] = 'complete'
@@ -317,7 +333,7 @@ def run(args, model_factory=None):
                 elapsed = time.monotonic() - supervisor_start
                 metadata['first_pair_seconds'] = elapsed
                 metadata['projected_total_seconds'] = 1.25 * 5 * elapsed
-                if elapsed > 3600 or metadata['projected_total_seconds'] > 28800:
+                if elapsed > FIRST_PAIR_SECONDS or metadata['projected_total_seconds'] > TOTAL_BUDGET_SECONDS:
                     raise TimeoutError('First pair time/projection exceeds frozen cap')
                 # Supervisor requires both arms/full predictions/replay/archive before accepting this marker.
                 (output / 'first-fold-complete.json').write_text(json.dumps(fold_receipt, allow_nan=False))
@@ -331,6 +347,8 @@ def run(args, model_factory=None):
         metadata.update(status='failed', full_oof=False, error=f'{type(error).__name__}: {error}')
         raise
     finally:
+        if 'setup_seconds' not in metadata['timings']:
+            metadata['timings']['setup_seconds'] = time.monotonic() - supervisor_start
         save()
     return metadata
 
