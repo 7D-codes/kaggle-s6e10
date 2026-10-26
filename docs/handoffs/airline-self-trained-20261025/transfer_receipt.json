@@ -1,0 +1,153 @@
+{
+  "at": "2026-10-25T06:44:24.640127+00:00",
+  "status": "passed",
+  "release_url": "https://github.com/7D-codes/kaggle-s6e10/releases/tag/airline-self-trained-20261025",
+  "release_id": 423184679,
+  "tag": "airline-self-trained-20261025",
+  "target": "agent/codex/airline-handoff-20261025",
+  "published_at": "2026-10-25T06:44:18Z",
+  "assets": [
+    {
+      "name": "cat_twins_tabpfnteacher_v1.zip",
+      "bytes": 175648261,
+      "sha256": "34bcd7fabd50d14782da8c7c361c596c3ff0c6c6988060aef7771aaeab66a7fa",
+      "server_digest": "sha256:34bcd7fabd50d14782da8c7c361c596c3ff0c6c6988060aef7771aaeab66a7fa",
+      "url": "https://github.com/7D-codes/kaggle-s6e10/releases/download/airline-self-trained-20261025/cat_twins_tabpfnteacher_v1.zip"
+    },
+    {
+      "name": "lgbm_optuna_013.zip",
+      "bytes": 3107298,
+      "sha256": "32e430e8407adb131bba7b3b2d931df74fb49d675dd487c00f4c4506b1072297",
+      "server_digest": "sha256:32e430e8407adb131bba7b3b2d931df74fb49d675dd487c00f4c4506b1072297",
+      "url": "https://github.com/7D-codes/kaggle-s6e10/releases/download/airline-self-trained-20261025/lgbm_optuna_013.zip"
+    },
+    {
+      "name": "nested_stack_reference233_services13_lgbm021_cat_twins_v3.zip",
+      "bytes": 480824585,
+      "sha256": "6c212231490519d50de53267b0b62a8ef7343246f3dc6be397494241d205bdf1",
+      "server_digest": "sha256:6c212231490519d50de53267b0b62a8ef7343246f3dc6be397494241d205bdf1",
+      "url": "https://github.com/7D-codes/kaggle-s6e10/releases/download/airline-self-trained-20261025/nested_stack_reference233_services13_lgbm021_cat_twins_v3.zip"
+    },
+    {
+      "name": "nested_stack_reference233_services13_lgbmteacher_catteacher_v5.zip",
+      "bytes": 461735900,
+      "sha256": "efc83f74cf05b001bf962abd791ff24360ca00c50d7ac000bb0975b7f08b7abc",
+      "server_digest": "sha256:efc83f74cf05b001bf962abd791ff24360ca00c50d7ac000bb0975b7f08b7abc",
+      "url": "https://github.com/7D-codes/kaggle-s6e10/releases/download/airline-self-trained-20261025/nested_stack_reference233_services13_lgbmteacher_catteacher_v5.zip"
+    },
+    {
+      "name": "original_source_teacher.zip",
+      "bytes": 882812,
+      "sha256": "9bb5a489d99f192de9e9b2d2adbf2f2c318ce6c4da6450f12bf3efedad6add2b",
+      "server_digest": "sha256:9bb5a489d99f192de9e9b2d2adbf2f2c318ce6c4da6450f12bf3efedad6add2b",
+      "url": "https://github.com/7D-codes/kaggle-s6e10/releases/download/airline-self-trained-20261025/original_source_teacher.zip"
+    },
+    {
+      "name": "prepare_source_auxiliary_v1.zip",
+      "bytes": 3410805,
+      "sha256": "0086f6fb9e7071cdf24926abf3a14b84ac806b8139085c7885f91ca765058be9",
+      "server_digest": "sha256:0086f6fb9e7071cdf24926abf3a14b84ac806b8139085c7885f91ca765058be9",
+      "url": "https://github.com/7D-codes/kaggle-s6e10/releases/download/airline-self-trained-20261025/prepare_source_auxiliary_v1.zip"
+    },
+    {
+      "name": "realmlp_lean_sigma2.33_twins_epochs6_lr025.zip",
+      "bytes": 17990249,
+      "sha256": "2623c28817defb1f0c38aad6400b19eb0b6173f8f329ede89bf6a4201b830df4",
+      "server_digest": "sha256:2623c28817defb1f0c38aad6400b19eb0b6173f8f329ede89bf6a4201b830df4",
+      "url": "https://github.com/7D-codes/kaggle-s6e10/releases/download/airline-self-trained-20261025/realmlp_lean_sigma2.33_twins_epochs6_lr025.zip"
+    },
+    {
+      "name": "reference_catboost.zip",
+      "bytes": 14146686,
+      "sha256": "ae6f66e645bcc23fca0f21b7691a866052068fffcba1b23de2329caec38767c7",
+      "server_digest": "sha256:ae6f66e645bcc23fca0f21b7691a866052068fffcba1b23de2329caec38767c7",
+      "url": "https://github.com/7D-codes/kaggle-s6e10/releases/download/airline-self-trained-20261025/reference_catboost.zip"
+    },
+    {
+      "name": "reference_catboost_native.zip",
+      "bytes": 13985979,
+      "sha256": "fd5533995ae383552173e6a4ddf662da6ec7f968ca1f496715811dc3242a1854",
+      "server_digest": "sha256:fd5533995ae383552173e6a4ddf662da6ec7f968ca1f496715811dc3242a1854",
+      "url": "https://github.com/7D-codes/kaggle-s6e10/releases/download/airline-self-trained-20261025/reference_catboost_native.zip"
+    },
+    {
+      "name": "reference_retrain.zip",
+      "bytes": 88099116,
+      "sha256": "e23e3392d9d74bcf5fb38956b717ee1d74966f781bbdfd9f935e28edd81ffaa0",
+      "server_digest": "sha256:e23e3392d9d74bcf5fb38956b717ee1d74966f781bbdfd9f935e28edd81ffaa0",
+      "url": "https://github.com/7D-codes/kaggle-s6e10/releases/download/airline-self-trained-20261025/reference_retrain.zip"
+    },
+    {
+      "name": "reference_tabpfn_ensemble.zip",
+      "bytes": 455450328,
+      "sha256": "99c683dc133ab84ab8e36074f879ed7eb3853b74e204b31aa4fa1b8465c8e868",
+      "server_digest": "sha256:99c683dc133ab84ab8e36074f879ed7eb3853b74e204b31aa4fa1b8465c8e868",
+      "url": "https://github.com/7D-codes/kaggle-s6e10/releases/download/airline-self-trained-20261025/reference_tabpfn_ensemble.zip"
+    },
+    {
+      "name": "reference_tabpfn_medium.zip",
+      "bytes": 499710795,
+      "sha256": "8edd54932d360b9fade15e2d9710c3078aef2db621545ded47c0ae5c00b1bcb7",
+      "server_digest": "sha256:8edd54932d360b9fade15e2d9710c3078aef2db621545ded47c0ae5c00b1bcb7",
+      "url": "https://github.com/7D-codes/kaggle-s6e10/releases/download/airline-self-trained-20261025/reference_tabpfn_medium.zip"
+    },
+    {
+      "name": "reference_tabpfn_retrain.zip",
+      "bytes": 345580667,
+      "sha256": "845ea74a8bf2be851ec3f05aa04099b7d3d03552c10b83afc27e74bd8ee3d3e2",
+      "server_digest": "sha256:845ea74a8bf2be851ec3f05aa04099b7d3d03552c10b83afc27e74bd8ee3d3e2",
+      "url": "https://github.com/7D-codes/kaggle-s6e10/releases/download/airline-self-trained-20261025/reference_tabpfn_retrain.zip"
+    },
+    {
+      "name": "reference_xgboost.zip",
+      "bytes": 24893272,
+      "sha256": "04d437e0a9652bd0a4c0fb823ea78e3653d9cec86c55d93e6b3954d239bacef2",
+      "server_digest": "sha256:04d437e0a9652bd0a4c0fb823ea78e3653d9cec86c55d93e6b3954d239bacef2",
+      "url": "https://github.com/7D-codes/kaggle-s6e10/releases/download/airline-self-trained-20261025/reference_xgboost.zip"
+    },
+    {
+      "name": "source_and_evidence.zip",
+      "bytes": 347449,
+      "sha256": "baa751f07597e6de8e80533dda6c1daedb95295dac263beabe1353e7bc06ed44",
+      "server_digest": "sha256:baa751f07597e6de8e80533dda6c1daedb95295dac263beabe1353e7bc06ed44",
+      "url": "https://github.com/7D-codes/kaggle-s6e10/releases/download/airline-self-trained-20261025/source_and_evidence.zip"
+    },
+    {
+      "name": "source_auxiliary_services13_v2_prepare.zip",
+      "bytes": 20469458,
+      "sha256": "ace9c5d3aa927e2b8001f1b6e47bdbdb133a1c286b573cb0461bb78ab484e051",
+      "server_digest": "sha256:ace9c5d3aa927e2b8001f1b6e47bdbdb133a1c286b573cb0461bb78ab484e051",
+      "url": "https://github.com/7D-codes/kaggle-s6e10/releases/download/airline-self-trained-20261025/source_auxiliary_services13_v2_prepare.zip"
+    },
+    {
+      "name": "source_tabpfn_teacher_v1_prepare.zip",
+      "bytes": 326054014,
+      "sha256": "0b798df0c2b8e957068bfba4c4a546101f1b56dbaf921d78c8fcc945cfd35110",
+      "server_digest": "sha256:0b798df0c2b8e957068bfba4c4a546101f1b56dbaf921d78c8fcc945cfd35110",
+      "url": "https://github.com/7D-codes/kaggle-s6e10/releases/download/airline-self-trained-20261025/source_tabpfn_teacher_v1_prepare.zip"
+    },
+    {
+      "name": "validated_catboost_reference_blend_v1.csv",
+      "bytes": 8174184,
+      "sha256": "ae8c13b66415c555552773801a739379589166558c3a8141bf5bc7aa3f0cb8f5",
+      "server_digest": "sha256:ae8c13b66415c555552773801a739379589166558c3a8141bf5bc7aa3f0cb8f5",
+      "url": "https://github.com/7D-codes/kaggle-s6e10/releases/download/airline-self-trained-20261025/validated_catboost_reference_blend_v1.csv"
+    },
+    {
+      "name": "SHA256SUMS.txt",
+      "bytes": 1823,
+      "sha256": "292001b558bbbebbd3122b9744f5bf34caa93a323be1c7b9df5498404551a82a",
+      "server_digest": "sha256:292001b558bbbebbd3122b9744f5bf34caa93a323be1c7b9df5498404551a82a",
+      "url": "https://github.com/7D-codes/kaggle-s6e10/releases/download/airline-self-trained-20261025/SHA256SUMS.txt"
+    },
+    {
+      "name": "model_manifest.json",
+      "bytes": 42052,
+      "sha256": "bfdeeec684e852ee50210081d66b3bc23dd7ce7a8353b0efe8d845c024f01a3f",
+      "server_digest": "sha256:bfdeeec684e852ee50210081d66b3bc23dd7ce7a8353b0efe8d845c024f01a3f",
+      "url": "https://github.com/7D-codes/kaggle-s6e10/releases/download/airline-self-trained-20261025/model_manifest.json"
+    }
+  ],
+  "all_server_sha256_and_sizes_match": true,
+  "training_or_scoring_performed": false
+}

@@ -1,0 +1,947 @@
+{
+  "format_version": 1,
+  "models": [
+    {
+      "path": "artifacts/cat_twins_tabpfnteacher_v1/full_refit/seed2026/bundle.joblib",
+      "bytes": 258729161,
+      "sha256": "a41d9833ab83a4718ac4bf46738c01dee109de5c629be79b781eacc62a9db0e0",
+      "asset": "cat_twins_tabpfnteacher_v1.zip",
+      "role": "trained_models",
+      "provenance": "submitted-ensemble evidence superset"
+    },
+    {
+      "path": "artifacts/cat_twins_tabpfnteacher_v1/full_refit/seed42/bundle.joblib",
+      "bytes": 254560910,
+      "sha256": "05280f7cf15b0cdab93d0ac297e16f55897a73eca8b5bc50c8f32e7a76ab4b15",
+      "asset": "cat_twins_tabpfnteacher_v1.zip",
+      "role": "trained_models",
+      "provenance": "submitted-ensemble evidence superset"
+    },
+    {
+      "path": "artifacts/lgbm_optuna_013/full_refit/seed2026/bundle.joblib",
+      "bytes": 3697056,
+      "sha256": "3a3d1a73404e719ff01bbe83db6b08f530e80e82655c3d8750cd316e73f015d6",
+      "asset": "lgbm_optuna_013.zip",
+      "role": "trained_models",
+      "provenance": "submitted-ensemble evidence superset"
+    },
+    {
+      "path": "artifacts/lgbm_optuna_013/full_refit/seed42/bundle.joblib",
+      "bytes": 3699423,
+      "sha256": "4f804d32aaae8e9b7463575cf4100a887738266ed2ffac8dcc51449b4e8e903c",
+      "asset": "lgbm_optuna_013.zip",
+      "role": "trained_models",
+      "provenance": "submitted-ensemble evidence superset"
+    },
+    {
+      "path": "artifacts/nested_stack_reference233_services13_lgbm021_cat_twins_v3/full_refit/base0/meta_fold0/bundle.joblib",
+      "bytes": 13518528,
+      "sha256": "e1562469a37ee8834ba611c2212167cb5aeafa884cd3b6032a70b3d6db632704",
+      "asset": "nested_stack_reference233_services13_lgbm021_cat_twins_v3.zip",
+      "role": "trained_models",
+      "provenance": "submitted-ensemble evidence superset"
+    },
+    {
+      "path": "artifacts/nested_stack_reference233_services13_lgbm021_cat_twins_v3/full_refit/base0/meta_fold1/bundle.joblib",
+      "bytes": 13520453,
+      "sha256": "d0fa99eaf3697111be4e5c6cd6dc4b4123ff559da4b95b0ab82b74981d94c387",
+      "asset": "nested_stack_reference233_services13_lgbm021_cat_twins_v3.zip",
+      "role": "trained_models",
+      "provenance": "submitted-ensemble evidence superset"
+    },
+    {
+      "path": "artifacts/nested_stack_reference233_services13_lgbm021_cat_twins_v3/full_refit/base0/meta_fold2/bundle.joblib",
+      "bytes": 13520245,
+      "sha256": "aa8253d258384533e28d5cddb76e33f4c47d1579c16103a6fb70e7aab5ccde38",
+      "asset": "nested_stack_reference233_services13_lgbm021_cat_twins_v3.zip",
+      "role": "trained_models",
+      "provenance": "submitted-ensemble evidence superset"
+    },
+    {
+      "path": "artifacts/nested_stack_reference233_services13_lgbm021_cat_twins_v3/full_refit/base0/outer_full/bundle.joblib",
+      "bytes": 13551538,
+      "sha256": "5bf223df1ebb964a4665a73ffad1bf5fc434d8004519fbced02cd61bdde0cfe4",
+      "asset": "nested_stack_reference233_services13_lgbm021_cat_twins_v3.zip",
+      "role": "trained_models",
+      "provenance": "submitted-ensemble evidence superset"
+    },
+    {
+      "path": "artifacts/nested_stack_reference233_services13_lgbm021_cat_twins_v3/full_refit/base1/meta_fold0/bundle.joblib",
+      "bytes": 32682685,
+      "sha256": "8acd2499ef1e2fe6f352a6625486042e25057161b6c02040823fed3ab19ef83e",
+      "asset": "nested_stack_reference233_services13_lgbm021_cat_twins_v3.zip",
+      "role": "trained_models",
+      "provenance": "submitted-ensemble evidence superset"
+    },
+    {
+      "path": "artifacts/nested_stack_reference233_services13_lgbm021_cat_twins_v3/full_refit/base1/meta_fold1/bundle.joblib",
+      "bytes": 32671743,
+      "sha256": "6720b0b6bbc8f139af9c9668ee28c599b89737a916dec707a655d049e46cd9e2",
+      "asset": "nested_stack_reference233_services13_lgbm021_cat_twins_v3.zip",
+      "role": "trained_models",
+      "provenance": "submitted-ensemble evidence superset"
+    },
+    {
+      "path": "artifacts/nested_stack_reference233_services13_lgbm021_cat_twins_v3/full_refit/base1/meta_fold2/bundle.joblib",
+      "bytes": 32678123,
+      "sha256": "c778eed561fcf61c3c66390f57ab734dc027eadef39ce4901326e0840b3c32dc",
+      "asset": "nested_stack_reference233_services13_lgbm021_cat_twins_v3.zip",
+      "role": "trained_models",
+      "provenance": "submitted-ensemble evidence superset"
+    },
+    {
+      "path": "artifacts/nested_stack_reference233_services13_lgbm021_cat_twins_v3/full_refit/base1/outer_full/bundle.joblib",
+      "bytes": 45177592,
+      "sha256": "d2e74808a25cb3ef942d9733f042b355534ea531cd8e72ce2d966825ae5bbc37",
+      "asset": "nested_stack_reference233_services13_lgbm021_cat_twins_v3.zip",
+      "role": "trained_models",
+      "provenance": "submitted-ensemble evidence superset"
+    },
+    {
+      "path": "artifacts/nested_stack_reference233_services13_lgbm021_cat_twins_v3/full_refit/base2/meta_fold0/bundle.joblib",
+      "bytes": 290828485,
+      "sha256": "d241d550e23e2baff8d79a593e95e410930d734185a0d8bf7538344ab565c08b",
+      "asset": "nested_stack_reference233_services13_lgbm021_cat_twins_v3.zip",
+      "role": "trained_models",
+      "provenance": "submitted-ensemble evidence superset"
+    },
+    {
+      "path": "artifacts/nested_stack_reference233_services13_lgbm021_cat_twins_v3/full_refit/base2/meta_fold1/bundle.joblib",
+      "bytes": 261150693,
+      "sha256": "fdc7a78659c52356a74f60f87c911c46cdc75fb32ec6d6a1b693d2a28690c952",
+      "asset": "nested_stack_reference233_services13_lgbm021_cat_twins_v3.zip",
+      "role": "trained_models",
+      "provenance": "submitted-ensemble evidence superset"
+    },
+    {
+      "path": "artifacts/nested_stack_reference233_services13_lgbm021_cat_twins_v3/full_refit/base2/meta_fold2/bundle.joblib",
+      "bytes": 263426481,
+      "sha256": "c24b1e24077af91c531c5ebddbd81f4eb9a750e16cc405381b9886057357ef3e",
+      "asset": "nested_stack_reference233_services13_lgbm021_cat_twins_v3.zip",
+      "role": "trained_models",
+      "provenance": "submitted-ensemble evidence superset"
+    },
+    {
+      "path": "artifacts/nested_stack_reference233_services13_lgbm021_cat_twins_v3/full_refit/base2/outer_full/bundle.joblib",
+      "bytes": 342830200,
+      "sha256": "74f4723161db10187e7342b54fa7782e90d5fae2328124277d3aa858005ef9f8",
+      "asset": "nested_stack_reference233_services13_lgbm021_cat_twins_v3.zip",
+      "role": "trained_models",
+      "provenance": "submitted-ensemble evidence superset"
+    },
+    {
+      "path": "artifacts/nested_stack_reference233_services13_lgbm021_cat_twins_v3/full_refit/stack.joblib",
+      "bytes": 1079,
+      "sha256": "2f1967ec378e43ce6eed057b3d86ea6f5c9950d07e0c296fb58ea90121ef404b",
+      "asset": "nested_stack_reference233_services13_lgbm021_cat_twins_v3.zip",
+      "role": "trained_models",
+      "provenance": "submitted-ensemble evidence superset"
+    },
+    {
+      "path": "artifacts/nested_stack_reference233_services13_lgbmteacher_catteacher_v5/full_refit/base0/meta_fold0/bundle.joblib",
+      "bytes": 13518528,
+      "sha256": "689eda0d74f3e7a2383f5e11051652c421b9aa946937d9b3bd555ba58500cdd3",
+      "asset": "nested_stack_reference233_services13_lgbmteacher_catteacher_v5.zip",
+      "role": "trained_models",
+      "provenance": "submitted-ensemble evidence superset"
+    },
+    {
+      "path": "artifacts/nested_stack_reference233_services13_lgbmteacher_catteacher_v5/full_refit/base0/meta_fold1/bundle.joblib",
+      "bytes": 13520453,
+      "sha256": "e8406bbeeeff645dee2ed1fb82509727d82e496db827c63004212b8f7d00e876",
+      "asset": "nested_stack_reference233_services13_lgbmteacher_catteacher_v5.zip",
+      "role": "trained_models",
+      "provenance": "submitted-ensemble evidence superset"
+    },
+    {
+      "path": "artifacts/nested_stack_reference233_services13_lgbmteacher_catteacher_v5/full_refit/base0/meta_fold2/bundle.joblib",
+      "bytes": 13520245,
+      "sha256": "153cfddb5612af4ee2c1e5c862d8cef2b26ee8bcd68b9b023fc69184b54d161e",
+      "asset": "nested_stack_reference233_services13_lgbmteacher_catteacher_v5.zip",
+      "role": "trained_models",
+      "provenance": "submitted-ensemble evidence superset"
+    },
+    {
+      "path": "artifacts/nested_stack_reference233_services13_lgbmteacher_catteacher_v5/full_refit/base0/outer_full/bundle.joblib",
+      "bytes": 13551538,
+      "sha256": "a6fe2753c7bf6797400ad3058bb77d9e4f01419f67143b92e608e690c9bbee6e",
+      "asset": "nested_stack_reference233_services13_lgbmteacher_catteacher_v5.zip",
+      "role": "trained_models",
+      "provenance": "submitted-ensemble evidence superset"
+    },
+    {
+      "path": "artifacts/nested_stack_reference233_services13_lgbmteacher_catteacher_v5/full_refit/base1/meta_fold0/bundle.joblib",
+      "bytes": 31233890,
+      "sha256": "558dd76744a55175845d092bc08eb367c8531e91b9588d3bf7c1709adc93b785",
+      "asset": "nested_stack_reference233_services13_lgbmteacher_catteacher_v5.zip",
+      "role": "trained_models",
+      "provenance": "submitted-ensemble evidence superset"
+    },
+    {
+      "path": "artifacts/nested_stack_reference233_services13_lgbmteacher_catteacher_v5/full_refit/base1/meta_fold1/bundle.joblib",
+      "bytes": 31223215,
+      "sha256": "d506da31fb7da482491c0f00fcec5be2ed25acc564eb95bec1ea8d55aa0efb5a",
+      "asset": "nested_stack_reference233_services13_lgbmteacher_catteacher_v5.zip",
+      "role": "trained_models",
+      "provenance": "submitted-ensemble evidence superset"
+    },
+    {
+      "path": "artifacts/nested_stack_reference233_services13_lgbmteacher_catteacher_v5/full_refit/base1/meta_fold2/bundle.joblib",
+      "bytes": 31223861,
+      "sha256": "f667a8d0863a7795900f1f33da08aa1d15db576edf1be7c5960350e750375499",
+      "asset": "nested_stack_reference233_services13_lgbmteacher_catteacher_v5.zip",
+      "role": "trained_models",
+      "provenance": "submitted-ensemble evidence superset"
+    },
+    {
+      "path": "artifacts/nested_stack_reference233_services13_lgbmteacher_catteacher_v5/full_refit/base1/outer_full/bundle.joblib",
+      "bytes": 43714946,
+      "sha256": "2f15e41e014ee3ac6e0cd387711a3699d4097b3ac8bf9948b86adf0ba0b3f4fa",
+      "asset": "nested_stack_reference233_services13_lgbmteacher_catteacher_v5.zip",
+      "role": "trained_models",
+      "provenance": "submitted-ensemble evidence superset"
+    },
+    {
+      "path": "artifacts/nested_stack_reference233_services13_lgbmteacher_catteacher_v5/full_refit/base2/meta_fold0/bundle.joblib",
+      "bytes": 253589719,
+      "sha256": "95d4298e942c2e517d031a664fd07ed751be346e3c9b07260fb55c25bd184914",
+      "asset": "nested_stack_reference233_services13_lgbmteacher_catteacher_v5.zip",
+      "role": "trained_models",
+      "provenance": "submitted-ensemble evidence superset"
+    },
+    {
+      "path": "artifacts/nested_stack_reference233_services13_lgbmteacher_catteacher_v5/full_refit/base2/meta_fold1/bundle.joblib",
+      "bytes": 260055955,
+      "sha256": "48b5159fe3811adac89ace4bb2e07e4fb067a9fb778f2877425842b5f1f79a7f",
+      "asset": "nested_stack_reference233_services13_lgbmteacher_catteacher_v5.zip",
+      "role": "trained_models",
+      "provenance": "submitted-ensemble evidence superset"
+    },
+    {
+      "path": "artifacts/nested_stack_reference233_services13_lgbmteacher_catteacher_v5/full_refit/base2/meta_fold2/bundle.joblib",
+      "bytes": 265456335,
+      "sha256": "04a59804a726694fda06734a3c3cae2de5af9edb5a72258e0d1ad0279fa9797a",
+      "asset": "nested_stack_reference233_services13_lgbmteacher_catteacher_v5.zip",
+      "role": "trained_models",
+      "provenance": "submitted-ensemble evidence superset"
+    },
+    {
+      "path": "artifacts/nested_stack_reference233_services13_lgbmteacher_catteacher_v5/full_refit/base2/outer_full/bundle.joblib",
+      "bytes": 322596010,
+      "sha256": "16daeda725dfbb7c81013e739a4800d56beef87b0416a8897e42eb1297070258",
+      "asset": "nested_stack_reference233_services13_lgbmteacher_catteacher_v5.zip",
+      "role": "trained_models",
+      "provenance": "submitted-ensemble evidence superset"
+    },
+    {
+      "path": "artifacts/nested_stack_reference233_services13_lgbmteacher_catteacher_v5/full_refit/stack.joblib",
+      "bytes": 1094,
+      "sha256": "350bb9be454d58c1e319ac26f9b2ece049e8daf5744572bf97fbe124b1b9c44d",
+      "asset": "nested_stack_reference233_services13_lgbmteacher_catteacher_v5.zip",
+      "role": "trained_models",
+      "provenance": "submitted-ensemble evidence superset"
+    },
+    {
+      "path": "data/original/teacher.joblib",
+      "bytes": 2118039,
+      "sha256": "0443d090dfa315e59ac422de82249adbbf58475c8edc52debf3f883a7a00104a",
+      "asset": "original_source_teacher.zip",
+      "role": "trained_models",
+      "provenance": "submitted-ensemble evidence superset"
+    },
+    {
+      "path": "artifacts/prepare_source_auxiliary_v1/seed42_fold0/source_aux_boarding/model.joblib",
+      "bytes": 4120500,
+      "sha256": "282fb62f51b0eb03b1947d53fb70cfb74a4ff6a35ca6d41370392fbab691dc53",
+      "asset": "prepare_source_auxiliary_v1.zip",
+      "role": "trained_models",
+      "provenance": "submitted-ensemble evidence superset"
+    },
+    {
+      "path": "artifacts/prepare_source_auxiliary_v1/seed42_fold0/source_aux_wifi/model.joblib",
+      "bytes": 4132004,
+      "sha256": "9e7bd4a96e22794267a2ba1387f1ec6c2fe9dc2afdffe419a60f93421e465192",
+      "asset": "prepare_source_auxiliary_v1.zip",
+      "role": "trained_models",
+      "provenance": "submitted-ensemble evidence superset"
+    },
+    {
+      "path": "artifacts/realmlp_lean_sigma2.33_twins_epochs6_lr025/full_refit/seed42/bundle.joblib",
+      "bytes": 20288829,
+      "sha256": "bebe2c304abc9604d04039fbae133eef28b4f74b916e6ac681f7421425b03558",
+      "asset": "realmlp_lean_sigma2.33_twins_epochs6_lr025.zip",
+      "role": "trained_models",
+      "provenance": "submitted-ensemble evidence superset"
+    },
+    {
+      "path": "artifacts/reference_catboost/full_refit/model.cbm",
+      "bytes": 3238376,
+      "sha256": "09f96db857b94194d0cf2db30dd7aa6b56cf9afe2227161bc888350a827b078c",
+      "asset": "reference_catboost.zip",
+      "role": "trained_models",
+      "provenance": "submitted-ensemble evidence superset"
+    },
+    {
+      "path": "artifacts/reference_catboost/split2026_fold0/model.cbm",
+      "bytes": 3238832,
+      "sha256": "69ac37cc6c028c0a40027054c03a7ced2e4dec5e051d520fa99649ec3d96192a",
+      "asset": "reference_catboost.zip",
+      "role": "trained_models",
+      "provenance": "submitted-ensemble evidence superset"
+    },
+    {
+      "path": "artifacts/reference_catboost/split2026_fold1/model.cbm",
+      "bytes": 3238616,
+      "sha256": "2549db8d4139eb389c6ed71d81809bbf7175513be016cfe5b8ca471b48a0c37b",
+      "asset": "reference_catboost.zip",
+      "role": "trained_models",
+      "provenance": "submitted-ensemble evidence superset"
+    },
+    {
+      "path": "artifacts/reference_catboost/split2026_fold2/model.cbm",
+      "bytes": 3238616,
+      "sha256": "a6902f8e361d6e50ca8bdc631472583327d08eb3e7f2e923a70f655027a6b1d5",
+      "asset": "reference_catboost.zip",
+      "role": "trained_models",
+      "provenance": "submitted-ensemble evidence superset"
+    },
+    {
+      "path": "artifacts/reference_catboost/split2026_fold3/model.cbm",
+      "bytes": 3238560,
+      "sha256": "baff953bb4d761e7ff725a6155d83d318ae93477bceaf4d22f5f7f6c2d17e38e",
+      "asset": "reference_catboost.zip",
+      "role": "trained_models",
+      "provenance": "submitted-ensemble evidence superset"
+    },
+    {
+      "path": "artifacts/reference_catboost/split2026_fold4/model.cbm",
+      "bytes": 3238528,
+      "sha256": "c6a01a9278369c451723bc112cc4504a01022009b369cdb1ec50e332c9654c46",
+      "asset": "reference_catboost.zip",
+      "role": "trained_models",
+      "provenance": "submitted-ensemble evidence superset"
+    },
+    {
+      "path": "artifacts/reference_catboost/split42_fold0/model.cbm",
+      "bytes": 3238712,
+      "sha256": "c2f6d556ba1a4e0d9e1944855fb29dd040f125dfd89295e6030bc8227afe279c",
+      "asset": "reference_catboost.zip",
+      "role": "trained_models",
+      "provenance": "submitted-ensemble evidence superset"
+    },
+    {
+      "path": "artifacts/reference_catboost/split42_fold1/model.cbm",
+      "bytes": 3238856,
+      "sha256": "ab3f1c6dd96a2bb04a91101280db6553361a9868c6a13638cd4cce7db1849c6e",
+      "asset": "reference_catboost.zip",
+      "role": "trained_models",
+      "provenance": "submitted-ensemble evidence superset"
+    },
+    {
+      "path": "artifacts/reference_catboost/split42_fold2/model.cbm",
+      "bytes": 3238608,
+      "sha256": "6cc2fc22c223000ec70dcb93c834241d76b814b728231b58a9b2d1dbed36d82b",
+      "asset": "reference_catboost.zip",
+      "role": "trained_models",
+      "provenance": "submitted-ensemble evidence superset"
+    },
+    {
+      "path": "artifacts/reference_catboost/split42_fold3/model.cbm",
+      "bytes": 3238648,
+      "sha256": "789697e0ed9f5b6a888746aaff5a55b4701abdb759918958fea9ab4c04ac07f9",
+      "asset": "reference_catboost.zip",
+      "role": "trained_models",
+      "provenance": "submitted-ensemble evidence superset"
+    },
+    {
+      "path": "artifacts/reference_catboost/split42_fold4/model.cbm",
+      "bytes": 3238424,
+      "sha256": "bc392b66dea4679ebf3096fef9ec4d516136d3d9ee8315c2e7c0ad9ef206fe3e",
+      "asset": "reference_catboost.zip",
+      "role": "trained_models",
+      "provenance": "submitted-ensemble evidence superset"
+    },
+    {
+      "path": "artifacts/reference_catboost_native/full_refit/model.cbm",
+      "bytes": 3253616,
+      "sha256": "b45957d4f4ae94f5773d9a3c02429213710d28abaab74d907cec015b5bd26fbb",
+      "asset": "reference_catboost_native.zip",
+      "role": "trained_model_or_encoder",
+      "provenance": "reference_catboost_native"
+    },
+    {
+      "path": "artifacts/reference_catboost_native/split2026_fold0/model.cbm",
+      "bytes": 3273976,
+      "sha256": "67f2237ae69eeeca47189fe072c0fe96ebfe3c2daf40eac36e95dda59678df77",
+      "asset": "reference_catboost_native.zip",
+      "role": "trained_model_or_encoder",
+      "provenance": "reference_catboost_native"
+    },
+    {
+      "path": "artifacts/reference_catboost_native/split2026_fold1/model.cbm",
+      "bytes": 3268936,
+      "sha256": "d9b9b8a56fb1411b44965012ce0484575829f925d327116e028c9da7caffc89e",
+      "asset": "reference_catboost_native.zip",
+      "role": "trained_model_or_encoder",
+      "provenance": "reference_catboost_native"
+    },
+    {
+      "path": "artifacts/reference_catboost_native/split2026_fold2/model.cbm",
+      "bytes": 3274672,
+      "sha256": "6a60bb4aacd68899cc4750ec357dcc9874431c856339e9d5ec609d2a21276259",
+      "asset": "reference_catboost_native.zip",
+      "role": "trained_model_or_encoder",
+      "provenance": "reference_catboost_native"
+    },
+    {
+      "path": "artifacts/reference_catboost_native/split2026_fold3/model.cbm",
+      "bytes": 3270264,
+      "sha256": "37eaf9cf8951dad46b306200dac189a6841635515c25e9e1a471ee575d2b18fe",
+      "asset": "reference_catboost_native.zip",
+      "role": "trained_model_or_encoder",
+      "provenance": "reference_catboost_native"
+    },
+    {
+      "path": "artifacts/reference_catboost_native/split2026_fold4/model.cbm",
+      "bytes": 3283232,
+      "sha256": "ef711a3478ce848e9a5d8088bf46fead8eb11dca683e26c19791e94b873f156a",
+      "asset": "reference_catboost_native.zip",
+      "role": "trained_model_or_encoder",
+      "provenance": "reference_catboost_native"
+    },
+    {
+      "path": "artifacts/reference_catboost_native/split42_fold0/model.cbm",
+      "bytes": 3277144,
+      "sha256": "03d17267f65651acc6564e55e2df93e75fb09111294fe51925a966cff7064b98",
+      "asset": "reference_catboost_native.zip",
+      "role": "trained_model_or_encoder",
+      "provenance": "reference_catboost_native"
+    },
+    {
+      "path": "artifacts/reference_catboost_native/split42_fold1/model.cbm",
+      "bytes": 3265992,
+      "sha256": "0c87e7013d983892eaec8f3148ec2793c0af713c6442b021c3ad5abdacb764dc",
+      "asset": "reference_catboost_native.zip",
+      "role": "trained_model_or_encoder",
+      "provenance": "reference_catboost_native"
+    },
+    {
+      "path": "artifacts/reference_catboost_native/split42_fold2/model.cbm",
+      "bytes": 3286496,
+      "sha256": "c63401d90ddad688d03aaede893d25d42628a0acf268a4c7308c0ba1902cf7d3",
+      "asset": "reference_catboost_native.zip",
+      "role": "trained_model_or_encoder",
+      "provenance": "reference_catboost_native"
+    },
+    {
+      "path": "artifacts/reference_catboost_native/split42_fold3/model.cbm",
+      "bytes": 3288088,
+      "sha256": "a89b10ef673f2d1e8900b167acb1d8e5bd65b208ed8c0299c3dd8c8aa559ee2f",
+      "asset": "reference_catboost_native.zip",
+      "role": "trained_model_or_encoder",
+      "provenance": "reference_catboost_native"
+    },
+    {
+      "path": "artifacts/reference_catboost_native/split42_fold4/model.cbm",
+      "bytes": 3283632,
+      "sha256": "cb39c8f6921f11dad655c20b7fca00e685583bb861eb9eadb01083a25f1ea369",
+      "asset": "reference_catboost_native.zip",
+      "role": "trained_model_or_encoder",
+      "provenance": "reference_catboost_native"
+    },
+    {
+      "path": "artifacts/reference_retrain/full_refit/model.joblib",
+      "bytes": 8505782,
+      "sha256": "127226832b3a16c63b9eb5776516dc3afe570a50e730806893b338c8551d19aa",
+      "asset": "reference_retrain.zip",
+      "role": "trained_model_or_encoder",
+      "provenance": "reference_retrain"
+    },
+    {
+      "path": "artifacts/reference_retrain/split2026_fold0/model.joblib",
+      "bytes": 7169141,
+      "sha256": "1610b1157fe8457545c15b3ff89ab187d802914ee55e2becf3ac49b83624ba9f",
+      "asset": "reference_retrain.zip",
+      "role": "trained_model_or_encoder",
+      "provenance": "reference_retrain"
+    },
+    {
+      "path": "artifacts/reference_retrain/split2026_fold1/model.joblib",
+      "bytes": 7668132,
+      "sha256": "f9c6dc38589bef4820e2ba249e611b9aaf2eeadb7ce082b53629d0c009ac1016",
+      "asset": "reference_retrain.zip",
+      "role": "trained_model_or_encoder",
+      "provenance": "reference_retrain"
+    },
+    {
+      "path": "artifacts/reference_retrain/split2026_fold2/model.joblib",
+      "bytes": 8762793,
+      "sha256": "ce88bf1262fbc1f9a5b2a51cc54879649d612b1a620e555e962a2bf019d0e82f",
+      "asset": "reference_retrain.zip",
+      "role": "trained_model_or_encoder",
+      "provenance": "reference_retrain"
+    },
+    {
+      "path": "artifacts/reference_retrain/split2026_fold3/model.joblib",
+      "bytes": 7677536,
+      "sha256": "23288470229d487119dd059c67a1226c568c70417adfe4b8ca2a6009c66e45a6",
+      "asset": "reference_retrain.zip",
+      "role": "trained_model_or_encoder",
+      "provenance": "reference_retrain"
+    },
+    {
+      "path": "artifacts/reference_retrain/split2026_fold4/model.joblib",
+      "bytes": 7154550,
+      "sha256": "c70823ace014bf6ebd6bb9505bd1f175882dd10e4c9ce307ada55a05768aaf2d",
+      "asset": "reference_retrain.zip",
+      "role": "trained_model_or_encoder",
+      "provenance": "reference_retrain"
+    },
+    {
+      "path": "artifacts/reference_retrain/split42_fold0/model.joblib",
+      "bytes": 9572963,
+      "sha256": "4794a0462303b9ec3d324d02a9e18483b0fd5ad3d3b33b05e910a09ecec47de8",
+      "asset": "reference_retrain.zip",
+      "role": "trained_model_or_encoder",
+      "provenance": "reference_retrain"
+    },
+    {
+      "path": "artifacts/reference_retrain/split42_fold1/model.joblib",
+      "bytes": 7903344,
+      "sha256": "b7dd71e4dd5b6a286a3ac83671262e1766ff0f45a45bb70f6692adf19c23bdf9",
+      "asset": "reference_retrain.zip",
+      "role": "trained_model_or_encoder",
+      "provenance": "reference_retrain"
+    },
+    {
+      "path": "artifacts/reference_retrain/split42_fold2/model.joblib",
+      "bytes": 7055704,
+      "sha256": "cd7be03d14920b502a085d865c87e00bcc789f24301e098ca36fd5c65c7cbc41",
+      "asset": "reference_retrain.zip",
+      "role": "trained_model_or_encoder",
+      "provenance": "reference_retrain"
+    },
+    {
+      "path": "artifacts/reference_retrain/split42_fold3/model.joblib",
+      "bytes": 8825978,
+      "sha256": "5595c3d0b5a97f8fcf8b23d26fd65401f63c9ef6391836a7f820bd7db83a9360",
+      "asset": "reference_retrain.zip",
+      "role": "trained_model_or_encoder",
+      "provenance": "reference_retrain"
+    },
+    {
+      "path": "artifacts/reference_retrain/split42_fold4/model.joblib",
+      "bytes": 8568949,
+      "sha256": "f6b564d8ddb71b64f813188d02fca85ecccc4d0fdddbb36b5824b15c139e2f79",
+      "asset": "reference_retrain.zip",
+      "role": "trained_model_or_encoder",
+      "provenance": "reference_retrain"
+    },
+    {
+      "path": "artifacts/reference_tabpfn_ensemble/full_refit/context_indices.npy",
+      "bytes": 524416,
+      "sha256": "61a7f9542cdc250b0333264d6aac979fb09fa406cef433a0737a8ecb1e6c4380",
+      "asset": "reference_tabpfn_ensemble.zip",
+      "role": "fitted_context_indices",
+      "provenance": "reference_tabpfn_ensemble"
+    },
+    {
+      "path": "artifacts/reference_tabpfn_ensemble/full_refit/features.joblib",
+      "bytes": 5135616,
+      "sha256": "a4e833c388e1f68eda9e59e9460ff3ae03b91440b7ab56087f9e969c6295ce21",
+      "asset": "reference_tabpfn_ensemble.zip",
+      "role": "trained_model_or_encoder",
+      "provenance": "reference_tabpfn_ensemble"
+    },
+    {
+      "path": "artifacts/reference_tabpfn_ensemble/full_refit/model.tabpfn_fit",
+      "bytes": 450295831,
+      "sha256": "25eb4a895614deda40efcae84530aeaceb3728351120374508af1962c96d4632",
+      "asset": "reference_tabpfn_ensemble.zip",
+      "role": "trained_model_or_encoder",
+      "provenance": "reference_tabpfn_ensemble"
+    },
+    {
+      "path": "artifacts/reference_tabpfn_medium/full_refit/context_indices.npy",
+      "bytes": 1200128,
+      "sha256": "d8c57b02d79497350085a9d70515ac67124b4ed9ead37cc4d4645002ef3d5e1e",
+      "asset": "reference_tabpfn_medium.zip",
+      "role": "fitted_context_indices",
+      "provenance": "reference_tabpfn_medium"
+    },
+    {
+      "path": "artifacts/reference_tabpfn_medium/full_refit/features.joblib",
+      "bytes": 5135616,
+      "sha256": "a4e833c388e1f68eda9e59e9460ff3ae03b91440b7ab56087f9e969c6295ce21",
+      "asset": "reference_tabpfn_medium.zip",
+      "role": "trained_model_or_encoder",
+      "provenance": "reference_tabpfn_medium"
+    },
+    {
+      "path": "artifacts/reference_tabpfn_medium/full_refit/model.tabpfn_fit",
+      "bytes": 494243790,
+      "sha256": "a34cf9e56843cb728b5ce4b22fb5da6c5125c27136ab7392211836a510b10938",
+      "asset": "reference_tabpfn_medium.zip",
+      "role": "trained_model_or_encoder",
+      "provenance": "reference_tabpfn_medium"
+    },
+    {
+      "path": "artifacts/reference_tabpfn_retrain/full_refit/context_indices.npy",
+      "bytes": 800128,
+      "sha256": "bf7cd7faf8998a524e21e54969b8476b2cf14ef3a82cbeb4b76481c3bbbb4863",
+      "asset": "reference_tabpfn_retrain.zip",
+      "role": "fitted_context_indices",
+      "provenance": "reference_tabpfn_retrain"
+    },
+    {
+      "path": "artifacts/reference_tabpfn_retrain/full_refit/features.joblib",
+      "bytes": 5135616,
+      "sha256": "a4e833c388e1f68eda9e59e9460ff3ae03b91440b7ab56087f9e969c6295ce21",
+      "asset": "reference_tabpfn_retrain.zip",
+      "role": "trained_model_or_encoder",
+      "provenance": "reference_tabpfn_retrain"
+    },
+    {
+      "path": "artifacts/reference_tabpfn_retrain/full_refit/model.tabpfn_fit",
+      "bytes": 335208759,
+      "sha256": "169bc431954ddd4e278dac33caa3c99480976f3948ef45af920a1df609dc374c",
+      "asset": "reference_tabpfn_retrain.zip",
+      "role": "trained_model_or_encoder",
+      "provenance": "reference_tabpfn_retrain"
+    },
+    {
+      "path": "artifacts/reference_tabpfn_retrain/prepared/full/features.joblib",
+      "bytes": 5135293,
+      "sha256": "cc6fba9db7244bca1064ebba3d7fa3a6282781ddcf27f846aaecbd75fa252935",
+      "asset": "reference_tabpfn_retrain.zip",
+      "role": "trained_models",
+      "provenance": "submitted-ensemble evidence superset"
+    },
+    {
+      "path": "artifacts/reference_xgboost/full_refit/model.ubj",
+      "bytes": 5814418,
+      "sha256": "b1b760430e58af1404bb9ec623f0e2c92539ddfe250a7a8150f0e1bb5731d605",
+      "asset": "reference_xgboost.zip",
+      "role": "trained_model_or_encoder",
+      "provenance": "reference_xgboost"
+    },
+    {
+      "path": "artifacts/reference_xgboost/split2026_fold0/model.ubj",
+      "bytes": 5629809,
+      "sha256": "685520479912f49a2491c825536d621dd147bc77c68fb5ff0b3f71d38a37a7a7",
+      "asset": "reference_xgboost.zip",
+      "role": "trained_model_or_encoder",
+      "provenance": "reference_xgboost"
+    },
+    {
+      "path": "artifacts/reference_xgboost/split2026_fold1/model.ubj",
+      "bytes": 5569948,
+      "sha256": "2711a33c719d8d897470f76262edbc6a4111776675d1e6ead45435f39022b902",
+      "asset": "reference_xgboost.zip",
+      "role": "trained_model_or_encoder",
+      "provenance": "reference_xgboost"
+    },
+    {
+      "path": "artifacts/reference_xgboost/split2026_fold2/model.ubj",
+      "bytes": 5516421,
+      "sha256": "94f61a5001853f24410d4bc62f17150a0ca134b0bd5ab537ffc1dff9ee0c3fb0",
+      "asset": "reference_xgboost.zip",
+      "role": "trained_model_or_encoder",
+      "provenance": "reference_xgboost"
+    },
+    {
+      "path": "artifacts/reference_xgboost/split2026_fold3/model.ubj",
+      "bytes": 5630765,
+      "sha256": "5c6b3fee23600e843db5d490ae0576f029b3b28105c29753f08ee8cb01795525",
+      "asset": "reference_xgboost.zip",
+      "role": "trained_model_or_encoder",
+      "provenance": "reference_xgboost"
+    },
+    {
+      "path": "artifacts/reference_xgboost/split2026_fold4/model.ubj",
+      "bytes": 5651833,
+      "sha256": "07057165f6bf6b9ae61573ebec3f8ecd744cafd8a94f903c4ea8c9b4ae16d37a",
+      "asset": "reference_xgboost.zip",
+      "role": "trained_model_or_encoder",
+      "provenance": "reference_xgboost"
+    },
+    {
+      "path": "artifacts/reference_xgboost/split42_fold0/model.ubj",
+      "bytes": 5573476,
+      "sha256": "3a8d441ec5fa2e8ec1b8f18cdb8872bae486bc45ebb010d82a5e8c2fdd45833e",
+      "asset": "reference_xgboost.zip",
+      "role": "trained_model_or_encoder",
+      "provenance": "reference_xgboost"
+    },
+    {
+      "path": "artifacts/reference_xgboost/split42_fold1/model.ubj",
+      "bytes": 5575254,
+      "sha256": "c57322f58c17eb2c23c11f20e3d308467081f7f24e62aa2430bb13252218d837",
+      "asset": "reference_xgboost.zip",
+      "role": "trained_model_or_encoder",
+      "provenance": "reference_xgboost"
+    },
+    {
+      "path": "artifacts/reference_xgboost/split42_fold2/model.ubj",
+      "bytes": 5651032,
+      "sha256": "86c64447def1a27497f1dd09b00930968b0482c12698b034fa10f1dc818ea833",
+      "asset": "reference_xgboost.zip",
+      "role": "trained_model_or_encoder",
+      "provenance": "reference_xgboost"
+    },
+    {
+      "path": "artifacts/reference_xgboost/split42_fold3/model.ubj",
+      "bytes": 5669383,
+      "sha256": "bcbd7100f7fd2ed42e04443bcc00bfe9ab71193bd18bb64913a4ceb71402e4fb",
+      "asset": "reference_xgboost.zip",
+      "role": "trained_model_or_encoder",
+      "provenance": "reference_xgboost"
+    },
+    {
+      "path": "artifacts/reference_xgboost/split42_fold4/model.ubj",
+      "bytes": 5599869,
+      "sha256": "69e4eacf0419dbee8e27173488c1ed8c91b92e23ef129bc426cf8e77718d04db",
+      "asset": "reference_xgboost.zip",
+      "role": "trained_model_or_encoder",
+      "provenance": "reference_xgboost"
+    },
+    {
+      "path": "artifacts/source_auxiliary_services13_v2_prepare/seed42_fold0/source_aux_baggage_handling/model.joblib",
+      "bytes": 3458748,
+      "sha256": "0eae6cd7cab074d3a38e4465c69ab8bf9db1d9d0c548b0e65277247c44c27269",
+      "asset": "source_auxiliary_services13_v2_prepare.zip",
+      "role": "trained_models",
+      "provenance": "submitted-ensemble evidence superset"
+    },
+    {
+      "path": "artifacts/source_auxiliary_services13_v2_prepare/seed42_fold0/source_aux_boarding/model.joblib",
+      "bytes": 4120500,
+      "sha256": "282fb62f51b0eb03b1947d53fb70cfb74a4ff6a35ca6d41370392fbab691dc53",
+      "asset": "source_auxiliary_services13_v2_prepare.zip",
+      "role": "trained_models",
+      "provenance": "submitted-ensemble evidence superset"
+    },
+    {
+      "path": "artifacts/source_auxiliary_services13_v2_prepare/seed42_fold0/source_aux_checkin_service/model.joblib",
+      "bytes": 3557812,
+      "sha256": "1a58767b16f84dd634a1406e6229e87e9cc94a8e8cc05b3d91a6ea6aa84373ee",
+      "asset": "source_auxiliary_services13_v2_prepare.zip",
+      "role": "trained_models",
+      "provenance": "submitted-ensemble evidence superset"
+    },
+    {
+      "path": "artifacts/source_auxiliary_services13_v2_prepare/seed42_fold0/source_aux_cleanliness/model.joblib",
+      "bytes": 3616932,
+      "sha256": "47a7bc47420e2e3c6078f082165c9dfbbc323f6770b849df2c53de06f18a6417",
+      "asset": "source_auxiliary_services13_v2_prepare.zip",
+      "role": "trained_models",
+      "provenance": "submitted-ensemble evidence superset"
+    },
+    {
+      "path": "artifacts/source_auxiliary_services13_v2_prepare/seed42_fold0/source_aux_departure_arrival_time_convenient/model.joblib",
+      "bytes": 4141812,
+      "sha256": "a47239e46d84ea29aa2628ce55b73cc6e5838ac5191aae5338210d3e6a2e3fdb",
+      "asset": "source_auxiliary_services13_v2_prepare.zip",
+      "role": "trained_models",
+      "provenance": "submitted-ensemble evidence superset"
+    },
+    {
+      "path": "artifacts/source_auxiliary_services13_v2_prepare/seed42_fold0/source_aux_ease_of_online_booking/model.joblib",
+      "bytes": 4120964,
+      "sha256": "6fa38625a01ec0f31ae2eeac69bd042a2c7faa1f97e9104dd0f0e038bd2ed1e4",
+      "asset": "source_auxiliary_services13_v2_prepare.zip",
+      "role": "trained_models",
+      "provenance": "submitted-ensemble evidence superset"
+    },
+    {
+      "path": "artifacts/source_auxiliary_services13_v2_prepare/seed42_fold0/source_aux_food_and_drink/model.joblib",
+      "bytes": 4100388,
+      "sha256": "93c88d5484cd451abb0d7a479a29eaed49b7f45c31ce4ae58dfe0fec6a0d366b",
+      "asset": "source_auxiliary_services13_v2_prepare.zip",
+      "role": "trained_models",
+      "provenance": "submitted-ensemble evidence superset"
+    },
+    {
+      "path": "artifacts/source_auxiliary_services13_v2_prepare/seed42_fold0/source_aux_gate_location/model.joblib",
+      "bytes": 3572132,
+      "sha256": "1e4998efe9be02d9fe0387f09668d58c3bf65a0ab804ac2995f1a6a6c2221940",
+      "asset": "source_auxiliary_services13_v2_prepare.zip",
+      "role": "trained_models",
+      "provenance": "submitted-ensemble evidence superset"
+    },
+    {
+      "path": "artifacts/source_auxiliary_services13_v2_prepare/seed42_fold0/source_aux_inflight_entertainment/model.joblib",
+      "bytes": 3635204,
+      "sha256": "fd4677602f2c688012337ad00857325954cfc4422bf35d24c7167e431d7ea617",
+      "asset": "source_auxiliary_services13_v2_prepare.zip",
+      "role": "trained_models",
+      "provenance": "submitted-ensemble evidence superset"
+    },
+    {
+      "path": "artifacts/source_auxiliary_services13_v2_prepare/seed42_fold0/source_aux_leg_room_service/model.joblib",
+      "bytes": 4034708,
+      "sha256": "17e0bf097a89a6a50aba1ac4245c11514b43bdb632d5bec693ebd20eb8ed7001",
+      "asset": "source_auxiliary_services13_v2_prepare.zip",
+      "role": "trained_models",
+      "provenance": "submitted-ensemble evidence superset"
+    },
+    {
+      "path": "artifacts/source_auxiliary_services13_v2_prepare/seed42_fold0/source_aux_on_board_service/model.joblib",
+      "bytes": 3560676,
+      "sha256": "ff7d1edd816d14328f8abf304be8a3ed278d9cf5d1b2d1cb6d084779361f95ad",
+      "asset": "source_auxiliary_services13_v2_prepare.zip",
+      "role": "trained_models",
+      "provenance": "submitted-ensemble evidence superset"
+    },
+    {
+      "path": "artifacts/source_auxiliary_services13_v2_prepare/seed42_fold0/source_aux_seat_comfort/model.joblib",
+      "bytes": 3555364,
+      "sha256": "bce575c8066e1b16babfb20c902d93e133359602ffa1a9f44711effefb6b1c06",
+      "asset": "source_auxiliary_services13_v2_prepare.zip",
+      "role": "trained_models",
+      "provenance": "submitted-ensemble evidence superset"
+    },
+    {
+      "path": "artifacts/source_auxiliary_services13_v2_prepare/seed42_fold0/source_aux_wifi/model.joblib",
+      "bytes": 4132004,
+      "sha256": "9e7bd4a96e22794267a2ba1387f1ec6c2fe9dc2afdffe419a60f93421e465192",
+      "asset": "source_auxiliary_services13_v2_prepare.zip",
+      "role": "trained_models",
+      "provenance": "submitted-ensemble evidence superset"
+    },
+    {
+      "path": "artifacts/source_tabpfn_teacher_v1_prepare/seed42_fold0/encoder.joblib",
+      "bytes": 4020,
+      "sha256": "3e0e9b52c109c273105c3cbc087ba659c66fa8b6d2970f2121cdbf61013df2e7",
+      "asset": "source_tabpfn_teacher_v1_prepare.zip",
+      "role": "trained_models",
+      "provenance": "submitted-ensemble evidence superset"
+    },
+    {
+      "path": "artifacts/source_tabpfn_teacher_v1_prepare/seed42_fold0/teacher.tabpfn_fit",
+      "bytes": 326069038,
+      "sha256": "dd4de420d7ab6539f2b163f30df52d314b711612848071c0098326f2db03b151",
+      "asset": "source_tabpfn_teacher_v1_prepare.zip",
+      "role": "trained_models",
+      "provenance": "submitted-ensemble evidence superset"
+    }
+  ],
+  "assets": [
+    {
+      "file": "cat_twins_tabpfnteacher_v1.zip",
+      "bytes": 175648261,
+      "sha256": "34bcd7fabd50d14782da8c7c361c596c3ff0c6c6988060aef7771aaeab66a7fa",
+      "entries": 2
+    },
+    {
+      "file": "lgbm_optuna_013.zip",
+      "bytes": 3107298,
+      "sha256": "32e430e8407adb131bba7b3b2d931df74fb49d675dd487c00f4c4506b1072297",
+      "entries": 2
+    },
+    {
+      "file": "nested_stack_reference233_services13_lgbm021_cat_twins_v3.zip",
+      "bytes": 480824585,
+      "sha256": "6c212231490519d50de53267b0b62a8ef7343246f3dc6be397494241d205bdf1",
+      "entries": 13
+    },
+    {
+      "file": "nested_stack_reference233_services13_lgbmteacher_catteacher_v5.zip",
+      "bytes": 461735900,
+      "sha256": "efc83f74cf05b001bf962abd791ff24360ca00c50d7ac000bb0975b7f08b7abc",
+      "entries": 13
+    },
+    {
+      "file": "original_source_teacher.zip",
+      "bytes": 882812,
+      "sha256": "9bb5a489d99f192de9e9b2d2adbf2f2c318ce6c4da6450f12bf3efedad6add2b",
+      "entries": 1
+    },
+    {
+      "file": "prepare_source_auxiliary_v1.zip",
+      "bytes": 3410805,
+      "sha256": "0086f6fb9e7071cdf24926abf3a14b84ac806b8139085c7885f91ca765058be9",
+      "entries": 2
+    },
+    {
+      "file": "realmlp_lean_sigma2.33_twins_epochs6_lr025.zip",
+      "bytes": 17990249,
+      "sha256": "2623c28817defb1f0c38aad6400b19eb0b6173f8f329ede89bf6a4201b830df4",
+      "entries": 1
+    },
+    {
+      "file": "reference_catboost.zip",
+      "bytes": 14146686,
+      "sha256": "ae6f66e645bcc23fca0f21b7691a866052068fffcba1b23de2329caec38767c7",
+      "entries": 11
+    },
+    {
+      "file": "reference_catboost_native.zip",
+      "bytes": 13985979,
+      "sha256": "fd5533995ae383552173e6a4ddf662da6ec7f968ca1f496715811dc3242a1854",
+      "entries": 11
+    },
+    {
+      "file": "reference_retrain.zip",
+      "bytes": 88099116,
+      "sha256": "e23e3392d9d74bcf5fb38956b717ee1d74966f781bbdfd9f935e28edd81ffaa0",
+      "entries": 11
+    },
+    {
+      "file": "reference_tabpfn_ensemble.zip",
+      "bytes": 455450328,
+      "sha256": "99c683dc133ab84ab8e36074f879ed7eb3853b74e204b31aa4fa1b8465c8e868",
+      "entries": 3
+    },
+    {
+      "file": "reference_tabpfn_medium.zip",
+      "bytes": 499710795,
+      "sha256": "8edd54932d360b9fade15e2d9710c3078aef2db621545ded47c0ae5c00b1bcb7",
+      "entries": 3
+    },
+    {
+      "file": "reference_tabpfn_retrain.zip",
+      "bytes": 345580667,
+      "sha256": "845ea74a8bf2be851ec3f05aa04099b7d3d03552c10b83afc27e74bd8ee3d3e2",
+      "entries": 4
+    },
+    {
+      "file": "reference_xgboost.zip",
+      "bytes": 24893272,
+      "sha256": "04d437e0a9652bd0a4c0fb823ea78e3653d9cec86c55d93e6b3954d239bacef2",
+      "entries": 11
+    },
+    {
+      "file": "source_auxiliary_services13_v2_prepare.zip",
+      "bytes": 20469458,
+      "sha256": "ace9c5d3aa927e2b8001f1b6e47bdbdb133a1c286b573cb0461bb78ab484e051",
+      "entries": 13
+    },
+    {
+      "file": "source_tabpfn_teacher_v1_prepare.zip",
+      "bytes": 326054014,
+      "sha256": "0b798df0c2b8e957068bfba4c4a546101f1b56dbaf921d78c8fcc945cfd35110",
+      "entries": 2
+    },
+    {
+      "file": "source_and_evidence.zip",
+      "bytes": 347449,
+      "sha256": "baa751f07597e6de8e80533dda6c1daedb95295dac263beabe1353e7bc06ed44",
+      "entries": 341
+    }
+  ],
+  "external_inputs_not_bundled": [
+    "Kaggle competition train/test/sample CSV files",
+    "Original source dataset files",
+    "Official licensed TabPFN foundation checkpoint; obtain separately"
+  ],
+  "training_restarted": false,
+  "models_retrained_for_export": false,
+  "submission_asset": {
+    "file": "validated_catboost_reference_blend_v1.csv",
+    "bytes": 8174184,
+    "sha256": "ae8c13b66415c555552773801a739379589166558c3a8141bf5bc7aa3f0cb8f5"
+  },
+  "planned_release_url": "https://github.com/7D-codes/kaggle-s6e10/releases/tag/airline-self-trained-20261025",
+  "publication_status": "prepared_locally_not_uploaded"
+}
