@@ -203,11 +203,11 @@ Read `AGENTS.md`; pull first, publish your claim, work on nonoverlapping files, 
 
 ### Codex Kumo comparison implementation — Codex / GPT-6
 
-- Status: IN PROGRESS on SPEC atomic-receipt artifact-map fix; independent SPEC then QUALITY review remains pending with root. Synthetic software work only.
+- Status: IMPLEMENTED SPEC atomic-receipt artifact-map fix; independent SPEC re-review then QUALITY remains pending with root. Synthetic software work only.
 - Goal: implement the frozen twelve/thirteen/fourteen-member continuation comparison without changing its scientific contract.
 - Evidence/approach: reuse unchanged public-context helpers; qualify immutable inputs and independent terminal receipt before any fit; synthetic TDD, source-only suite, independent SPEC then QUALITY review.
 - Branch: `agent/codex/kumo-comparison-20261027`; isolated `.worktrees/codex-kumo-compare`.
 - Owned files: NEW `stack_kumo_continuation.py`, NEW `test_kumo_stack.py`, this subsection, [implementation plan](plans/codex-kumo-stack-implementation.md). Root retains all other coordination/scientific files and actual execution.
 - Job owner: root only; existing141062725/v1 untouched. No real-data fitting, downloads, GPU job, submission or delegation here.
 - Verification: code`b00676a`published/read back;36targetedpassed8.84s, full215passed/66existingwarnings42.23s, fresh source-onlyarchive215passed/66existingwarnings42.38s. Thirty restored-native/manual replay states, retained-control drift, receipt/input guards, both-gate failures, deadline and export quarantine checked. Helper byte-identical.
-- Handoff: root received code for independent specification then quality review; root retains all real fits/exports and terminal source/native audit. All Kumo score/export gates remain unmeasured; no real fit/download/GPU/job/submission/delegation here.
+- Handoff: root received initial code and SPEC fix`05b0475`; actual atomic-replace RED then37targetedGREEN9.31s, fresh source-only216passed/66existingwarnings42.99s. Root retains all real fits/exports and terminal source/native audit. All Kumo score/export gates remain unmeasured; no real fit/download/GPU/job/submission/delegation here.
