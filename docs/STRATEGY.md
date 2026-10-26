@@ -92,6 +92,7 @@ Read `AGENTS.md`; pull first, publish your claim, work on nonoverlapping files, 
 - Plan: [score escalation evidence review](plans/codex-score-escalation-20261027.md).
 - Existing job: root monitors `wasidyms/s6e10-codex-kumo-continuation-v1/1`, kernel141062725; RUNNING with empty failure message at23:40:35UTC2026-10-26. No launch/restart in this task.
 - Verification/handoff: four API notebook-source hashes checked; latest public work supplies no newly qualified complementary member. Published source-specific limits and next-evidence decision; documentation checks passed, runtime tests unnecessary. Existing Kumo result still pending; no real-data fit, GPU launch or submission. Monitor exact version and obtain resumed evaluation scope before any further fitting.
+- Resource follow-up: earlier hardware receipt proves two T4s, current Kumo code selects GPU0. Official specifications and a separate project's measurement support investigating independent work on both cards, but speedup/current-account quota charging/native equivalence remain unmeasured. Research-only lead for a later council after a resource failure; no change to the live experiment and no successor selected.
 
 ```markdown
 ### <agent name> — <tool/model, if known>
