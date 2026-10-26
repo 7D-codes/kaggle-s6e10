@@ -78,7 +78,7 @@ Read `AGENTS.md`; pull first, publish your claim, work on nonoverlapping files, 
 - Owned files/areas: this subsection and `docs/plans/codex-next-signal-20261026.md`; runtime ownership will be handed off explicitly after selection.
 - Plan: [next-signal decision and execution](plans/codex-next-signal-20261026.md).
 - Job owner/monitor: root Codex only. No new job yet; both allowed Astra calls already used.
-- Verification/handoff: new CatBoost gain independently audited; fresh quota preflight/council in progress. Preserve the existing unsubmitted candidate and scientific proof limits.
+- Verification/handoff: council4 complete5advisors/5anonymousreviews/chairman, noAstra remaining. [Frozen Kumo continuation](plans/codex-kumo-continuation-contract.md): same canonical128/rawFE, qualifiedCatcontrol, gates14vs13and14vs12;24900newworkerseconds/5400firstpair/25%projection/8cumulativeh. Regenerateallpairs,no reuse. Freshquota27.82529h/noactivejobs22:54UTC2026-10-26. Isolatedbranch/worktree ready, baseline169pass. Explicit runtime-only implementation handoff; root retains launch/monitor/scientific decisions. No new GPU job yet.
 
 ## New-agent entry template
 
