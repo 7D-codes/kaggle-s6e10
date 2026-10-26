@@ -70,6 +70,10 @@ All proposal gates are conditional on explicit training resumption and a finaliz
 
 ## Contract template for later authorized experiments
 
+### Score escalation research — 2026-10-27, no new experiment
+
+[Four-source review and decision](plans/codex-score-escalation-20261027.md): exact notebook SHA256 snapshots inspected and rechecked, current numeric versions unknown. Recent Meta/Twin Stack sources do not provide exact Summit OOF or a new qualified member; the38-member family study reports0.962021CV versus0.96169public with explicitly conditional/nonnested upstream validation. Two specialist/aggregate experiments are author-reported negatives. The11-pair TFM inventory is unchanged, not two new eligible members. No model fits/imported prediction pool/new launch/submission. Existing kernel141062725/v1 RUNNING23:40:35UTC with nofailuremessage; no full-output/quality claim. Cat's prior offline gain remains distinct from public score. Latest owner-supplied training pause applies before new fitting; preserve live-run contract and artifacts.
+
 ### Council4 Kumo continuation — frozen before launch
 
 [Scientific/resource contract and reviewed provenance](plans/codex-kumo-continuation-contract.md). One same-context/model/FE/inference paired experiment after v1's resource timeout, all outputs regenerated;8cumulativeGPUhours INCLUDING prior3606roundedseconds, newworker24900, providerreserve294, firstpair5400plus stronger25%complete-workprojection. Control12 includes independently qualified Cat; primary14vs13FEincrement and mandatory14vs12retained-control gates, rawsecondarydescriptive. Runtime28d73af SPEC PASS/QUALITY APPROVE;179freshsource-onlytests. Packagebe660467…/control91a6fac8… sealed. Root solelaunchowner; actual job/nativeGPU/OOF/quality results pending. No public-score improvement or submission implied.
