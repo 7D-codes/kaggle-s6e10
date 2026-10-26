@@ -191,3 +191,12 @@ Read `AGENTS.md`; pull first, publish your claim, work on nonoverlapping files, 
 - Verification checkpoint: runtime `47e6af1` published/read back;19targetedchecks passed including actual tiny native CPU CatBoost1.2.8 CBM replay. Fresh source-only full suite169passed/66existingwarnings/32.66seconds. Generated source closure imports outside the repository. Latest main`9dfbfc8` registry update integrated deliberately; no runtime changes.
 - Receipt correction: RED reproduced stale selection.json self-hash; own receipt now excludes itself, with every listed hash checked against disk and final run metrics independently pinning the completed selection file. Runtime correction`b41e03c`published/read back; targeted19passed, fresh source-only full169passed/66existingwarnings/33.02seconds.
 - Handoff: root delta specification then quality review before any native GPU run; no launch by this agent.
+
+### Codex Kumo continuation implementation — Codex / GPT-6
+
+- Status: IN PROGRESS, synthetic software only; root retains scientific decisions and sole launch/monitor authority.
+- Objective/evidence: implement the [frozen continuation contract](plans/codex-kumo-continuation-contract.md), reusing original packaging and numerical code with only new resource caps and monotonic receipts. Regenerate all five pairs; no v1 predictions/cache reuse.
+- Branch/worktree: `agent/codex/next-signal-20261026`, `.worktrees/codex-next-signal`.
+- Ownership explicitly handed off by root: `train_kumo_pair.py` resource constants/guard and receipt timings only; new `package_kumo_continuation.py`, new `test_kumo_continuation.py`, this subsection and [implementation plan](plans/codex-kumo-continuation-implementation.md). Old packager, statistical/native code and other coordination remain outside ownership.
+- Approach/verification: inspect callers; targeted RED/GREEN; source/dispatch/default/cap/metadata/economics/deadline/receipt invariance; full source-only suite and fresh archive. No real-data fits, model downloads, GPU smokes, remote jobs or submissions.
+- Handoff: root receives committed/pushed SHA plus verification for independent SPEC then QUALITY review before any launch.
