@@ -203,11 +203,11 @@ Read `AGENTS.md`; pull first, publish your claim, work on nonoverlapping files, 
 
 ### Codex Kumo comparison implementation — Codex / GPT-6
 
-- Status: IN PROGRESS, synthetic software work only.
+- Status: IMPLEMENTED; independent SPEC then QUALITY review pending with root. Synthetic software work only.
 - Goal: implement the frozen twelve/thirteen/fourteen-member continuation comparison without changing its scientific contract.
 - Evidence/approach: reuse unchanged public-context helpers; qualify immutable inputs and independent terminal receipt before any fit; synthetic TDD, source-only suite, independent SPEC then QUALITY review.
 - Branch: `agent/codex/kumo-comparison-20261027`; isolated `.worktrees/codex-kumo-compare`.
 - Owned files: NEW `stack_kumo_continuation.py`, NEW `test_kumo_stack.py`, this subsection, [implementation plan](plans/codex-kumo-stack-implementation.md). Root retains all other coordination/scientific files and actual execution.
 - Job owner: root only; existing141062725/v1 untouched. No real-data fitting, downloads, GPU job, submission or delegation here.
-- Verification: claim13922ee published/read back; missing-runner RED reproduced;36synthetic checks passing, including thirty native/manual replay fits, retained-control drift, input/receipt guards, both-gate failures and export quarantine. Full/fresh source-only verification pending. Helper unchanged.
-- Handoff: publish tested code for independent specification then quality review; all score/export gates remain unmeasured.
+- Verification: code`b00676a`published/read back;36targetedpassed8.84s, full215passed/66existingwarnings42.23s, fresh source-onlyarchive215passed/66existingwarnings42.38s. Thirty restored-native/manual replay states, retained-control drift, receipt/input guards, both-gate failures, deadline and export quarantine checked. Helper byte-identical.
+- Handoff: root received code for independent specification then quality review; root retains all real fits/exports and terminal source/native audit. All Kumo score/export gates remain unmeasured; no real fit/download/GPU/job/submission/delegation here.
