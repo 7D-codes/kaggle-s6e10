@@ -200,3 +200,14 @@ Read `AGENTS.md`; pull first, publish your claim, work on nonoverlapping files, 
 - Ownership explicitly handed off by root: `train_kumo_pair.py` resource constants/guard and receipt timings only; new `package_kumo_continuation.py`, new `test_kumo_continuation.py`, this subsection and [implementation plan](plans/codex-kumo-continuation-implementation.md). Old packager, statistical/native code and other coordination remain outside ownership.
 - Approach/verification: inspect callers; targeted RED/GREEN; source/dispatch/default/cap/metadata/economics/deadline/receipt invariance; full source-only suite and fresh archive. No real-data fits, model downloads, GPU smokes, remote jobs or submissions.
 - Verification/handoff: code `28d73af`;54targeted tests passed4.49seconds, full checkout179passed/66existingwarnings35.93seconds and fresh source-only archive179passed/66existingwarnings35.85seconds. Generated package compiled; worker/source/dispatch/native/default invariance, matching5400/24900caps, economic boundary3984seconds,21syntheticreplaychecks, fullregeneration and process-group cleanup verified. No real fit/download/GPU/job/submission; native T4 operation/runtime remain unverified. Package/hashes and detailed evidence are in the linked plan.
+
+### Codex Kumo comparison implementation — Codex / GPT-6
+
+- Status: IN PROGRESS, synthetic software work only.
+- Goal: implement the frozen twelve/thirteen/fourteen-member continuation comparison without changing its scientific contract.
+- Evidence/approach: reuse unchanged public-context helpers; qualify immutable inputs and independent terminal receipt before any fit; synthetic TDD, source-only suite, independent SPEC then QUALITY review.
+- Branch: `agent/codex/kumo-comparison-20261027`; isolated `.worktrees/codex-kumo-compare`.
+- Owned files: NEW `stack_kumo_continuation.py`, NEW `test_kumo_stack.py`, this subsection, [implementation plan](plans/codex-kumo-stack-implementation.md). Root retains all other coordination/scientific files and actual execution.
+- Job owner: root only; existing141062725/v1 untouched. No real-data fitting, downloads, GPU job, submission or delegation here.
+- Verification: clean initial worktree; fetched and integrated latest origin/main coordination; no upstream existed initially. Implementation/tests pending.
+- Handoff: publish tested code for independent specification then quality review; all score/export gates remain unmeasured.
