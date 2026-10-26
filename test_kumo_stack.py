@@ -273,3 +273,27 @@ def test_cli_requires_explicit_mode_and_self_test_is_synthetic(tmp_path):
     result = subprocess.run([sys.executable, str(script), '--root', str(tmp_path), '--self-test'], capture_output=True, text=True)
     assert result.returncode == 0 and 'synthetic thirty-fit' in result.stdout
     assert not (tmp_path / s.OUTPUT).exists()
+
+
+def test_atomic_completion_receipt_failure_keeps_only_existing_artifact_hashes(inputs, monkeypatch):
+    s, root, audit, js = inputs; output = root / s.OUTPUT
+    monkeypatch.setattr(s, 'promotion_gate', lambda *args, **kwargs: True)
+    monkeypatch.setattr(s.m, 'bootstrap_gain', lambda *args: {'interval95': [.01, .2]})
+    original = Path.replace; failed = []
+    def replace(path, destination):
+        if (path == output / 'metrics.tmp' and not failed and
+                json.loads(path.read_text()).get('status') == 'complete'):
+            failed.append(True)
+            raise OSError('synthetic atomic completion receipt replacement failure')
+        return original(path, destination)
+    monkeypatch.setattr(Path, 'replace', replace)
+    with pytest.raises(OSError, match='atomic completion receipt'): s.run(root)
+    receipt = json.loads((output / 'metrics.json').read_text())
+    assert failed and receipt['status'] == 'failed'
+    assert not receipt['valid'] and not receipt['gate_passed']
+    assert not (output / s.CANDIDATE).exists() and (output / s.INCOMPLETE).exists()
+    assert 'metrics.tmp' not in receipt['artifacts_sha256']
+    assert not (output / 'metrics.tmp').exists()
+    for name, digest in receipt['artifacts_sha256'].items():
+        assert (output / name).is_file()
+        assert s.m.sha256(output / name) == digest

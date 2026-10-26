@@ -187,7 +187,7 @@ def corrected_rank(baseline, control, joint):
 
 
 def artifact_hashes(output):
-    return {path.name: m.sha256(path) for path in sorted(output.iterdir()) if path.is_file() and path.name != 'metrics.json'}
+    return {path.name: m.sha256(path) for path in sorted(output.iterdir()) if path.is_file() and path.name not in ('metrics.json', 'metrics.tmp')}
 
 
 def quarantine(output, metrics):

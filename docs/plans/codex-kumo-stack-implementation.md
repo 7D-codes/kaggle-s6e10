@@ -31,3 +31,5 @@ Staged diffs/whitespace and credential patterns inspected: owned files only, no 
 ## SPEC follow-up: atomic completion receipt
 
 Root handed back the same owned files for one bounded blocker: a one-time failure replacing complete `metrics.tmp` leaves that temporary receipt visible to quarantine hashing, then recovery saving removes it. Reproduce actual `Path.replace` failure with synthetic fixtures, exclude only the metrics receipt temporary file from artifact hashes, then targeted/full fresh-source verification. No scientific changes or GPU artifact access.
+
+Actual atomic-replacement RED reproduced stale `artifacts_sha256["metrics.tmp"]` after recovery consumed that file. One-line correction excludes both metrics receipt names from artifact hashing. GREEN37targetedtests passed9.31s; regression asserts failed/invalid/no-gate state, candidate quarantine and existence/exactSHA for every mapped filename. Full fresh-source verification follows the code checkpoint.
