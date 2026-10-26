@@ -203,7 +203,7 @@ Read `AGENTS.md`; pull first, publish your claim, work on nonoverlapping files, 
 
 ### Codex Kumo comparison implementation — Codex / GPT-6
 
-- Status: IMPLEMENTED; independent SPEC then QUALITY review pending with root. Synthetic software work only.
+- Status: IN PROGRESS on SPEC atomic-receipt artifact-map fix; independent SPEC then QUALITY review remains pending with root. Synthetic software work only.
 - Goal: implement the frozen twelve/thirteen/fourteen-member continuation comparison without changing its scientific contract.
 - Evidence/approach: reuse unchanged public-context helpers; qualify immutable inputs and independent terminal receipt before any fit; synthetic TDD, source-only suite, independent SPEC then QUALITY review.
 - Branch: `agent/codex/kumo-comparison-20261027`; isolated `.worktrees/codex-kumo-compare`.

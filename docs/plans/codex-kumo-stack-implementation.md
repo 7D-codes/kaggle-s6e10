@@ -27,3 +27,7 @@ All thirty coefficient records carry exact fitting/validation index hashes and n
 Root received this checkpoint for independent SPEC then QUALITY review; neither is claimed here. Root may run the tracked script with `--run --root /home/toro/Projects/kaggle-s6e10/.worktrees/codex-tabpfn` only after root's independent complete native/source terminal audit. New output is fixed and fresh-only. Exact frozen scientific gates/correction and conditional/averaged-input/no-public-score caveats remain unchanged.
 
 Staged diffs/whitespace and credential patterns inspected: owned files only, no restricted files. `origin/main` changes integrated before implementation; fetch before checkpoint found no new main commits. Existing GPU141062725/v1 untouched. No real-data fit, GPU smoke, weights download, remote job, submission, subagent, or Kumo output inspection occurred. No score improvement claimed.
+
+## SPEC follow-up: atomic completion receipt
+
+Root handed back the same owned files for one bounded blocker: a one-time failure replacing complete `metrics.tmp` leaves that temporary receipt visible to quarantine hashing, then recovery saving removes it. Reproduce actual `Path.replace` failure with synthetic fixtures, exclude only the metrics receipt temporary file from artifact hashes, then targeted/full fresh-source verification. No scientific changes or GPU artifact access.
