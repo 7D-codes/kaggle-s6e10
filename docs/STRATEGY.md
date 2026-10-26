@@ -2,7 +2,7 @@
 
 ## Project state
 
-**Training/evaluation RESUMED for Codex's score-improvement effort on 2026-10-26.** The owner explicitly said "GO AHEAD YOU HAVE FULL RIGHTS" after the pause discussion. Start with the frozen CatBoost ensemble comparison; any later GPU experiment retains its preregistered checks/caps and sole launch owner. Competition submissions remain prohibited. Historical PAUSED entries below describe their original tasks, not the new authorization.
+**New training/evaluation is PAUSED under the owner's latest supplied AGENTS instructions.** Earlier 2026-10-26 resumption authorized the completed CatBoost comparison and existing Kumo launch, but past authorization is not reusable after the newly supplied pause. Read-only research and monitoring of existing kernel141062725/version1 may continue; do not launch, restart or fit a real-data comparison until explicit resumption. Competition submissions remain prohibited. Historical entries retain their original authorization context.
 
 Retained public ROC AUC: **0.96111**, submission **57568517**. Target ≥0.962 is an ambition, not an achieved result or a promise. Read [experiment history](EXPERIMENTS.md) before proposing work.
 
@@ -107,7 +107,7 @@ Read `AGENTS.md`; pull first, publish your claim, work on nonoverlapping files, 
 
 ## Decisions
 
-- The owner explicitly resumed Codex training/evaluation on 2026-10-26; historical pause records remain preserved. Submission permission was not granted.
+- The owner previously resumed Codex training/evaluation on 2026-10-26. The latest supplied AGENTS instructions pause new fitting/jobs again; retain historical results and monitor the existing version without restarting. Submission permission was not granted.
 - Current diagnosis suggests limited model diversity; TabPFN is only an unverified research lead. Its existence is not permission to install/download/launch it.
 - Preserve historical negative results and the incumbent. No new agent should start a fresh feature/epoch sweep by default.
 
