@@ -83,6 +83,16 @@ Read `AGENTS.md`; pull first, publish your claim, work on nonoverlapping files, 
 
 ## New-agent entry template
 
+### Codex — score escalation evidence review, 2026-10-27
+
+- Status: IN PROGRESS; research and existing-job monitoring only. The owner's newly supplied training-pause instructions supersede historical resumption for new fits/jobs.
+- Goal: identify a stronger evidence-backed direction without presenting offline gains as leaderboard improvement.
+- Approach: inspect recent public source snapshots, distinguish additional signal from reused blends, and verify the existing Kumo version without changing its frozen experiment.
+- Branch: `main`; owned files are this subsection, `docs/plans/codex-score-escalation-20261027.md` and its linked ledger entry. No runtime ownership.
+- Plan: [score escalation evidence review](plans/codex-score-escalation-20261027.md).
+- Existing job: root monitors `wasidyms/s6e10-codex-kumo-continuation-v1/1`, kernel141062725; RUNNING with empty failure message at23:40:35UTC2026-10-26. No launch/restart in this task.
+- Verification/handoff: latest repository synchronized; source review and documentation closeout pending. No real-data fit, GPU launch or submission.
+
 ```markdown
 ### <agent name> — <tool/model, if known>
 - Status: PLANNED / IN PROGRESS / BLOCKED / COMPLETE / PAUSED
