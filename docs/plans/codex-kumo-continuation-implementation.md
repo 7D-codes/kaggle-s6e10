@@ -15,3 +15,9 @@ Read AGENTS/STRATEGY/EXPERIMENTS/ONBOARDING and current origin/main contract; in
 ## Handoff
 
 Pending implementation and verification. Native GPU correctness/performance and complete real-data runtime remain outside this synthetic-software task.
+
+### Code checkpoint
+
+Targeted RED: all10new continuation checks failed in2.01seconds for missing builder/default constants/timings (no import errors). Minimal implementation adds default constants3600/28800, substitutes them only in the original guard, and records setup/context and per-arm transform/fit/native-calibration/validation/test/total monotonic durations. Existing v1 packager remains SHA256 `31a15db42a58cfb688d081c02b27cd63c90b25b90bb39d820493a79b0a65c267` byte-identical. New builder reuses its unchanged worker/supervisor, guards unique cap replacements5400/24900, compiles generated source and writes private competition-only T4 metadata. It never launches.
+
+Targeted GREEN:54tests passed (continuation, original Kumo and CatBoost),4.52seconds; subsequent explicit21comparison synthetic assertion and numerical-call AST pin checked at checkpoint. Tests pin every pre-existing non-run function/class AST, computational/native call AST in run, exact generated runner/source bundle/worker/supervisor invariance, unique metadata, economics at3984seconds and just over, all10fresharm constructions, partial failure receipts/markers and blocking-worker process-group kill under both deadlines. Full/source-only verification pending.
