@@ -77,8 +77,8 @@ Read `AGENTS.md`; pull first, publish your claim, work on nonoverlapping files, 
 - Branch: `main` for decision/contract; isolated task branch for substantial code.
 - Owned files/areas: this subsection and `docs/plans/codex-next-signal-20261026.md`; runtime ownership will be handed off explicitly after selection.
 - Plan: [next-signal decision and execution](plans/codex-next-signal-20261026.md).
-- Job owner/monitor: root Codex only. No new job yet; both allowed Astra calls already used.
-- Verification/handoff: council4 complete5advisors/5anonymousreviews/chairman, noAstra remaining. [Frozen Kumo continuation](plans/codex-kumo-continuation-contract.md): canonical128/rawFE, qualifiedCatcontrol, gates14vs13and14vs12;24900newworkerseconds/5400firstpair/25%projection/8cumulativeh. Regenerateallpairs,no reuse. Code28d73af independentlySPEC PASS/QUALITY APPROVE,54targeted each; full/freshsource-only179passed. Published/runtime branch a6baf34, packagebe660467…, control91a6fac8… sealed. Root solelaunchowner will refresh quota and launch uniqueprivatecontinuation after checkpoint publication; no new GPU job yet.
+- Job owner/monitor: root Codex only. Private `wasidyms/s6e10-codex-kumo-continuation-v1/1`, kernel141062725, launched23:05:27UTC2026-10-26; RUNNING23:06:05UTC, emptyfailuremessage, remote source/privacy exact. No duplicate/restart; both allowed Astra calls already used.
+- Verification/handoff: council4 complete5advisors/5anonymousreviews/chairman, noAstra remaining. [Frozen Kumo continuation](plans/codex-kumo-continuation-contract.md): canonical128/rawFE, qualifiedCatcontrol, gates14vs13and14vs12;24900newworkerseconds/5400firstpair/25%projection/8cumulativeh. Regenerateallpairs,no reuse. Code28d73af SPEC PASS/QUALITY APPROVE,54targeted each; full/freshsource-only179passed. Published branch a6baf34/[draft PR5](https://github.com/7D-codes/kaggle-s6e10/pull/5), packagebe660467…/control91a6fac8… sealed. Prelaunch3d85a6f remoteverified, fresh27.82529h/noactivejobs; one launch confirmed. NativeGPU/firstpair/fullOOF/quality pending; submissions0.
 
 ## New-agent entry template
 
