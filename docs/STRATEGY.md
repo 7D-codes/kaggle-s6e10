@@ -194,9 +194,9 @@ Read `AGENTS.md`; pull first, publish your claim, work on nonoverlapping files, 
 
 ### Codex Kumo continuation implementation — Codex / GPT-6
 
-- Status: IN PROGRESS, synthetic software only; root retains scientific decisions and sole launch/monitor authority.
+- Status: IMPLEMENTATION COMPLETE, synthetic software only; owned runtime files handed back to root for independent SPEC then QUALITY review. Root retains scientific decisions and sole launch/monitor authority.
 - Objective/evidence: implement the [frozen continuation contract](plans/codex-kumo-continuation-contract.md), reusing original packaging and numerical code with only new resource caps and monotonic receipts. Regenerate all five pairs; no v1 predictions/cache reuse.
 - Branch/worktree: `agent/codex/next-signal-20261026`, `.worktrees/codex-next-signal`.
 - Ownership explicitly handed off by root: `train_kumo_pair.py` resource constants/guard and receipt timings only; new `package_kumo_continuation.py`, new `test_kumo_continuation.py`, this subsection and [implementation plan](plans/codex-kumo-continuation-implementation.md). Old packager, statistical/native code and other coordination remain outside ownership.
 - Approach/verification: inspect callers; targeted RED/GREEN; source/dispatch/default/cap/metadata/economics/deadline/receipt invariance; full source-only suite and fresh archive. No real-data fits, model downloads, GPU smokes, remote jobs or submissions.
-- Handoff: root receives committed/pushed SHA plus verification for independent SPEC then QUALITY review before any launch.
+- Verification/handoff: code `28d73af`;54targeted tests passed4.49seconds, full checkout179passed/66existingwarnings35.93seconds and fresh source-only archive179passed/66existingwarnings35.85seconds. Generated package compiled; worker/source/dispatch/native/default invariance, matching5400/24900caps, economic boundary3984seconds,21syntheticreplaychecks, fullregeneration and process-group cleanup verified. No real fit/download/GPU/job/submission; native T4 operation/runtime remain unverified. Package/hashes and detailed evidence are in the linked plan.
