@@ -71,7 +71,7 @@ Read `AGENTS.md`; pull first, publish your claim, work on nonoverlapping files, 
 
 ### Codex — next complementary signal, 2026-10-26
 
-- Status: IN PROGRESS; owner explicitly requests further improvement, no submissions.
+- Status: PAUSED by the owner. No new fitting/jobs/submissions. Existing remote job last observed RUNNING at 00:38:47 UTC on 2026-10-27; current status unverified.
 - Goal: choose and execute the next bounded complementary experiment after the measured CatBoost gain.
 - Evidence/hypothesis and approach: fresh five-perspective/anonymous-review council incorporates the qualified twelve-member control and prior Kumo resource failure; select one falsifiable experiment, publish its fixed contract, verify software/native identity and quota before launch.
 - Branch: `main` for decision/contract; isolated task branch for substantial code.
@@ -80,6 +80,7 @@ Read `AGENTS.md`; pull first, publish your claim, work on nonoverlapping files, 
 - Job owner/monitor: root Codex only. Private `wasidyms/s6e10-codex-kumo-continuation-v1/1`, kernel141062725, launched23:05:27UTC2026-10-26; RUNNING23:06:05UTC, emptyfailuremessage, remote source/privacy exact. No duplicate/restart; both allowed Astra calls already used.
 - Verification/handoff: council4 complete5advisors/5anonymousreviews/chairman, noAstra remaining. [Frozen Kumo continuation](plans/codex-kumo-continuation-contract.md): canonical128/rawFE, qualifiedCatcontrol, gates14vs13and14vs12;24900newworkerseconds/5400firstpair/25%projection/8cumulativeh. Regenerateallpairs,no reuse. Code28d73af SPEC PASS/QUALITY APPROVE,54targeted each; full/freshsource-only179passed. Published branch a6baf34/[draft PR5](https://github.com/7D-codes/kaggle-s6e10/pull/5), packagebe660467…/control91a6fac8… sealed. Prelaunch3d85a6f remoteverified, fresh27.82529h/noactivejobs; one launch confirmed. NativeGPU/firstpair/fullOOF/quality pending; submissions0.
 - Post-run comparison preparation: code05b0475 SPEC PASS/QUALITY APPROVE,37targeted/216freshsource-onlypassed; source340fb727…/[draft PR6](https://github.com/7D-codes/kaggle-s6e10/pull/6), no real fits. Retained12control replay/dual gates/failure quarantine frozen. Read-only terminal auditor105e2efe… self-checked. Exact GPUjob stillRUNNING23:24:22UTC, nofailuremessage. Monitor sameversion; no restart, partial promotion or submission.
+- Latest handoff: owner explicitly paused the goal. The local observer started 00:42:49 UTC but its first API request stalled; state remained starting with an empty log at 05:25 UTC. It is not evidence of current remote-job progress. Preserve frozen outputs/contracts; strategic reassessment is read-only.
 
 ## New-agent entry template
 
@@ -135,3 +136,15 @@ Read `AGENTS.md`; pull first, publish your claim, work on nonoverlapping files, 
 - Verification: original provenance hashes, 17 ZIP CRCs, 444 archive-entry SHA256 checks, document/relative-link checks and remote branch readback passed. Runtime code unchanged. Exact source modules and external licensed inputs remain prerequisites; fresh-platform portability not fully tested.
 - Ownership released: own registry subsection, handoff directory, plan and appended ledger entry. Other agents' entries and historical scientific records preserved.
 - Handoff: review/integrate PR #4. All models/code/evidence preserved. No extra training authorization is implied by this transfer.
+
+
+### Codex — strategic reassessment, 2026-10-27
+
+- Status: IN PROGRESS; research and saved-prediction diagnostics only; training remains PAUSED.
+- Goal: reassess how to improve the actual final ranking above the supplied Summit anchor, including weaknesses in the current experimental strategy.
+- Evidence/hypothesis: the accepted CatBoost gain is measured on an eleven-to-twelve-member surrogate, while the exported Summit artifact uses a fixed 0.05 probability-difference correction to ranks. Its actual benefit has not been measured.
+- Approach: independent five-perspective council with anonymous peer review; audit the fixed correction using existing predictions without fitting or weight selection; prioritize information gain and realistic validation.
+- Branch: main; root owns this registry subsection, own interrupted next-signal handoff corrections, docs/plans/codex-strategic-reassessment-20261027.md and its ledger entry. Advisors are read-only and own no files.
+- Plan: [strategic reassessment](plans/codex-strategic-reassessment-20261027.md).
+- Jobs: none launched, restarted or submitted by this assessment. No persistent-goal resumption.
+- Verification/handoff: pending saved-artifact diagnostic and independent review.
