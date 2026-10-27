@@ -71,7 +71,7 @@ Read `AGENTS.md`; pull first, publish your claim, work on nonoverlapping files, 
 
 ### Codex — next complementary signal, 2026-10-26
 
-- Status: PAUSED by the owner. No new fitting/jobs/submissions. Existing remote job last observed RUNNING at 00:38:47 UTC on 2026-10-27; current status unverified.
+- Status: PAUSED by the owner. No new fitting/jobs/submissions. Existing remote job COMPLETE at 05:35:55 UTC on 2026-10-27; summary receipts report full five-fold outputs, but independent full-artifact audit and ensemble comparison remain outstanding.
 - Goal: choose and execute the next bounded complementary experiment after the measured CatBoost gain.
 - Evidence/hypothesis and approach: fresh five-perspective/anonymous-review council incorporates the qualified twelve-member control and prior Kumo resource failure; select one falsifiable experiment, publish its fixed contract, verify software/native identity and quota before launch.
 - Branch: `main` for decision/contract; isolated task branch for substantial code.
@@ -140,11 +140,11 @@ Read `AGENTS.md`; pull first, publish your claim, work on nonoverlapping files, 
 
 ### Codex — strategic reassessment, 2026-10-27
 
-- Status: IN PROGRESS; research and saved-prediction diagnostics only; training remains PAUSED.
+- Status: COMPLETE; research and saved-prediction diagnostics only; training remains PAUSED.
 - Goal: reassess how to improve the actual final ranking above the supplied Summit anchor, including weaknesses in the current experimental strategy.
 - Evidence/hypothesis: the accepted CatBoost gain is measured on an eleven-to-twelve-member surrogate, while the exported Summit artifact uses a fixed 0.05 probability-difference correction to ranks. Its actual benefit has not been measured.
 - Approach: independent five-perspective council with anonymous peer review; audit the fixed correction using existing predictions without fitting or weight selection; prioritize information gain and realistic validation.
 - Branch: main; root owns this registry subsection, own interrupted next-signal handoff corrections, docs/plans/codex-strategic-reassessment-20261027.md and its ledger entry. Advisors are read-only and own no files.
 - Plan: [strategic reassessment](plans/codex-strategic-reassessment-20261027.md).
-- Jobs: none launched, restarted or submitted by this assessment. No persistent-goal resumption.
-- Verification/handoff: pending saved-artifact diagnostic and independent review.
+- Jobs: none launched, restarted or submitted by this assessment. Exact existing Kumo version1 COMPLETE05:35:55UTC; small summary receipts fetched read-only. No persistent-goal resumption.
+- Verification/handoff: five advisors/five anonymous peer reviews/chair completed. Hash/ID/formula checks passed; fixed export analogue retains +0.00000690542 of +0.00010496547 full surrogate gain (6.58%), all five folds positive. This does not estimate Summit gain. Preserve the full challenger and conservative overlay separately; prioritize final-recipe evaluation using cached predictions, close existing Kumo without automatic retries, then one bounded TabM hypothesis after explicit resumption. No new fit/GPU launch/submission. Ownership released after documentation publication.
