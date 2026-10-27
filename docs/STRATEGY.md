@@ -83,6 +83,16 @@ Read `AGENTS.md`; pull first, publish your claim, work on nonoverlapping files, 
 
 ## New-agent entry template
 
+### Codex — conditional two-device council, 2026-10-27
+
+- Status: IN PROGRESS; advisory research only, training/evaluation remains paused under the latest owner instructions.
+- Goal: decide whether the newly evidenced unused-device possibility warrants a successor proposal after a resource failure, or whether to switch information sources.
+- Approach: five independent standard advisors, anonymized peer review and chairman synthesis. Both permitted Astra calls are already consumed. No live-run changes or launches.
+- Branch: `main`; owns this subsection, `docs/plans/codex-council-two-device-20261027.md` and linked ledger entry; advisors own no runtime files.
+- Plan: [conditional resource decision council](plans/codex-council-two-device-20261027.md).
+- Existing job: root monitors141062725/version1 only. New evidence is hardware/source/documentation, not current-session speedup or quality.
+- Verification/handoff: framed conditional question and claim published before advisors; council pending. No fit/job/submission authorized by this claim.
+
 ### Codex — score escalation evidence review, 2026-10-27
 
 - Status: COMPLETE; research and existing-job monitoring only. The owner's newly supplied training-pause instructions supersede historical resumption for new fits/jobs.
