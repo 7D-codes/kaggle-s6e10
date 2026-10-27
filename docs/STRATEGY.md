@@ -148,3 +148,15 @@ Read `AGENTS.md`; pull first, publish your claim, work on nonoverlapping files, 
 - Plan: [strategic reassessment](plans/codex-strategic-reassessment-20261027.md).
 - Jobs: none launched, restarted or submitted by this assessment. Exact existing Kumo version1 COMPLETE05:35:55UTC; small summary receipts fetched read-only. No persistent-goal resumption.
 - Verification/handoff: five advisors/five anonymous peer reviews/chair completed. Hash/ID/formula checks passed; fixed export analogue retains +0.00000690542 of +0.00010496547 full surrogate gain (6.58%), all five folds positive. This does not estimate Summit gain. Preserve the full challenger and conservative overlay separately; prioritize final-recipe evaluation using cached predictions, close existing Kumo without automatic retries, then one bounded TabM hypothesis after explicit resumption. No new fit/GPU launch/submission. Ownership released after documentation publication.
+
+
+### Codex — first-place campaign, 2026-10-27
+
+- Status: IN PROGRESS. New persistent goal is active; clarification of explicit training/evaluation resumption is pending. Existing no-submission instruction remains in force.
+- Goal: reach first place, measured by the authoritative competition leaderboard rather than inferred from offline AUC. Public placement during competition and final private placement must remain distinct.
+- Evidence/approach: establish current leading score and gap; independently verify completed Kumo artifacts; reuse frozen comparison before any new GPU training when authorized; evaluate final exported recipes, then only one justified complementary-model experiment.
+- Branch: main for bounded coordination/evidence; existing reviewed comparison branch for any later execution.
+- Ownership: root owns this entry, docs/plans/codex-first-place-20261027.md and its ledger entry; existing artifacts remain preserved. Read-only advisors own no files or jobs.
+- Plan: [first-place campaign](plans/codex-first-place-20261027.md).
+- Job owner: no new job; root alone may operate authorized jobs later. Existing Kumo141062725/version1 is COMPLETE.
+- Verification/handoff: current read-only audit/leaderboard work pending. No score/rank improvement claimed.
