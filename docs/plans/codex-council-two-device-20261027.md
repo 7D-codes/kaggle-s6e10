@@ -48,4 +48,6 @@ If the current run completes, audit integrity and full outputs; run the frozen14
 
 ## One first action and handoff
 
+Read-only live quota checkpoint at2026-10-27T00:10:32UTC: account used3.258856404722222GPUhours, remaining26.741143595277777hours, increase since launch1.0841461269444443hours. Thus usage is being reported during this running session; it is not necessary to wait for termination to observe some consumption. This is account-wide/provisional, not final per-job attribution, dual-device charging proof or successor budget qualification. Exact version remained RUNNING with nofailuremessage at00:10:09UTC. Live output inventory at00:08:08UTC had zero files, no persisted log and no next page; no fold-completion inference follows.
+
 Obtain the existing version's terminal receipt and reconcile actual consumed quota, arm-stage timings and memory evidence. Until then, monitor that exact live version without restarting. Latest observed API status remained RUNNING with an empty failure message at2026-10-27T00:03:46UTC. No training, qualification, benchmark, runtime edit, job launch or submission occurred in this council. Root checked documentation scope, local links, whitespace and credential patterns; no runtime tests were needed because runtime code is unchanged. Ownership released after publication. The improvement goal remains unfulfilled.
