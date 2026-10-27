@@ -159,4 +159,4 @@ Read `AGENTS.md`; pull first, publish your claim, work on nonoverlapping files, 
 - Ownership: root owns this entry, docs/plans/codex-first-place-20261027.md and its ledger entry; existing artifacts remain preserved. Read-only advisors own no files or jobs.
 - Plan: [first-place campaign](plans/codex-first-place-20261027.md).
 - Job owner: root alone executes the frozen local Kumo comparison;30fits/fourthreads/10800second cap, source340fb727… and helperb20c9043…. Existing GPU141062725/version1 COMPLETE; no duplicate GPU job.
-- Verification/handoff: current read-only audit/leaderboard work pending. No score/rank improvement claimed.
+- Verification/handoff: currentleader0.96427; teampublic4/0.96254 is teammate-labeled LB-fitted/display-only. Independent Kumo artifacts and all30coefficient replays passed; frozen comparison rejected(+0.00000741844vs12), no candidateexport. Keep12control; seek stronger signal/finalcombination. Owner public-vs-private priority clarification pending; no submissions.

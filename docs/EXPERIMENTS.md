@@ -96,3 +96,10 @@ Record before launching: agent/owner, hypothesis and evidence, control, exact fo
 Decision after five advisors/five anonymous reviews/chair: evaluate the complete final recipe using existing predictions, preserve a reproducible full challenger separately from the small Summit overlay, close existing Kumo under its frozen gates when authorized, then prioritize one bounded TabM-with-embeddings hypothesis if new signal is needed. No promise of public gain; no training, GPU job or submission launched. Goal remains PAUSED.
 
 Read-only end-of-assessment update: exact Kumo continuation version1 COMPLETE at2026-10-27T05:35:55UTC. Small summaries report full fivefoldOOF,210remote native checks passed,18202.57worker seconds; standalone raw0.95743609742 versus engineered0.95849554138. These are remote-reported standalone results, not independently audited coverage or measured ensemble/Summit improvement. No new fit, restart or submission; full-artifact audit and frozen comparison remain outstanding.
+
+
+### Kumo continuation frozen comparison — 2026-10-27, rejected
+
+Owner explicitly resumed training/evaluation; submissions remain prohibited. [Full evidence and first-place campaign](plans/codex-first-place-20261027.md). Independent complete artifact and coefficient replay checks passed. Root executed30within-original-fold CPUmeta fits once in74.05seconds. Fourteen-member versus retainedtwelve gain+0.00000741844,4/5positivefolds, conditional95%interval[-0.00000316038,0.00001844126]; engineered14vsraw13gain+0.00001063414,3/5positivefolds. Both gains missfrozen0.00002threshold. Raw13vs12descriptivegain-0.00000321569. No candidate export; retain qualifiedtwelve-membercontrol. Do not repeat Kumo resource/feature work without materially new evidence. No GPUlaunch/retry/submission in this comparison.
+
+Fresh API also reveals teampublicrank4/0.96254 from teammate submission57687430, explicitly labeled public-feedback-fitted/display-only/do-not-select. This is distinct from retained modeling results and not evidence of final generalization. Currentleader0.96427 at05:51UTC; rankfirstgoal remainsunachieved.
