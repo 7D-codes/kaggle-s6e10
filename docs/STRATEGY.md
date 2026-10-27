@@ -145,6 +145,7 @@ Read `AGENTS.md`; pull first, publish your claim, work on nonoverlapping files, 
 - Plan: [next-signal decision and execution](plans/codex-next-signal-20261026.md).
 - Job owner/monitor: root Codex only. Private `wasidyms/s6e10-codex-kumo-continuation-v1/1`, kernel141062725, launched23:05:27UTC2026-10-26; RUNNING23:06:05UTC, emptyfailuremessage, remote source/privacy exact. No duplicate/restart; both allowed Astra calls already used.
 - Verification/handoff: council4 complete5advisors/5anonymousreviews/chairman, noAstra remaining. [Frozen Kumo continuation](plans/codex-kumo-continuation-contract.md): canonical128/rawFE, qualifiedCatcontrol, gates14vs13and14vs12;24900newworkerseconds/5400firstpair/25%projection/8cumulativeh. Regenerateallpairs,no reuse. Code28d73af SPEC PASS/QUALITY APPROVE,54targeted each; full/freshsource-only179passed. Published branch a6baf34/[draft PR5](https://github.com/7D-codes/kaggle-s6e10/pull/5), packagebe660467…/control91a6fac8… sealed. Prelaunch3d85a6f remoteverified, fresh27.82529h/noactivejobs; one launch confirmed. NativeGPU/firstpair/fullOOF/quality pending; submissions0.
+- Post-run comparison preparation: code05b0475 SPEC PASS/QUALITY APPROVE,37targeted/216freshsource-onlypassed; source340fb727…/[draft PR6](https://github.com/7D-codes/kaggle-s6e10/pull/6), no real fits. Retained12control replay/dual gates/failure quarantine frozen. Read-only terminal auditor105e2efe… self-checked. Exact GPUjob stillRUNNING23:24:22UTC, nofailuremessage. Monitor sameversion; no restart, partial promotion or submission.
 
 ## New-agent entry template
 
@@ -200,3 +201,14 @@ Read `AGENTS.md`; pull first, publish your claim, work on nonoverlapping files, 
 - Ownership explicitly handed off by root: `train_kumo_pair.py` resource constants/guard and receipt timings only; new `package_kumo_continuation.py`, new `test_kumo_continuation.py`, this subsection and [implementation plan](plans/codex-kumo-continuation-implementation.md). Old packager, statistical/native code and other coordination remain outside ownership.
 - Approach/verification: inspect callers; targeted RED/GREEN; source/dispatch/default/cap/metadata/economics/deadline/receipt invariance; full source-only suite and fresh archive. No real-data fits, model downloads, GPU smokes, remote jobs or submissions.
 - Verification/handoff: code `28d73af`;54targeted tests passed4.49seconds, full checkout179passed/66existingwarnings35.93seconds and fresh source-only archive179passed/66existingwarnings35.85seconds. Generated package compiled; worker/source/dispatch/native/default invariance, matching5400/24900caps, economic boundary3984seconds,21syntheticreplaychecks, fullregeneration and process-group cleanup verified. No real fit/download/GPU/job/submission; native T4 operation/runtime remain unverified. Package/hashes and detailed evidence are in the linked plan.
+
+### Codex Kumo comparison implementation — Codex / GPT-6
+
+- Status: IMPLEMENTED SPEC atomic-receipt artifact-map fix; independent SPEC re-review then QUALITY remains pending with root. Synthetic software work only.
+- Goal: implement the frozen twelve/thirteen/fourteen-member continuation comparison without changing its scientific contract.
+- Evidence/approach: reuse unchanged public-context helpers; qualify immutable inputs and independent terminal receipt before any fit; synthetic TDD, source-only suite, independent SPEC then QUALITY review.
+- Branch: `agent/codex/kumo-comparison-20261027`; isolated `.worktrees/codex-kumo-compare`.
+- Owned files: NEW `stack_kumo_continuation.py`, NEW `test_kumo_stack.py`, this subsection, [implementation plan](plans/codex-kumo-stack-implementation.md). Root retains all other coordination/scientific files and actual execution.
+- Job owner: root only; existing141062725/v1 untouched. No real-data fitting, downloads, GPU job, submission or delegation here.
+- Verification: code`b00676a`published/read back;36targetedpassed8.84s, full215passed/66existingwarnings42.23s, fresh source-onlyarchive215passed/66existingwarnings42.38s. Thirty restored-native/manual replay states, retained-control drift, receipt/input guards, both-gate failures, deadline and export quarantine checked. Helper byte-identical.
+- Handoff: root received initial code and SPEC fix`05b0475`; actual atomic-replace RED then37targetedGREEN9.31s, fresh source-only216passed/66existingwarnings42.99s. Root retains all real fits/exports and terminal source/native audit. All Kumo score/export gates remain unmeasured; no real fit/download/GPU/job/submission/delegation here.
