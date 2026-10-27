@@ -19,3 +19,12 @@ Main synchronized at45ee4956a1693a106c1de4f978fa6cb23b79f879. Existing Kumo cont
 ## Progress classification
 
 This is the first turn of the newly activated goal. The preceding question answered overfitting conceptually; it was not an execution turn of this goal. Current initial state inspection has found actual completed artifact audit files previously unverified in chat. Goal remains active, not complete.
+
+
+## Explicit resumption and next execution contract
+
+Owner answered **“Resume training and evaluation; no submissions.”** This resumes fitting and GPU work within declared experiment/resource contracts; it does not authorize competition submissions. No further resumption clarification is needed.
+
+Next run is the already-reviewed frozen comparison from `agent/codex/kumo-comparison-20261027`: source SHA256 `340fb7272f5e07610b6cba2699d1b30b80873c9f8f6fdcec95862d7f4043e66c`, helper `b20c9043c05eebe17d5673839312af6e12466db50577f303800ed16e15e010ec`, control manifest `91a6fac84d243482579d18ef5c2ab52b33b6ecf5ad22c22c457bcddf094d628d`. Twelve unchanged members versus +rawKumo versus +raw+engineeredKumo. Thirty within-original-fold meta fits,5foldseed42/halfseed20261025+fold, logisticC1/lbfgs2000/tol1e-7, fourthreads and10800CPU/wallsecond cap. Primary14vs13 AND14vs12 gain≥0.00002,≥4/5positivefolds and lower conditional200bootstrapseed314159interval>0;13vs12descriptive. Reproduce historical twelve-member OOF/test at originalrtol1e-6/atol1e-7 before accepting. Existing0.05export and all historical gates unchanged. Root sole executor; no retry or output overwrite without diagnosing failure.
+
+Run after independent source/input readiness using the existing scientific environment and `stack_kumo_continuation.py --run --root /home/toro/Projects/kaggle-s6e10/.worktrees/codex-tabpfn`. Output `results/summit-kumo-comparison-v1/` beneath that root. Existing reviewed code was already tested37targeted/216fresh-source-only; current source hashes must match before relying on those checks. This CPU comparison does not train a new base model or consume GPU quota.

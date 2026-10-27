@@ -2,7 +2,7 @@
 
 ## Project state
 
-**New training/evaluation is PAUSED under the owner's latest supplied AGENTS instructions.** Earlier 2026-10-26 resumption authorized the completed CatBoost comparison and existing Kumo launch, but past authorization is not reusable after the newly supplied pause. Read-only research and monitoring of existing kernel141062725/version1 may continue; do not launch, restart or fit a real-data comparison until explicit resumption. Competition submissions remain prohibited. Historical entries retain their original authorization context.
+**Training and offline evaluation are RESUMED by the owner's explicit 2026-10-27 answer: “Resume training and evaluation; no submissions.”** The active objective is first place. Each new experiment still requires its predeclared control/configuration/resource/gate contract. The already-reviewed frozen Kumo comparison is the next execution; do not duplicate it. Competition submissions remain prohibited. Historical entries retain their original authorization context.
 
 Retained public ROC AUC: **0.96111**, submission **57568517**. Target ≥0.962 is an ambition, not an achieved result or a promise. Read [experiment history](EXPERIMENTS.md) before proposing work.
 
@@ -152,11 +152,11 @@ Read `AGENTS.md`; pull first, publish your claim, work on nonoverlapping files, 
 
 ### Codex — first-place campaign, 2026-10-27
 
-- Status: IN PROGRESS. New persistent goal is active; clarification of explicit training/evaluation resumption is pending. Existing no-submission instruction remains in force.
+- Status: IN PROGRESS. Owner explicitly resumed training and offline evaluation on2026-10-27; no submissions.
 - Goal: reach first place, measured by the authoritative competition leaderboard rather than inferred from offline AUC. Public placement during competition and final private placement must remain distinct.
 - Evidence/approach: establish current leading score and gap; independently verify completed Kumo artifacts; reuse frozen comparison before any new GPU training when authorized; evaluate final exported recipes, then only one justified complementary-model experiment.
 - Branch: main for bounded coordination/evidence; existing reviewed comparison branch for any later execution.
 - Ownership: root owns this entry, docs/plans/codex-first-place-20261027.md and its ledger entry; existing artifacts remain preserved. Read-only advisors own no files or jobs.
 - Plan: [first-place campaign](plans/codex-first-place-20261027.md).
-- Job owner: no new job; root alone may operate authorized jobs later. Existing Kumo141062725/version1 is COMPLETE.
+- Job owner: root alone executes the frozen local Kumo comparison;30fits/fourthreads/10800second cap, source340fb727… and helperb20c9043…. Existing GPU141062725/version1 COMPLETE; no duplicate GPU job.
 - Verification/handoff: current read-only audit/leaderboard work pending. No score/rank improvement claimed.
