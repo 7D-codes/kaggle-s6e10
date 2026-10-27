@@ -85,13 +85,13 @@ Read `AGENTS.md`; pull first, publish your claim, work on nonoverlapping files, 
 
 ### Codex — conditional two-device council, 2026-10-27
 
-- Status: IN PROGRESS; advisory research only, training/evaluation remains paused under the latest owner instructions.
+- Status: COMPLETE; advisory research only, training/evaluation remains paused under the latest owner instructions.
 - Goal: decide whether the newly evidenced unused-device possibility warrants a successor proposal after a resource failure, or whether to switch information sources.
 - Approach: five independent standard advisors, anonymized peer review and chairman synthesis. Both permitted Astra calls are already consumed. No live-run changes or launches.
-- Branch: `main`; owns this subsection, `docs/plans/codex-council-two-device-20261027.md` and linked ledger entry; advisors own no runtime files.
+- Branch: `main`; ownership released for this subsection, `docs/plans/codex-council-two-device-20261027.md` and linked ledger entry; advisors own no runtime files.
 - Plan: [conditional resource decision council](plans/codex-council-two-device-20261027.md).
 - Existing job: root monitors141062725/version1 only. New evidence is hardware/source/documentation, not current-session speedup or quality.
-- Verification/handoff: framed conditional question and claim published before advisors; council pending. No fit/job/submission authorized by this claim.
+- Verification/handoff: five advisors/five anonymous reviews/standard chairman complete, no additional Astra. Chairman deferred successor selection until actual terminal receipts permit a numerical contract; original eight cumulative hours includes BOTH runs and all qualification, with no automatic extension. Peer review added comparative budget value, slower-arm projection, raw-row equivalence and predeclared output eligibility. Exact job remained RUNNING00:03:46UTC. Documentation checks passed; no runtime changes/tests/fits/jobs/submissions.
 
 ### Codex — score escalation evidence review, 2026-10-27
 
